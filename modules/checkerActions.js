@@ -7,22 +7,24 @@ var queue = [];
 var attempts = 0;
 var foundLives = 0;
 var lastCardSentCommand = "";
+var stop = false;
 
 export async function startChecking(args) {
-    queue=[];
+    queue = [];
     attempts = 0;
     par = args;
-    foundLives=0;
+    foundLives = 0;
+    stop = false;
     lastCardSentCommand = "";
-    
+
     try {
-        
+
         await connect();
-        
+
         onMessageEvent({ on: "edit", handler: handleMessageEdited, userName: par.userName });
         onMessageEvent({ on: "new", handler: handleNewMessage, userName: par.userName });
-        
-        console.log(colors.bgCyan("Se comenzon a checkear "+args.gate+" "+args.bin)) 
+
+        console.log(colors.bgCyan("Se comenzon a checkear " + args.gate + " " + args.bin))
         sendCard({ bin: par.bin, gate: par.gate })
 
     } catch (err) {
@@ -35,9 +37,13 @@ export async function startChecking(args) {
 
 export async function stopChecking() {
 
-   
+
     await closeConnection();
 
+}
+
+export function stopNextTime() {
+    stop = true;
 }
 
 
@@ -53,10 +59,10 @@ async function handleMessageEdited(event) {
     var sender = await message.getSender();
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch[0];
-    
+
 
     if (sender.username === par.userName && cardMatch.length > 0 && text.includes(par.live_if_contains)) {
-        text+="\n\n*Bin:* `"+par.gate+" "+par.bin+"`"
+        text += "\n\n*Bin:* `" + par.gate + " " + par.bin + "`"
         await sendMessageByUserName({ userName: "me", message: text }, () => {
             console.log(colors.green("Se encontro y se envio live " + cardMatch + " a mensajes guardados"))
         });
@@ -68,18 +74,25 @@ async function handleMessageEdited(event) {
     if (cardIndex >= 0) {
         queue.splice(cardIndex)
         attempts++;
-        
-        console.log(colors.red("Intento "+attempts+", La tarjeta recibida " + cardNumber + " se borro de la cola"))
-        
+
+        console.log(colors.red("Intento " + attempts + ", La tarjeta recibida " + cardNumber + " se borro de la cola"))
+
         if (attempts === par.max_atemps_per_bin) {
-            
+
             console.log("Se termino de checkear por intentos maximos")
             return await closeConnection();
         }
 
-        if(foundLives===par.num_to_find){
-             console.log("Se termino de checkear por lives encontradas maximas")
+        if (foundLives === par.num_to_find) {
+            console.log("Se termino de checkear por lives encontradas maximas")
             return await closeConnection();
+        }
+
+        if (stop) {
+            console.log("Se termino de checkear por peticion externa")
+
+            return await closeConnection();
+
         }
         debugger
     } else {
@@ -112,7 +125,7 @@ async function handleNewMessage(event) {
         await waitForTimeout(parseInt(secondsToWait[0]) * 1000);
         debugger
 
-        sendCard({  message: lastCardSentCommand })
+        sendCard({ message: lastCardSentCommand })
     }
 }
 
@@ -128,13 +141,13 @@ function sendCard({ gate, bin, message }) {
         var card = generateCardFromString(bin);
         var command = `${gate} ${card}`
         lastCardSentCommand = "" + command;
-        
+
     }
 
-    
+
     sendMessageByUserName({ userName: par.userName, message: message ? message : command }, () => {
         console.log("Se envio tarjeta " + (card || lastCardSentCommand));
         if (!queue.includes(card)) queue.push(card)
-        
+
     })
 }

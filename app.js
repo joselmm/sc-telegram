@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
 
-import { startChecking, stopChecking } from "./modules/checkerActions.js"
+import { startChecking,  stopNextTime } from "./modules/checkerActions.js"
 
 
 app.use(express.json());
@@ -40,7 +40,17 @@ app.post("/start-checking", async (req, res) => {
 });
 
 app.get("/stop-checking", (req, res) => {
-    stopChecking();
+
+    try {
+        
+        stopNextTime();
+        res.json({ noError: true })
+
+    } catch (error) {
+        res.json({ noError: false, message: error.message })
+        
+    }
+
 })
 
 app.listen(port, () => {
