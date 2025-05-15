@@ -2,7 +2,9 @@
 import { connect, onMessageEvent, sendMessageByUserName, closeConnection } from "./telegramActions.js";
 import { generateCardFromString } from "./genCard.js";
 import colors from "colors/safe.js";
+import Timer from 'cli-timer';
 export var par = null;
+var cardRegex = /\d{16,16}\|\d{2,2}\|\d{2,4}\|\d{3,4}/;
 var queue = [];
 var attempts = 0;
 var foundLives = 0;
@@ -29,7 +31,7 @@ export async function startChecking(args) {
 
     } catch (err) {
         console.log(err)
-        debugger
+
         await closeConnection();
         throw new Error(err.message)
     }
@@ -51,28 +53,37 @@ export function stopNextTime() {
 async function handleMessageEdited(event) {
     const message = event.message;
     var text = message.message;
-    var cardRegex = /\d{16,16}\|\d{2,2}\|\d{2,4}\|\d{3,4}/;
+    if (text.match(cardRegex)) {
+
+        await handleCardCheckResult(event);
+    }
+}
+
+async function handleCardCheckResult(event) {
+    const message = event.message;
+    var text = message.message;
+
 
     // Checks if it's a private message (from user or bot)
 
     // prints sender id
     var sender = await message.getSender();
     var cardMatch = text.match(cardRegex);
-    var cardNumber = cardMatch[0];
+    var cardNumber = cardMatch ? cardMatch[0] : null;
 
 
-    if (sender.username === par.userName && cardMatch.length > 0 && text.includes(par.live_if_contains)) {
+    if (sender.username === par.userName && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
         text += "\n\n*Bin:* `" + par.gate + " " + par.bin + "`"
         await sendMessageByUserName({ userName: "me", message: text }, () => {
             console.log(colors.green("Se encontro y se envio live " + cardMatch + " a mensajes guardados"))
         });
         foundLives++;
-        debugger
+
     }
 
     var cardIndex = queue.indexOf(cardNumber)
     if (cardIndex >= 0) {
-        queue.splice(cardIndex)
+        queue.splice(cardIndex, 1)
         attempts++;
 
         console.log(colors.red("Intento " + attempts + ", La tarjeta recibida " + cardNumber + " se borro de la cola"))
@@ -94,36 +105,45 @@ async function handleMessageEdited(event) {
             return await closeConnection();
 
         }
-        debugger
-    } else {
+
+    } /* else {
         console.log("La tarjeta recibida " + cardNumber + " no esta en la cola y se omitira")
-    }
+    } */
 
-
-    debugger
     await waitForTimeout(par.to_wait_card_send * 1000);
-    sendCard({ gate: par.gate, bin: par.bin })
     debugger
-    // read message
-    /* if (message.text == "hello") {
-        /* const sender = await message.getSender();
-        console.log("sender is", sender);
-        await client.sendMessage(sender, {
-            message: `hi your id is ${message.senderId}`
-        }); */
-
+    if (queue.length === 0) sendCard({ gate: par.gate, bin: par.bin })
 }
 
 
 async function handleNewMessage(event) {
     const message = event.message;
     const text = message.message;
-    var toWaitRegex = / \d+ /;
+    if (text.match(cardRegex)) {
+
+        await handleCardCheckResult(event);
+    }
+
+
+    var toWaitRegex = new RegExp(par.antibot_seconds_regex);
     var secondsToWait = text.match(toWaitRegex);
-    if (text.includes("⚠️ Rate limit: ") && secondsToWait && secondsToWait.length > 0) {
+    
+
+    if (text.includes("Resuelve")) {
+        var captchaResolution = (text.match(/ \d+\n/)[0]).trim();
+        if(captchaResolution){
+            
+            await sendMessageByUserName({ userName: par.userName, message: "/captcha " + captchaResolution });
+            console.log("se soluciono captcha " + captchaResolution);
+            sendCard({ message: lastCardSentCommand })
+        }
+    }
+
+    if (text.includes(par.antibot_if_contains) && secondsToWait && secondsToWait.length > 0) {
         console.log("se detecto antibot, esperando por" + secondsToWait[0] + "segundos");
-        await waitForTimeout(parseInt(secondsToWait[0]) * 1000);
-        debugger
+        var millisecondsToWait = parseInt(secondsToWait[0]) * 1000;
+
+        await waitForTimeout(millisecondsToWait);
 
         sendCard({ message: lastCardSentCommand })
     }
@@ -141,13 +161,13 @@ function sendCard({ gate, bin, message }) {
         var card = generateCardFromString(bin);
         var command = `${gate} ${card}`
         lastCardSentCommand = "" + command;
-
     }
-
 
     sendMessageByUserName({ userName: par.userName, message: message ? message : command }, () => {
         console.log("Se envio tarjeta " + (card || lastCardSentCommand));
-        if (!queue.includes(card)) queue.push(card)
+        if(message)card=lastCardSentCommand.split(" ")[1];
 
+        if (!queue.includes(card)) queue.push(card )
     })
 }
+

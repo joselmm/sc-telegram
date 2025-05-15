@@ -69,7 +69,7 @@ export async function getMessagesByUserName({ userName, limit = 5 }) {
 }
 
 export async function closeConnection() {
-    await client.disconnect()
+    client.destroy()
     console.log("Se cerro la conexion con Telegram")
 }
 
