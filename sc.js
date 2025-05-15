@@ -72,7 +72,7 @@ const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve)
         const msg = event.message;
         const sender = await msg.getSender();
         const username = sender.username;
-        const text = msg.message;
+        const messageText = msg.message;
         if(!userNamesFilter.includes(username)) return;
         if ( messageText.toLowerCase().includes("approved") || messageText.toLowerCase().includes("✅") ) {
             await client.sendMessage(groupWhereToSave, { message: text });
