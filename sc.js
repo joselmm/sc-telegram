@@ -5,6 +5,19 @@ import readline from "readline";
 import { NewMessage } from "telegram/events/index.js";
 import { EditedMessage } from "telegram/events/EditedMessage.js";
 
+import cors from "cors";
+import express from "express"
+const port = process.env.PORT || 3000;
+const app = express();
+app.use(cors());
+
+app.get("/",(r, res)=>{
+    res.json({noError:true})
+})
+app.listen(port,()=>{
+    console.log("http escuchando en "+port)
+})
+
 dotenv.config();
 
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
