@@ -88,7 +88,7 @@ async function handleCardCheckResult(event) {
     }
 
     var cardIndex = queue.indexOf(cardNumber)
-    if (cardIndex >= 0 && text.includes(par.gate))  {
+    if (cardIndex >= 0 && text.toLowerCase().includes(par.gate))  {
         queue.splice(cardIndex, 1)
         attempts++;
 

@@ -15,6 +15,8 @@ app.get("/", (r, res) => {
     res.json({ noError: true })
 })
 
+var cardRegex = /\d{16,16}\|\d{2,2}\|\d{2,4}\|\d{3,4}/;
+
 app.post("/next-card", async (req, res) => {
     try {
         var bin = req.body.bin;
@@ -31,16 +33,16 @@ app.post("/next-card", async (req, res) => {
             body: JSON.stringify({
                 action: "GET"
             })
-        }).then(e=>e.json())
+        }).then(e => e.json())
 
         var newBin = queue[0];
 
 
-        fetch(process.env.TAC+"/start-checking",{
-            method:"POST",
-            body:JSON.stringify({
-                action:"DELETE",
-                data:bin
+        fetch(process.env.TAC + "/start-checking", {
+            method: "POST",
+            body: JSON.stringify({
+                action: "DELETE",
+                data: bin
             })
         })
     } catch (error) {
@@ -112,7 +114,9 @@ const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve)
         const sender = await msg.getSender();
         const username = sender.username;
         const messageText = msg.message;
-        if (!userNamesFilter.includes(username)) return;
+        // if (!userNamesFilter.includes(username)) return;
+        var card = messageText.match(cardRegex);
+        if (card===null) return;
 
         if (messageText.toLowerCase().includes("approved") || messageText.toLowerCase().includes("✅")) {
             await client.sendMessage(groupWhereToSave, { message: messageText });
