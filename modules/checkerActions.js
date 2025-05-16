@@ -88,7 +88,7 @@ async function handleCardCheckResult(event) {
     }
 
     var cardIndex = queue.indexOf(cardNumber)
-    if (cardIndex >= 0) {
+    if (cardIndex >= 0 && text.includes('\n[✦] 𝗧𝗮𝗿𝗷𝗲𝘁𝗮:'))  {
         queue.splice(cardIndex, 1)
         attempts++;
 
