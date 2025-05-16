@@ -4,6 +4,7 @@ import { generateCardFromString } from "./genCard.js";
 import colors from "colors/safe.js";
 import Timer from 'cli-timer';
 export var par = null;
+var checking = false;
 var cardRegex = /\d{16,16}\|\d{2,2}\|\d{2,4}\|\d{3,4}/;
 var queue = [];
 var attempts = 0;
@@ -12,6 +13,9 @@ var lastCardSentCommand = "";
 var stop = false;
 
 export async function startChecking(args) {
+
+    if(checking)throw new Error("Ya se esta checkeando");
+    checking=true
     queue = [];
     attempts = 0;
     par = args;
@@ -31,7 +35,7 @@ export async function startChecking(args) {
 
     } catch (err) {
         console.log(err)
-
+        
         await closeConnection();
         throw new Error(err.message)
     }
@@ -39,7 +43,7 @@ export async function startChecking(args) {
 
 export async function stopChecking() {
 
-
+    checking=false;
     await closeConnection();
 
 }
@@ -70,6 +74,8 @@ async function handleCardCheckResult(event) {
     var sender = await message.getSender();
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch ? cardMatch[0] : null;
+    cardNumber=processCardFormat(cardNumber);
+
 
 
     if (sender.username === par.userName && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
@@ -91,18 +97,18 @@ async function handleCardCheckResult(event) {
         if (attempts === par.max_atemps_per_bin) {
 
             console.log("Se termino de checkear por intentos maximos")
-            return await closeConnection();
+            return await stopChecking();
         }
 
         if (foundLives === par.num_to_find) {
             console.log("Se termino de checkear por lives encontradas maximas")
-            return await closeConnection();
+            return await stopChecking();
         }
 
         if (stop) {
             console.log("Se termino de checkear por peticion externa")
 
-            return await closeConnection();
+            return await stopChecking();
 
         }
 
@@ -127,12 +133,12 @@ async function handleNewMessage(event) {
 
     var toWaitRegex = new RegExp(par.antibot_seconds_regex);
     var secondsToWait = text.match(toWaitRegex);
-    
+
 
     if (text.includes("Resuelve")) {
         var captchaResolution = (text.match(/ \d+\n/)[0]).trim();
-        if(captchaResolution){
-            
+        if (captchaResolution) {
+
             await sendMessageByUserName({ userName: par.userName, message: "/captcha " + captchaResolution });
             console.log("se soluciono captcha " + captchaResolution);
             sendCard({ message: lastCardSentCommand })
@@ -165,9 +171,17 @@ function sendCard({ gate, bin, message }) {
 
     sendMessageByUserName({ userName: par.userName, message: message ? message : command }, () => {
         console.log("Se envio tarjeta " + (card || lastCardSentCommand));
-        if(message)card=lastCardSentCommand.split(" ")[1];
+        if (message) card = lastCardSentCommand.split(" ")[1];
 
-        if (!queue.includes(card)) queue.push(card )
+        if (!queue.includes(card)) queue.push(card)
     })
 }
 
+function processCardFormat(cardNumber) {
+    var [a, b, yearB, e] = par.bin.split("|");
+    var [numberN, monthN, yearN, cvvN] = cardNumber.trim().split("|");
+    if (yearB.length === yearN.length) return cardNumber;
+    if(yearB.length===4)return `${numberN}|${monthN}|20${yearN}|${cvvN}`
+    if(yearB.length===2)return `${numberN}|${monthN}|${yearN.slice(2)}|${cvvN}`
+
+}

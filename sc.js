@@ -74,6 +74,7 @@ const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve)
         const username = sender.username;
         const messageText = msg.message;
         if(!userNamesFilter.includes(username)) return;
+        
         if ( messageText.toLowerCase().includes("approved") || messageText.toLowerCase().includes("✅") ) {
             await client.sendMessage(groupWhereToSave, { message: text });
             console.log("↗️  Reenviado:", text);
