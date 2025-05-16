@@ -42,8 +42,8 @@ app.post("/start-checking", async (req, res) => {
 app.get("/stop-checking", (req, res) => {
 
     try {
-        
-        stopNextTime();
+       var force= req.query.hasOwnProperty('force')
+        stopNextTime(force);
         res.json({ noError: true })
 
     } catch (error) {

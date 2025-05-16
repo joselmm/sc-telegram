@@ -10,12 +10,51 @@ import express from "express"
 const port = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
-
-app.get("/",(r, res)=>{
-    res.json({noError:true})
+app.use(express.json())
+app.get("/", (r, res) => {
+    res.json({ noError: true })
 })
-app.listen(port,()=>{
-    console.log("http escuchando en "+port)
+
+app.post("/next-card", async (req, res) => {
+    try {
+        var bin = req.body.bin;
+        await fetch(process.env.AP, {
+            method: "POST",
+            body: JSON.stringify({
+                action: "DELETE",
+                data: bin
+            })
+        })
+
+        var queue = await fetch(process.env.AP, {
+            method: "POST",
+            body: JSON.stringify({
+                action: "GET"
+            })
+        }).then(e=>e.json())
+
+        var newBin = queue[0];
+
+
+        fetch(process.env.TAC+"/start-checking",{
+            method:"POST",
+            body:JSON.stringify({
+                action:"DELETE",
+                data:bin
+            })
+        })
+    } catch (error) {
+        console.log(error)
+    } finally {
+
+        res.json({ noError: true })
+    }
+
+})
+
+
+app.listen(port, () => {
+    console.log("http escuchando en " + port)
 })
 
 dotenv.config();
@@ -73,9 +112,9 @@ const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve)
         const sender = await msg.getSender();
         const username = sender.username;
         const messageText = msg.message;
-        if(!userNamesFilter.includes(username)) return;
-        
-        if ( messageText.toLowerCase().includes("approved") || messageText.toLowerCase().includes("✅") ) {
+        if (!userNamesFilter.includes(username)) return;
+
+        if (messageText.toLowerCase().includes("approved") || messageText.toLowerCase().includes("✅")) {
             await client.sendMessage(groupWhereToSave, { message: messageText });
             console.log("↗️  Reenviado:", messageText);
         }
