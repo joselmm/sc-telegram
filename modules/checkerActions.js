@@ -88,7 +88,10 @@ async function handleCardCheckResult(event) {
     }
 
     var cardIndex = queue.indexOf(cardNumber)
-    if (cardIndex >= 0 && eval(par.eval_result))  {
+    var isResult = eval(par.eval_result);
+    debugger
+    if (cardIndex >= 0 && isResult)  {
+
         queue.splice(cardIndex, 1)
         attempts++;
 
