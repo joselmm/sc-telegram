@@ -1,9 +1,10 @@
-import { TelegramClient } from "telegram";
+import { TelegramClient, Api } from "telegram";
 import { StringSession } from "telegram/sessions/index.js";
 import dotenv from "dotenv";
 import readline from "readline";
 import { NewMessage } from "telegram/events/index.js";
 import { EditedMessage } from "telegram/events/EditedMessage.js";
+import fs from "fs";
 
 import cors from "cors";
 import express from "express"
@@ -96,11 +97,11 @@ const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve)
     rl.close();
 
     // Pre-carga el peer destino
-    const groupWhereToSave = await client.getEntity(-4687999165);
+    // const groupWhereToSave = await client.getEntity(-4687999165);
 
     // Handlers
-    client.addEventHandler(handleMessage, new EditedMessage({ chats: filtroChats, incoming: true }));
-    client.addEventHandler(handleMessage, new NewMessage({ chats: filtroChats, incoming: true }));
+    //client.addEventHandler(handleMessage, new EditedMessage({ chats: filtroChats, incoming: true }));
+    //client.addEventHandler(handleMessage, new NewMessage({ chats: filtroChats, incoming: true }));
 
     async function handleMessage(event) {
         const userNamesFilter = [
@@ -116,11 +117,43 @@ const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve)
         const messageText = msg.message;
         // if (!userNamesFilter.includes(username)) return;
         var card = messageText.match(cardRegex);
-        if (card===null) return;
+        if (card === null) return;
 
         if (messageText.toLowerCase().includes("approved") || messageText.toLowerCase().includes("✅")) {
             await client.sendMessage(groupWhereToSave, { message: messageText });
             console.log("↗️  Reenviado:", messageText);
         }
     }
-})();
+
+
+    /* const result = await client.invoke(
+        new Api.users.GetFullUser({
+            id: "@Ninjaprotv",
+            // Reemplaza "@username" con el @usuario del contacto
+        })
+    ); */
+    /* const user = await client.getEntity("@Ninjaprotv");   // o "@Ninjaprotv"
+    const uid = user.id;                         // 6898178400n
+    console.log(uid.toString());                         // → "6898178400" */
+
+    const entity = await client.getEntity("5190762402");
+
+   /*  console.log(entity)
+    return */
+
+    const participantes = [];
+    for await (const user of client.iterParticipants(entity, { limit: 10000000,  })) {
+        //console.log(entity)
+        participantes.push({
+            id: user.id,
+            username: user.username || null,
+            firstName: user.firstName || null,
+            lastName: user.lastName || null,
+            phone: user.phone || null, // puede venir null si el usuario no lo comparte
+        });
+    }
+
+    fs.writeFileSync("miembros.json", JSON.stringify(participantes, null, 2));
+    console.log(`Guardados ${participantes.length} usuarios en miembros.json`);
+
+}) ();
