@@ -12,15 +12,20 @@ var attempts = 0;
 var foundLives = 0;
 var lastCardSentCommand = "";
 var stop = false;
+var maxAttempsTimeout = 0;
 
-// ✅ NUEVO: soporte multi-bin
-export var arrayBins = [];         // siempre declarado/creado
-var currentBinIndex = 0;           // índice del bin actual
+export var arrayBins = [];
+export var arrayGates = [];
+var currentBinIndex = 0;
+var currentGateIndex = 0;
 
 export async function monitorTimeout() {
     await new Promise(r => setTimeout(r, 1000));
+    if (maxAttempsTimeout === 3) {
+        maxAttempsTimeout = 0;
+        await advanceToNextGate();
+    }
 
-    // Evita errores si la cola está vacía o no hay último comando
     const hasQueue = queue.length > 0;
     if (
         hasQueue &&
@@ -31,10 +36,10 @@ export async function monitorTimeout() {
     ) {
         queue.pop();
         console.warn("Se superó el tiempo de espera, enviando nueva tarjeta");
+        maxAttempsTimeout++;
         sendCard({ bin: par.bin, gate: par.gate });
     }
 
-    // Mantén el loop de monitoreo
     monitorTimeout();
 }
 
@@ -48,7 +53,6 @@ export async function startChecking(args) {
     stop = false;
     lastCardSentCommand = "";
 
-    // ✅ Preparar arrayBins a partir de args.bin (puede venir como CSV)
     arrayBins = String(args.bin || "")
         .split(",")
         .map(b => b.trim())
@@ -59,11 +63,22 @@ export async function startChecking(args) {
         throw new Error("No se proporcionó ningún bin válido.");
     }
 
-    currentBinIndex = 0;
+    arrayGates = String(args.gate || "")
+        .split(",")
+        .map(g => g.trim())
+        .filter(Boolean);
 
-    // Guardamos par y fijamos el bin inicial
+    if (arrayGates.length === 0) {
+        checking = false;
+        throw new Error("No se proporcionó ningún gate válido.");
+    }
+
+    currentBinIndex = 0;
+    currentGateIndex = 0;
+
     par = args;
     par.bin = arrayBins[currentBinIndex];
+    par.gate = arrayGates[currentGateIndex];
 
     try {
         monitorTimeout();
@@ -73,7 +88,7 @@ export async function startChecking(args) {
         onMessageEvent({ on: "edit", handler: handleMessageEdited, userName: par.userName });
         onMessageEvent({ on: "new", handler: handleNewMessage, userName: par.userName });
 
-        console.log(colors.bgCyan(`Se comenzó a checkear ${args.gate} (bins: ${arrayBins.join(", ")})`));
+        console.log(colors.bgCyan(`Se comenzó a checkear (bins: ${arrayBins.join(", ")}, gates: ${arrayGates.join(", ")})`));
         sendCard({ bin: par.bin, gate: par.gate });
 
     } catch (err) {
@@ -104,17 +119,15 @@ async function handleCardCheckResult(event) {
     const message = event.message;
     var text = message.message;
 
-    // prints sender id
     var sender = await message.getSender();
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch ? cardMatch[0] : null;
     cardNumber = processCardFormat(cardNumber);
-    
 
     if (sender.username === par.userName && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
-        text += "\n\n*Bin:* `" + par.gate + " " + par.bin + "`";
+        text += `\n\n*Bin:* \`${par.bin}\` *Gate:* \`${par.gate}\``;
         await sendMessageByUserName({ userName: par.me, message: text }, () => {
-            console.log(colors.green("Se encontró y se envió live " + cardMatch + " a " + par.me));
+            console.log(colors.green(`Se encontró y se envió live ${cardMatch} a ${par.me}`));
         });
         foundLives++;
     }
@@ -125,18 +138,15 @@ async function handleCardCheckResult(event) {
     if (cardIndex >= 0 && isResult) {
         queue.splice(cardIndex, 1);
         attempts++;
+        maxAttempsTimeout = 0; // Reset max attempts counter after successful processing
+        console.log(colors.red(`Intento ${attempts} (bin ${currentBinIndex + 1}/${arrayBins.length}, gate ${currentGateIndex + 1}/${arrayGates.length}). La tarjeta ${cardNumber} se borró de la cola`));
 
-        console.log(colors.red(`Intento ${attempts} (bin ${currentBinIndex + 1}/${arrayBins.length}). La tarjeta ${cardNumber} se borró de la cola`));
-
-        // ✅ Si llegamos al máximo de intentos por BIN, pasamos al siguiente BIN
         if (attempts === par.max_atemps_per_bin) {
             console.log(colors.yellow(`Se alcanzó el máximo de intentos para el BIN actual: ${par.bin}`));
             const advanced = await advanceToNextBin();
             if (!advanced) {
-                // No hay más bins; stopChecking ya fue llamado dentro de advanceToNextBin
                 return;
             }
-            // Al avanzar a siguiente BIN, ya se envió una nueva tarjeta; terminamos aquí.
             return;
         }
 
@@ -154,7 +164,6 @@ async function handleCardCheckResult(event) {
     await waitForTimeout(par.to_wait_card_send * 1000);
 
     if (queue.length === 0) {
-        // Con multi-bin, par.bin siempre apunta al bin actual
         sendCard({ gate: par.gate, bin: par.bin });
     }
 }
@@ -174,7 +183,7 @@ async function handleNewMessage(event) {
         if (captchaResolution) {
             await sendMessageByUserName({ userName: par.userName, message: "/captcha " + captchaResolution });
             console.log("Se solucionó captcha " + captchaResolution);
-            sendCard({ message: lastCardSentCommand, anyway: true });
+            sendCard({ message: lastCardSentCommand });
         }
     }
 
@@ -192,25 +201,40 @@ export function waitForTimeout(milliseconds) {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
-// ✅ NUEVO: avanzar al siguiente BIN o terminar si no hay más
 async function advanceToNextBin() {
-    // Limpiamos estado del BIN actual
     queue = [];
     lastCardSentCommand = "";
 
     if (currentBinIndex < arrayBins.length - 1) {
         currentBinIndex++;
         par.bin = arrayBins[currentBinIndex];
-        attempts = 0; // Reinicia intentos por BIN
+        attempts = 0;
         console.log(colors.bgCyan(`Cambiando al siguiente BIN (${currentBinIndex + 1}/${arrayBins.length}): ${par.bin}`));
-
-        // Enviar primera tarjeta del nuevo BIN
         sendCard({ gate: par.gate, bin: par.bin });
-        return true;
+        return true; // Hay más bins
     } else {
-        console.log(colors.bgMagenta("No hay más BINs. Se termina el proceso."));
+        // Avanzar al siguiente gate
+        const advancedGate = await advanceToNextGate();
+        if (advancedGate) {
+            currentBinIndex = 0; // Reiniciar los bins
+            par.bin = arrayBins[currentBinIndex];
+            sendCard({ gate: par.gate, bin: par.bin });
+        }
+        return false; // No hay más bins ni gates
+    }
+}
+
+async function advanceToNextGate() {
+    if (currentGateIndex < arrayGates.length - 1) {
+        currentGateIndex++;
+        par.gate = arrayGates[currentGateIndex];
+        attempts = 0;
+        console.log(colors.bgCyan(`Cambiando al siguiente gate (${currentGateIndex + 1}/${arrayGates.length}): ${par.gate}`));
+        return true; // Hay más gates
+    } else {
+        console.log(colors.bgMagenta("No hay más gates. Se termina el proceso."));
         await stopChecking();
-        return false;
+        return false; // No hay más gates
     }
 }
 
