@@ -1,4 +1,4 @@
-
+import { exec } from "child_process";
 import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
@@ -25,6 +25,10 @@ app.post("/start-checking", async (req, res) => {
     }
 
 });
+//INTERFAZ
+app.get("/", (req, res) => {
+  res.sendFile("interfaz.html", { root: "." });
+});
 
 app.get("/stop-checking", (req, res) => {
 
@@ -43,6 +47,21 @@ app.get("/stop-checking", (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("Escuchando en el puerto " + port)
-})
+  console.log("Escuchando en el puerto " + port);
+
+  // Si el segundo argumento (después de node app) es "abrir"
+  if (process.argv[2] === "abrir") {
+    const url = `http://localhost:${port}/`;
+
+    // Windows / Mac / Linux
+    const start =
+      process.platform == "darwin"
+        ? "open"
+        : process.platform == "win32"
+        ? "start"
+        : "xdg-open";
+
+    exec(`${start} ${url}`);
+  }
+});
 
