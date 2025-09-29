@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulario — Enviar payload JSON</title>
+  <style>
+    :root {
+      --bg: #0f1724; --card: #111827; --muted: #9aa4bd; --text: #e6eef8; --accent: #60a5fa;
+      --ok: #10b981; --err: #ef4444; --border: #22314a;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 20px; background: linear-gradient(180deg, #081029, #07101e); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, Arial; }
+    h1 { margin: 0 0 16px; font-size: 1.25rem; color: var(--accent); }
+    .wrap { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 18px; }
+    @media (max-width: 980px) { .wrap { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border: 1px solid var(--border); padding: 16px; border-radius: 12px; }
+    label { display: block; color: var(--muted); font-size: 0.86rem; margin-bottom: 6px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    input[type="text"], input[type="number"], textarea, select {
+      width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: #071224; color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .btn { padding: 9px 12px; border-radius: 9px; border: 1px solid var(--border); background: linear-gradient(#0f1724, #071224); color: var(--text); cursor: pointer; font-weight: 600; }
+    .btn.primary { background: linear-gradient(#1e3a8a, #0f1724); }
+    .btn.warn { background: linear-gradient(#b45309, #7c2d12); }
+    .muted { color: var(--muted); font-size: 0.85rem; }
+    pre { background: #071324; padding: 10px; border-radius: 8px; border: 1px solid var(--border); overflow: auto; white-space: pre-wrap; }
+    .field-help { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+    .small { font-size: 0.85rem; color: var(--muted); }
+    .status { display: inline-flex; gap: 8px; align-items: center; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: #071726; }
+    .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--muted); display: inline-block; }
+    .dot.ok { background: var(--ok); } .dot.err { background: var(--err); } .dot.warn { background: #f59e0b; }
+    .footer-note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+    .error { color: var(--err); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Formulario — Generar y enviar payload JSON</h1>
+
+  <div class="wrap">
+    <!-- left: formulario -->
+    <div class="card">
+      <h2 style="margin-top:0;color:var(--accent)">1) Rellena el formulario</h2>
+      <form id="payloadForm">
+        <div style="display:grid;gap:10px">
+          <label>userName
+            <input id="userName" type="text" value="@SeyaChk_bot" required />
+          </label>
+
+          <label>eval_result <span class="small">— expresión (string)</span>
+            <input id="eval_result" type="text" value="text.includes('✅') || text.includes('❌') || text.includes('⚠')" />
+            <div class="field-help">Expresión que se evaluará como string (se enviará tal cual en el JSON).</div>
+          </label>
+
+          <div class="grid-2">
+            <label>currentCards
+              <input id="currentCards" type="number" value="1" min="0" />
+            </label>
+            <label>timeout (s)
+              <input id="timeout" type="number" value="30" min="0" />
+            </label>
+          </div>
+
+          <label>bin
+            <input id="bin" type="text" value="53069177612xxxxx|rnd|2028|rnd" />
+            <div class="field-help">Cadena identificadora (puede contener separadores). No la cambies salvo que sea tuya.</div>
+          </label>
+
+          <label>gate
+            <input id="gate" type="text" value="/st" />
+          </label>
+
+          <div class="grid-2">
+            <label>me
+              <input id="me" type="text" value="me" />
+            </label>
+            <label>num_to_find
+              <input id="num_to_find" type="number" value="3" min="0" />
+            </label>
+          </div>
+
+          <div class="grid-2">
+            <label>to_wait_card_send (s)
+              <input id="to_wait_card_send" type="number" value="3" min="0" />
+            </label>
+            <label>max_atemps_per_bin
+              <input id="max_atemps_per_bin" type="number" value="30" min="0" />
+            </label>
+          </div>
+
+          <label>antibot_seconds_regex
+            <input id="antibot_seconds_regex" type="text" value=" \\d+ " />
+            <div class="field-help">Cadena con regex (se envía como string). Ej: <code> \\d+ </code></div>
+          </label>
+
+          <label>antibot_if_contains
+            <input id="antibot_if_contains" type="text" value="Anti-Spam" />
+          </label>
+
+          <label>live_if_contains
+            <input id="live_if_contains" type="text" value="✅" />
+          </label>
+
+          <div class="row" style="margin-top:8px">
+            <button id="buildBtn" class="btn">Construir JSON</button>
+            <button id="sendBtn" type="button" class="btn primary">Enviar POST</button>
+            <button id="resetBtn" type="button" class="btn" style="opacity:0.9">Restablecer</button>
+            <div style="flex:1"></div>
+            <div id="formStatus" class="status"><span class="dot warn"></span><span class="small">Sin enviar</span></div>
+          </div>
+
+          <div class="footer-note">Tip: puedes editar la previsualización JSON si quieres afinar algo antes de enviar.</div>
+        </div>
+      </form>
+    </div>
+
+    <!-- right: preview + stop -->
+    <div>
+      <div class="card" style="margin-bottom:12px">
+        <h2 style="margin-top:0;color:var(--accent)">2) Previsualización JSON</h2>
+        <label>Base URL
+          <input id="baseUrl" type="text" value="http://localhost:3000" />
+        </label>
+
+        <label style="margin-top:8px">JSON generado (editable)
+          <textarea id="jsonPreview" spellcheck="false"></textarea>
+        </label>
+
+        <div class="row" style="margin-top:8px">
+          <button id="prettyBtn" class="btn">Formatear</button>
+          <button id="copyBtn" class="btn">Copiar JSON</button>
+          <div style="flex:1"></div>
+          <div class="muted">CORS: el servidor debe permitir peticiones desde este origen si el archivo se abre localmente.</div>
+        </div>
+
+        <label style="margin-top:10px">Respuesta del servidor</label>
+        <pre id="postResponse">—</pre>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0;color:var(--accent)">3) Detener — GET /stop-checking</h2>
+        <div style="margin-top:8px" class="row">
+          <label style="display:inline-flex;align-items:center;gap:8px">
+            <input id="forceChk" type="checkbox" />
+            <span class="small">Agregar <code>?force=1</code></span>
+          </label>
+          <button id="stopBtn" class="btn warn">Detener (GET)</button>
+          <div style="flex:1"></div>
+          <div id="stopStatus" class="status"><span class="dot warn"></span><span class="small">Sin enviar</span></div>
+        </div>
+
+        <label style="margin-top:10px">Respuesta</label>
+        <pre id="stopResponse">—</pre>
+
+        <div class="field-help" style="margin-top:8px">Este botón hace un GET al endpoint de parada. Si marcas <code>force</code> la query string añadida será <code>?force=1</code>.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Elementos
+    const form = document.getElementById('payloadForm');
+    const fields = {
+      userName: document.getElementById('userName'),
+      eval_result: document.getElementById('eval_result'),
+      currentCards: document.getElementById('currentCards'),
+      timeout: document.getElementById('timeout'),
+      bin: document.getElementById('bin'),
+      gate: document.getElementById('gate'),
+      me: document.getElementById('me'),
+      num_to_find: document.getElementById('num_to_find'),
+      to_wait_card_send: document.getElementById('to_wait_card_send'),
+      antibot_seconds_regex: document.getElementById('antibot_seconds_regex'),
+      antibot_if_contains: document.getElementById('antibot_if_contains'),
+      max_atemps_per_bin: document.getElementById('max_atemps_per_bin'),
+      live_if_contains: document.getElementById('live_if_contains'),
+    };
+    const baseUrlInput = document.getElementById('baseUrl');
+    const jsonPreview = document.getElementById('jsonPreview');
+    const buildBtn = document.getElementById('buildBtn');
+    const prettyBtn = document.getElementById('prettyBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const sendBtn = document.getElementById('sendBtn');
+    const postResponse = document.getElementById('postResponse');
+    const formStatus = document.getElementById('formStatus');
+
+    const resetBtn = document.getElementById('resetBtn');
+
+    const forceChk = document.getElementById('forceChk');
+    const stopBtn = document.getElementById('stopBtn');
+    const stopResponse = document.getElementById('stopResponse');
+    const stopStatus = document.getElementById('stopStatus');
+
+    // Estado / LocalStorage keys
+    const LS = {
+      baseUrl: 'form_base_url',
+      force: 'form_force',
+      json: 'form_last_json'
+    };
+
+    // Helper function to construct URLs
+    function constructUrl(baseUrl, endpoint) {
+      if (!baseUrl) baseUrl = 'http://localhost:3000'; // Fallback
+      baseUrl = baseUrl.replace(/\/$/, '');
+      endpoint = endpoint.replace(/^\//, '');
+      return `${baseUrl}/${endpoint}`;
+    }
+
+    // Construye el objeto payload desde inputs
+    function buildPayload() {
+      const payload = {
+        userName: fields.userName.value.trim(),
+        eval_result: fields.eval_result.value,
+        currentCards: Number(fields.currentCards.value) || 0,
+        timeout: Number(fields.timeout.value) || 0,
+        bin: fields.bin.value,
+        gate: fields.gate.value,
+        me: fields.me.value,
+        num_to_find: Number(fields.num_to_find.value) || 0,
+        to_wait_card_send: Number(fields.to_wait_card_send.value) || 0,
+        antibot_seconds_regex: fields.antibot_seconds_regex.value,
+        antibot_if_contains: fields.antibot_if_contains.value,
+        max_atemps_per_bin: Number(fields.max_atemps_per_bin.value) || 0,
+        live_if_contains: fields.live_if_contains.value
+      };
+      return payload;
+    }
+
+    function updatePreviewFromForm() {
+      const p = buildPayload();
+      const pretty = JSON.stringify(p, null, 2);
+      jsonPreview.value = pretty;
+      localStorage.setItem(LS.json, pretty);
+    }
+
+    function updateFormFromPreview() {
+      try {
+        const obj = JSON.parse(jsonPreview.value);
+        Object.keys(fields).forEach(k => {
+          if (obj[k] !== undefined) fields[k].value = String(obj[k]);
+        });
+        setStatus(formStatus, 'ok', 'Preview aplicada al formulario');
+        localStorage.setItem(LS.json, jsonPreview.value);
+      } catch (e) {
+        setStatus(formStatus, 'err', 'JSON inválido');
+      }
+    }
+
+    // Status helper
+    function setStatus(el, type, text) {
+      const dot = el.querySelector('.dot');
+      const label = el.querySelector('span:nth-child(2)');
+      if (!dot || !label) return;
+      dot.className = 'dot ' + (type === 'ok' ? 'ok' : (type === 'err' ? 'err' : 'warn'));
+      label.textContent = text || '';
+    }
+
+    // Eventos
+    buildBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      updatePreviewFromForm();
+      setStatus(formStatus, 'ok', 'JSON construido');
+    });
+
+    prettyBtn.addEventListener('click', () => {
+      try {
+        const parsed = JSON.parse(jsonPreview.value);
+        jsonPreview.value = JSON.stringify(parsed, null, 2);
+        localStorage.setItem(LS.json, jsonPreview.value);
+      } catch (e) {
+        try {
+          updatePreviewFromForm();
+        } catch {}
+      }
+    });
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(jsonPreview.value);
+        setStatus(formStatus, 'ok', 'JSON copiado al portapapeles');
+      } catch (e) {
+        setStatus(formStatus, 'err', 'No se pudo copiar');
+      }
+    });
+
+    // Enviar POST
+    sendBtn.addEventListener('click', async () => {
+      let payload;
+      try {
+        payload = JSON.parse(jsonPreview.value);
+      } catch (e) {
+        setStatus(formStatus, 'err', 'JSON inválido');
+        postResponse.textContent = 'Error al parsear JSON: ' + e.message;
+        return;
+      }
+
+      const url = constructUrl(baseUrlInput.value, '/start-checking');
+      setStatus(formStatus, 'warn', 'Enviando...');
+      postResponse.textContent = 'Enviando...';
+
+      const t0 = performance.now();
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const ct = res.headers.get('content-type') || '';
+        const elapsed = Math.round(performance.now() - t0);
+        let body;
+        if (ct.includes('application/json')) {
+          body = await res.json();
+          postResponse.textContent = `HTTP ${res.status} • ${elapsed} ms\n\n` + JSON.stringify(body, null, 2);
+        } else {
+          body = await res.text();
+          postResponse.textContent = `HTTP ${res.status} • ${elapsed} ms\n\n` + body;
+        }
+        setStatus(formStatus, res.ok ? 'ok' : 'err', res.ok ? 'Éxito' : 'Error');
+      } catch (err) {
+        setStatus(formStatus, 'err', 'Fallo de red');
+        postResponse.textContent = 'Error de conexión: ' + String(err);
+      }
+    });
+
+    // GET /stop-checking
+    stopBtn.addEventListener('click', async () => {
+      const url = constructUrl(baseUrlInput.value, '/stop-checking');
+      const fullUrl = url + (forceChk.checked ? (url.includes('?') ? '&force=1' : '?force=1') : '');
+      setStatus(stopStatus, 'warn', 'Enviando...');
+      stopResponse.textContent = 'Enviando...';
+      const t0 = performance.now();
+      try {
+        const res = await fetch(fullUrl, { method: 'GET' });
+        const ct = res.headers.get('content-type') || '';
+        const elapsed = Math.round(performance.now() - t0);
+        if (ct.includes('application/json')) {
+          const json = await res.json();
+          stopResponse.textContent = `HTTP ${res.status} • ${elapsed} ms\n\n` + JSON.stringify(json, null, 2);
+        } else {
+          const text = await res.text();
+          stopResponse.textContent = `HTTP ${res.status} • ${elapsed} ms\n\n` + text;
+        }
+        setStatus(stopStatus, res.ok ? 'ok' : 'err', res.ok ? 'Éxito' : 'Error');
+      } catch (err) {
+        setStatus(stopStatus, 'err', 'Fallo de red');
+        stopResponse.textContent = 'Error de conexión: ' + String(err);
+      }
+    });
+
+    // Reset
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Restablecer al estado inicial?')) {
+        localStorage.removeItem(LS.json);
+        location.reload();
+      }
+    });
+
+    // Al editar preview manualmente, aplicar cambios al formulario si el usuario lo solicita (doble click)
+    jsonPreview.addEventListener('dblclick', () => {
+      if (confirm('¿Aplicar el JSON actual al formulario? Se sobreescribirán los campos.')) {
+        updateFormFromPreview();
+      }
+    });
+
+    // Auto-guardar y cargar
+    function saveState() {
+      localStorage.setItem(LS.baseUrl, baseUrlInput.value);
+      localStorage.setItem(LS.force, forceChk.checked ? '1' : '0');
+      localStorage.setItem(LS.json, jsonPreview.value);
+    }
+
+    function loadState() {
+      const savedJson = localStorage.getItem(LS.json);
+      if (savedJson) jsonPreview.value = savedJson;
+      else {
+        jsonPreview.value = JSON.stringify(buildPayload(), null, 2);
+      }
+      if (localStorage.getItem(LS.baseUrl)) baseUrlInput.value = localStorage.getItem(LS.baseUrl);
+      if (localStorage.getItem(LS.force)) forceChk.checked = localStorage.getItem(LS.force) === '1';
+
+      setInterval(saveState, 2000);
+    }
+
+    // On load: init preview and handlers for inputs to keep preview in sync
+    window.addEventListener('load', () => {
+      loadState();
+      Object.values(fields).forEach(f => f.addEventListener('change', updatePreviewFromForm));
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+          e.preventDefault();
+          updatePreviewFromForm();
+          setStatus(formStatus, 'ok', 'Guardado local (preview actualizado)');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
