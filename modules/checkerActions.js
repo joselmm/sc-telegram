@@ -84,6 +84,7 @@ export async function startChecking(args) {
         monitorTimeout();
 
         await connect();
+        
 
         onMessageEvent({ on: "edit", handler: handleMessageEdited, userName: par.userName });
         onMessageEvent({ on: "new", handler: handleNewMessage, userName: par.userName });
@@ -110,6 +111,7 @@ export function stopNextTime() {
 async function handleMessageEdited(event) {
     const message = event.message;
     var text = message.message;
+    debugger
     if (text.match(cardRegex)) {
         await handleCardCheckResult(event);
     }
@@ -123,8 +125,8 @@ async function handleCardCheckResult(event) {
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch ? cardMatch[0] : null;
     cardNumber = processCardFormat(cardNumber);
-
-    if (sender.username === par.userName && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
+    debugger
+    if (sender.username === par.userName.replace("@","") && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
         text += `\n\n*Bin:* \`${par.bin}\` *Gate:* \`${par.gate}\``;
         await sendMessageByUserName({ userName: par.me, message: text }, () => {
             console.log(colors.green(`Se encontró y se envió live ${cardMatch} a ${par.me}`));
@@ -171,6 +173,7 @@ async function handleCardCheckResult(event) {
 async function handleNewMessage(event) {
     const message = event.message;
     const text = message.message;
+    debugger
     if (text.match(cardRegex)) {
         await handleCardCheckResult(event);
     }
