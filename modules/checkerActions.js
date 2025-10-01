@@ -122,11 +122,12 @@ async function handleCardCheckResult(event) {
     var text = message.message;
 
     var sender = await message.getSender();
+    
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch ? cardMatch[0] : null;
     cardNumber = processCardFormat(cardNumber);
     debugger
-    if (sender.username === par.userName.replace("@","") && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
+    if (sender.username.toLowerCase() === par.userName.toLowerCase().replace("@","") && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
         text += `\n\n*Bin:* \`${par.bin}\` *Gate:* \`${par.gate}\``;
         await sendMessageByUserName({ userName: par.me, message: text }, () => {
             console.log(colors.green(`Se encontró y se envió live ${cardMatch} a ${par.me}`));
