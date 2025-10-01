@@ -6,6 +6,70 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Formulario — Enviar payload JSON</title>
   <style>
+    .ansi-black-fg {
+      color: #000;
+    }
+
+    .ansi-red-fg {
+      color: #f87171;
+    }
+
+    .ansi-green-fg {
+      color: #4ade80;
+    }
+
+    .ansi-yellow-fg {
+      color: #facc15;
+    }
+
+    .ansi-blue-fg {
+      color: #60a5fa;
+    }
+
+    .ansi-magenta-fg {
+      color: #d946ef;
+    }
+
+    .ansi-cyan-fg {
+      color: #22d3ee;
+    }
+
+    .ansi-white-fg {
+      color: #f3f4f6;
+    }
+
+    .ansi-bright-black-fg {
+      color: #6b7280;
+    }
+
+    .ansi-bright-red-fg {
+      color: #ef4444;
+    }
+
+    .ansi-bright-green-fg {
+      color: #22c55e;
+    }
+
+    .ansi-bright-yellow-fg {
+      color: #eab308;
+    }
+
+    .ansi-bright-blue-fg {
+      color: #3b82f6;
+    }
+
+    .ansi-bright-magenta-fg {
+      color: #c026d3;
+    }
+
+    .ansi-bright-cyan-fg {
+      color: #06b6d4;
+    }
+
+    .ansi-bright-white-fg {
+      color: #ffffff;
+    }
+
     :root {
       --bg: #0f1724;
       --card: #111827;
@@ -181,7 +245,7 @@
   <script src="https://cdn.jsdelivr.net/npm/ansi_up@5.2.1/ansi_up.min.js"></script>
 
 </head>
- 
+
 <body>
   <h1>Formulario — Generar y enviar payload JSON</h1>
 
@@ -306,7 +370,8 @@
         <pre id="stopResponse">—</pre>
 
         <div class="field-help" style="margin-top:8px">Este botón hace un GET al endpoint de parada. Si marcas
-          <code>force</code> la query string añadida será <code>?force=1</code>.</div>
+          <code>force</code> la query string añadida será <code>?force=1</code>.
+        </div>
       </div>
       <!-- 4) Logs en vivo (solo lectura) -->
       <div class="card" style="margin-top:12px">
@@ -319,7 +384,9 @@
           <div id="wsBuf" class="status"><span class="dot warn"></span><span class="small">Buffer: —</span></div>
         </div>
 
-        <pre id="logsTerm" style="height:260px;background:#000;color:#0f0;white-space:pre-wrap"></pre>
+        <div id="logsTerm" style="height:260px;background:#000;color:#fff;
+     font-family:monospace;white-space:pre-wrap;overflow:auto;padding:8px"></div>
+
 
         <div class="row" style="margin-top:8px">
           <button id="clearLogsBtn" class="btn">Limpiar</button>
@@ -606,144 +673,147 @@
     });
   </script>
   <script>
-  // ===================== WS LOGS (solo lectura) =====================
+    // ===================== WS LOGS (solo lectura) =====================
 
-  const logsTerm = document.getElementById('logsTerm');
-  const wsConn   = document.getElementById('wsConn');
-  const wsRec    = document.getElementById('wsRec');
-  const wsBuf    = document.getElementById('wsBuf');
-  const clearLogsBtn = document.getElementById('clearLogsBtn');
+    const logsTerm = document.getElementById('logsTerm');
+    const wsConn = document.getElementById('wsConn');
+    const wsRec = document.getElementById('wsRec');
+    const wsBuf = document.getElementById('wsBuf');
+    const clearLogsBtn = document.getElementById('clearLogsBtn');
 
-  // Estado de terminal local (DOM)
-  let domLines = 0;              // cuántas líneas hay en pantalla
-  const DOM_MAX = 2000;          // evita crecer infinito el DOM
+    // Estado de terminal local (DOM)
+    let domLines = 0;              // cuántas líneas hay en pantalla
+    const DOM_MAX = 2000;          // evita crecer infinito el DOM
 
-  // Helpers de UI
-  function setStatusChip(el, type, text) {
-    if (!el) return;
-    const dot = el.querySelector('.dot');
-    const label = el.querySelector('span:nth-child(2)');
-    if (dot) dot.className = 'dot ' + (type === 'ok' ? 'ok' : type === 'err' ? 'err' : 'warn');
-    if (label && text) label.textContent = text;
-  }
-
-  function appendLine(line) {
-    // capar tamaño: si excede, recorta por arriba
-    if (domLines > DOM_MAX) {
-      // recorta primer 20%
-      const txt = logsTerm.textContent;
-      const cutAt = Math.floor(txt.length * 0.2);
-      logsTerm.textContent = txt.slice(cutAt);
-      domLines = Math.floor(domLines * 0.8);
-    }
-    logsTerm.textContent += (line.endsWith('\n') ? line : (line + '\n'));
-    domLines++;
-    logsTerm.scrollTop = logsTerm.scrollHeight;
-  }
-
-  // Construye la URL ws://.../ws a partir de baseUrl
-  function getWsUrl() {
-    const raw = (baseUrlInput?.value || '').trim();
-    try {
-      const u = new URL(raw || window.location.href);
-      const proto = (u.protocol === 'https:') ? 'wss:' : 'ws:';
-      return `${proto}//${u.host}/ws`;
-    } catch {
-      const proto = (location.protocol === 'https:') ? 'wss:' : 'ws:';
-      return `${proto}//${location.host}/ws`;
-    }
-  }
-
-  let ws;
-  let reconnectTimer;
-  const RECONNECT_MS = 1500;
-
-  function connectWS() {
-    try {
-      ws = new WebSocket(getWsUrl());
-    } catch (e) {
-      setStatusChip(wsConn, 'err', 'WS: error URL');
-      return;
+    // Helpers de UI
+    function setStatusChip(el, type, text) {
+      if (!el) return;
+      const dot = el.querySelector('.dot');
+      const label = el.querySelector('span:nth-child(2)');
+      if (dot) dot.className = 'dot ' + (type === 'ok' ? 'ok' : type === 'err' ? 'err' : 'warn');
+      if (label && text) label.textContent = text;
     }
 
-    ws.onopen = () => {
-      setStatusChip(wsConn, 'ok', 'WS: conectado');
-      // No enviamos nada (solo lectura)
-    };
+    const ansi_up = new AnsiUp();
+    ansi_up.use_classes = true; // genera clases CSS reutilizables
 
-    ws.onmessage = (ev) => {
-      let data = ev.data;
-      try { data = JSON.parse(ev.data); } catch {}
-      // Soportamos tanto string plano como JSON
-      if (typeof data === 'string') {
-        appendLine(data);
-        // no sabemos buffer ni recording si llega como texto, así que no tocamos chips
+    function appendLine(line) {
+      if (domLines > DOM_MAX) {
+        const cutAt = Math.floor(logsTerm.textContent.length * 0.2);
+        logsTerm.textContent = logsTerm.textContent.slice(cutAt);
+        domLines = Math.floor(domLines * 0.8);
+      }
+      // Convertir ANSI a HTML seguro
+      const html = ansi_up.ansi_to_html(line);
+      logsTerm.insertAdjacentHTML("beforeend", html + "<br>");
+      domLines++;
+      logsTerm.scrollTop = logsTerm.scrollHeight;
+    }
+
+
+    // Construye la URL ws://.../ws a partir de baseUrl
+    function getWsUrl() {
+      const raw = (baseUrlInput?.value || '').trim();
+      try {
+        const u = new URL(raw || window.location.href);
+        const proto = (u.protocol === 'https:') ? 'wss:' : 'ws:';
+        return `${proto}//${u.host}/ws`;
+      } catch {
+        const proto = (location.protocol === 'https:') ? 'wss:' : 'ws:';
+        return `${proto}//${location.host}/ws`;
+      }
+    }
+
+    let ws;
+    let reconnectTimer;
+    const RECONNECT_MS = 1500;
+
+    function connectWS() {
+      try {
+        ws = new WebSocket(getWsUrl());
+      } catch (e) {
+        setStatusChip(wsConn, 'err', 'WS: error URL');
         return;
       }
 
-      if (data && typeof data === 'object') {
-        switch (data.type) {
-          case 'hello':
-            setStatusChip(wsRec, data.recording ? 'ok' : 'warn', data.recording ? 'Grabando: Sí' : 'Grabando: No');
-            setStatusChip(wsBuf, 'ok', `Buffer: ${data.stored}/${data.bufferSize}`);
-            break;
-          case 'history':
-            if (Array.isArray(data.logs)) {
-              // Pintar histórico
-              logsTerm.textContent = ''; domLines = 0;
-              data.logs.forEach(line => appendLine(line));
-              // Actualizar contador de buffer si no lo envió hello
-              if (!wsBuf.querySelector('span:nth-child(2)').textContent.includes('/')) {
-                setStatusChip(wsBuf, 'ok', `Buffer: ${data.logs.length}/100`);
-              }
-            }
-            break;
-          case 'log':
-            if (typeof data.line === 'string') {
-              appendLine(data.line);
-              // actualizar contador aprox si tenemos límite conocido
-              const cur = wsBuf.querySelector('span:nth-child(2)').textContent;
-              const m = cur.match(/Buffer:\s*(\d+)\s*\/\s*(\d+)/);
-              if (m) {
-                let n = Number(m[1]) || 0;
-                const max = Number(m[2]) || 100;
-                n = Math.min(max, n + 1);
-                setStatusChip(wsBuf, 'ok', `Buffer: ${n}/${max}`);
-              }
-            }
-            break;
+      ws.onopen = () => {
+        setStatusChip(wsConn, 'ok', 'WS: conectado');
+        // No enviamos nada (solo lectura)
+      };
+
+      ws.onmessage = (ev) => {
+        let data = ev.data;
+        try { data = JSON.parse(ev.data); } catch { }
+        // Soportamos tanto string plano como JSON
+        if (typeof data === 'string') {
+          appendLine(data);
+          // no sabemos buffer ni recording si llega como texto, así que no tocamos chips
+          return;
         }
-      }
-    };
 
-    ws.onclose = () => {
-      setStatusChip(wsConn, 'warn', 'WS: desconectado (reintentando…)');
-      clearTimeout(reconnectTimer);
-      reconnectTimer = setTimeout(connectWS, RECONNECT_MS);
-    };
+        if (data && typeof data === 'object') {
+          switch (data.type) {
+            case 'hello':
+              setStatusChip(wsRec, data.recording ? 'ok' : 'warn', data.recording ? 'Grabando: Sí' : 'Grabando: No');
+              setStatusChip(wsBuf, 'ok', `Buffer: ${data.stored}/${data.bufferSize}`);
+              break;
+            case 'history':
+              if (Array.isArray(data.logs)) {
+                // Pintar histórico
+                logsTerm.textContent = ''; domLines = 0;
+                data.logs.forEach(line => appendLine(line));
+                // Actualizar contador de buffer si no lo envió hello
+                if (!wsBuf.querySelector('span:nth-child(2)').textContent.includes('/')) {
+                  setStatusChip(wsBuf, 'ok', `Buffer: ${data.logs.length}/100`);
+                }
+              }
+              break;
+            case 'log':
+              if (typeof data.line === 'string') {
+                appendLine(data.line);
+                // actualizar contador aprox si tenemos límite conocido
+                const cur = wsBuf.querySelector('span:nth-child(2)').textContent;
+                const m = cur.match(/Buffer:\s*(\d+)\s*\/\s*(\d+)/);
+                if (m) {
+                  let n = Number(m[1]) || 0;
+                  const max = Number(m[2]) || 100;
+                  n = Math.min(max, n + 1);
+                  setStatusChip(wsBuf, 'ok', `Buffer: ${n}/${max}`);
+                }
+              }
+              break;
+          }
+        }
+      };
 
-    ws.onerror = () => {
-      setStatusChip(wsConn, 'err', 'WS: error');
-      // el onclose hará el reconnect
-    };
-  }
+      ws.onclose = () => {
+        setStatusChip(wsConn, 'warn', 'WS: desconectado (reintentando…)');
+        clearTimeout(reconnectTimer);
+        reconnectTimer = setTimeout(connectWS, RECONNECT_MS);
+      };
 
-  // Limpiar terminal manualmente (no limpia el buffer del servidor)
-  clearLogsBtn?.addEventListener('click', () => {
-    logsTerm.textContent = '';
-    domLines = 0;
-  });
+      ws.onerror = () => {
+        setStatusChip(wsConn, 'err', 'WS: error');
+        // el onclose hará el reconnect
+      };
+    }
 
-  // Re-conectar WS si cambia la baseUrl
-  baseUrlInput?.addEventListener('input', () => {
-    try { ws?.close(); } catch {}
-  });
+    // Limpiar terminal manualmente (no limpia el buffer del servidor)
+    clearLogsBtn?.addEventListener('click', () => {
+      logsTerm.textContent = '';
+      domLines = 0;
+    });
 
-  // Arrancar WS al cargar
-  window.addEventListener('load', () => {
-    connectWS();
-  });
-</script>
+    // Re-conectar WS si cambia la baseUrl
+    baseUrlInput?.addEventListener('input', () => {
+      try { ws?.close(); } catch { }
+    });
+
+    // Arrancar WS al cargar
+    window.addEventListener('load', () => {
+      connectWS();
+    });
+  </script>
 
 </body>
 
