@@ -1,156 +1,187 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Formulario — Enviar payload JSON</title>
   <style>
     :root {
-      --bg: #0f1724; 
-      --card: #111827; 
-      --muted: #9aa4bd; 
-      --text: #e6eef8; 
+      --bg: #0f1724;
+      --card: #111827;
+      --muted: #9aa4bd;
+      --text: #e6eef8;
       --accent: #60a5fa;
-      --ok: #10b981; 
-      --err: #ef4444; 
+      --ok: #10b981;
+      --err: #ef4444;
       --border: #22314a;
     }
-    * { 
-      box-sizing: border-box; 
+
+    * {
+      box-sizing: border-box;
     }
-    body { 
-      margin: 0; 
-      padding: 20px; 
-      background: linear-gradient(180deg, #081029, #07101e); 
-      color: var(--text); 
-      font-family: Inter, ui-sans-serif, system-ui, Arial; 
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(180deg, #081029, #07101e);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, Arial;
     }
-    h1 { 
-      margin: 0 0 16px; 
-      font-size: 1.25rem; 
-      color: var(--accent); 
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 1.25rem;
+      color: var(--accent);
     }
-    .wrap { 
-      max-width: 1100px; 
-      margin: 0 auto; 
-      display: grid; 
-      grid-template-columns: 1fr 420px; 
-      gap: 18px; 
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 18px;
     }
-    @media (max-width: 980px) { 
-      .wrap { grid-template-columns: 1fr; } 
+
+    @media (max-width: 980px) {
+      .wrap {
+        grid-template-columns: 1fr;
+      }
     }
-    .card { 
-      background: var(--card); 
-      border: 1px solid var(--border); 
-      padding: 16px; 
-      border-radius: 12px; 
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 12px;
     }
-    label { 
-      display: block; 
-      color: var(--muted); 
-      font-size: 0.86rem; 
-      margin-bottom: 6px; 
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 6px;
     }
-    .grid-2 { 
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      gap: 10px; 
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
     }
-    input[type="text"], 
-    input[type="number"], 
-    textarea, 
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
     select {
-      width: 100%; 
-      padding: 10px; 
-      border-radius: 8px; 
-      border: 1px solid var(--border); 
-      background: #071224; 
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #071224;
       color: var(--text);
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     }
-    textarea { 
-      min-height: 120px; 
-      resize: vertical; 
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
     }
-    .row { 
-      display: flex; 
-      gap: 8px; 
-      align-items: center; 
-      flex-wrap: wrap; 
+
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    .btn { 
-      padding: 9px 12px; 
-      border-radius: 9px; 
-      border: 1px solid var(--border); 
-      background: linear-gradient(#0f1724, #071224); 
-      color: var(--text); 
-      cursor: pointer; 
-      font-weight: 600; 
+
+    .btn {
+      padding: 9px 12px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: linear-gradient(#0f1724, #071224);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
     }
-    .btn.primary { 
-      background: linear-gradient(#1e3a8a, #0f1724); 
+
+    .btn.primary {
+      background: linear-gradient(#1e3a8a, #0f1724);
     }
-    .btn.warn { 
-      background: linear-gradient(#b45309, #7c2d12); 
+
+    .btn.warn {
+      background: linear-gradient(#b45309, #7c2d12);
     }
-    .muted { 
-      color: var(--muted); 
-      font-size: 0.85rem; 
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.85rem;
     }
-    pre { 
-      background: #071324; 
-      padding: 10px; 
-      border-radius: 8px; 
-      border: 1px solid var(--border); 
-      overflow: auto; 
-      white-space: pre-wrap; 
+
+    pre {
+      background: #071324;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow: auto;
+      white-space: pre-wrap;
     }
-    .field-help { 
-      font-size: 0.8rem; 
-      color: var(--muted); 
-      margin-top: 6px; 
+
+    .field-help {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 6px;
     }
-    .small { 
-      font-size: 0.85rem; 
-      color: var(--muted); 
+
+    .small {
+      font-size: 0.85rem;
+      color: var(--muted);
     }
-    .status { 
-      display: inline-flex; 
-      gap: 8px; 
-      align-items: center; 
-      padding: 6px 10px; 
-      border-radius: 999px; 
-      border: 1px solid var(--border); 
-      background: #071726; 
+
+    .status {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #071726;
     }
-    .dot { 
-      width: 9px; 
-      height: 9px; 
-      border-radius: 999px; 
-      background: var(--muted); 
-      display: inline-block; 
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--muted);
+      display: inline-block;
     }
-    .dot.ok { 
-      background: var(--ok); 
-    } 
-    .dot.err { 
-      background: var(--err); 
-    } 
-    .dot.warn { 
-      background: #f59e0b; 
+
+    .dot.ok {
+      background: var(--ok);
     }
-    .footer-note { 
-      font-size: 0.85rem; 
-      color: var(--muted); 
-      margin-top: 12px; 
+
+    .dot.err {
+      background: var(--err);
     }
-    .error { 
-      color: var(--err); 
-      font-weight: 600; 
+
+    .dot.warn {
+      background: #f59e0b;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .error {
+      color: var(--err);
+      font-weight: 600;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/ansi_up@5.2.1/ansi_up.min.js"></script>
+
 </head>
+ 
 <body>
   <h1>Formulario — Generar y enviar payload JSON</h1>
 
@@ -165,7 +196,8 @@
           </label>
 
           <label>eval_result <span class="small">— expresión (string)</span>
-            <input id="eval_result" type="text" value="text.includes('✅') || text.includes('❌') || text.includes('⚠')" />
+            <input id="eval_result" type="text"
+              value="text.includes('✅') || text.includes('❌') || text.includes('⚠')" />
             <div class="field-help">Expresión que se evaluará como string (se enviará tal cual en el JSON).</div>
           </label>
 
@@ -180,7 +212,8 @@
 
           <label>bin
             <input id="bin" type="text" value="53069177612xxxxx|rnd|2028|rnd" />
-            <div class="field-help">Cadena identificadora (puede contener separadores). No la cambies salvo que sea tuya.</div>
+            <div class="field-help">Cadena identificadora (puede contener separadores). No la cambies salvo que sea
+              tuya.</div>
           </label>
 
           <label>gate
@@ -223,10 +256,12 @@
             <button id="sendBtn" type="button" class="btn primary">Enviar POST</button>
             <button id="resetBtn" type="button" class="btn" style="opacity:0.9">Restablecer</button>
             <div style="flex:1"></div>
-            <div id="formStatus" class="status"><span class="dot warn"></span><span class="small">Sin enviar</span></div>
+            <div id="formStatus" class="status"><span class="dot warn"></span><span class="small">Sin enviar</span>
+            </div>
           </div>
 
-          <div class="footer-note">Tip: puedes editar la previsualización JSON si quieres afinar algo antes de enviar.</div>
+          <div class="footer-note">Tip: puedes editar la previsualización JSON si quieres afinar algo antes de enviar.
+          </div>
         </div>
       </form>
     </div>
@@ -247,7 +282,8 @@
           <button id="prettyBtn" class="btn">Formatear</button>
           <button id="copyBtn" class="btn">Copiar JSON</button>
           <div style="flex:1"></div>
-          <div class="muted">CORS: el servidor debe permitir peticiones desde este origen si el archivo se abre localmente.</div>
+          <div class="muted">CORS: el servidor debe permitir peticiones desde este origen si el archivo se abre
+            localmente.</div>
         </div>
 
         <label style="margin-top:10px">Respuesta del servidor</label>
@@ -269,8 +305,29 @@
         <label style="margin-top:10px">Respuesta</label>
         <pre id="stopResponse">—</pre>
 
-        <div class="field-help" style="margin-top:8px">Este botón hace un GET al endpoint de parada. Si marcas <code>force</code> la query string añadida será <code>?force=1</code>.</div>
+        <div class="field-help" style="margin-top:8px">Este botón hace un GET al endpoint de parada. Si marcas
+          <code>force</code> la query string añadida será <code>?force=1</code>.</div>
       </div>
+      <!-- 4) Logs en vivo (solo lectura) -->
+      <div class="card" style="margin-top:12px">
+        <h2 style="margin-top:0;color:var(--accent)">4) Logs en vivo (solo lectura)</h2>
+
+        <div class="row" style="margin-bottom:8px">
+          <div id="wsConn" class="status"><span class="dot warn"></span><span class="small">WS: desconectado</span>
+          </div>
+          <div id="wsRec" class="status"><span class="dot warn"></span><span class="small">Grabando: —</span></div>
+          <div id="wsBuf" class="status"><span class="dot warn"></span><span class="small">Buffer: —</span></div>
+        </div>
+
+        <pre id="logsTerm" style="height:260px;background:#000;color:#0f0;white-space:pre-wrap"></pre>
+
+        <div class="row" style="margin-top:8px">
+          <button id="clearLogsBtn" class="btn">Limpiar</button>
+          <div style="flex:1"></div>
+          <span class="muted small">Renderizado inmediato de histórico (máx 100) + nuevos logs</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -388,7 +445,7 @@
       } catch (e) {
         try {
           updatePreviewFromForm();
-        } catch {}
+        } catch { }
       }
     });
 
@@ -548,5 +605,146 @@
       });
     });
   </script>
+  <script>
+  // ===================== WS LOGS (solo lectura) =====================
+
+  const logsTerm = document.getElementById('logsTerm');
+  const wsConn   = document.getElementById('wsConn');
+  const wsRec    = document.getElementById('wsRec');
+  const wsBuf    = document.getElementById('wsBuf');
+  const clearLogsBtn = document.getElementById('clearLogsBtn');
+
+  // Estado de terminal local (DOM)
+  let domLines = 0;              // cuántas líneas hay en pantalla
+  const DOM_MAX = 2000;          // evita crecer infinito el DOM
+
+  // Helpers de UI
+  function setStatusChip(el, type, text) {
+    if (!el) return;
+    const dot = el.querySelector('.dot');
+    const label = el.querySelector('span:nth-child(2)');
+    if (dot) dot.className = 'dot ' + (type === 'ok' ? 'ok' : type === 'err' ? 'err' : 'warn');
+    if (label && text) label.textContent = text;
+  }
+
+  function appendLine(line) {
+    // capar tamaño: si excede, recorta por arriba
+    if (domLines > DOM_MAX) {
+      // recorta primer 20%
+      const txt = logsTerm.textContent;
+      const cutAt = Math.floor(txt.length * 0.2);
+      logsTerm.textContent = txt.slice(cutAt);
+      domLines = Math.floor(domLines * 0.8);
+    }
+    logsTerm.textContent += (line.endsWith('\n') ? line : (line + '\n'));
+    domLines++;
+    logsTerm.scrollTop = logsTerm.scrollHeight;
+  }
+
+  // Construye la URL ws://.../ws a partir de baseUrl
+  function getWsUrl() {
+    const raw = (baseUrlInput?.value || '').trim();
+    try {
+      const u = new URL(raw || window.location.href);
+      const proto = (u.protocol === 'https:') ? 'wss:' : 'ws:';
+      return `${proto}//${u.host}/ws`;
+    } catch {
+      const proto = (location.protocol === 'https:') ? 'wss:' : 'ws:';
+      return `${proto}//${location.host}/ws`;
+    }
+  }
+
+  let ws;
+  let reconnectTimer;
+  const RECONNECT_MS = 1500;
+
+  function connectWS() {
+    try {
+      ws = new WebSocket(getWsUrl());
+    } catch (e) {
+      setStatusChip(wsConn, 'err', 'WS: error URL');
+      return;
+    }
+
+    ws.onopen = () => {
+      setStatusChip(wsConn, 'ok', 'WS: conectado');
+      // No enviamos nada (solo lectura)
+    };
+
+    ws.onmessage = (ev) => {
+      let data = ev.data;
+      try { data = JSON.parse(ev.data); } catch {}
+      // Soportamos tanto string plano como JSON
+      if (typeof data === 'string') {
+        appendLine(data);
+        // no sabemos buffer ni recording si llega como texto, así que no tocamos chips
+        return;
+      }
+
+      if (data && typeof data === 'object') {
+        switch (data.type) {
+          case 'hello':
+            setStatusChip(wsRec, data.recording ? 'ok' : 'warn', data.recording ? 'Grabando: Sí' : 'Grabando: No');
+            setStatusChip(wsBuf, 'ok', `Buffer: ${data.stored}/${data.bufferSize}`);
+            break;
+          case 'history':
+            if (Array.isArray(data.logs)) {
+              // Pintar histórico
+              logsTerm.textContent = ''; domLines = 0;
+              data.logs.forEach(line => appendLine(line));
+              // Actualizar contador de buffer si no lo envió hello
+              if (!wsBuf.querySelector('span:nth-child(2)').textContent.includes('/')) {
+                setStatusChip(wsBuf, 'ok', `Buffer: ${data.logs.length}/100`);
+              }
+            }
+            break;
+          case 'log':
+            if (typeof data.line === 'string') {
+              appendLine(data.line);
+              // actualizar contador aprox si tenemos límite conocido
+              const cur = wsBuf.querySelector('span:nth-child(2)').textContent;
+              const m = cur.match(/Buffer:\s*(\d+)\s*\/\s*(\d+)/);
+              if (m) {
+                let n = Number(m[1]) || 0;
+                const max = Number(m[2]) || 100;
+                n = Math.min(max, n + 1);
+                setStatusChip(wsBuf, 'ok', `Buffer: ${n}/${max}`);
+              }
+            }
+            break;
+        }
+      }
+    };
+
+    ws.onclose = () => {
+      setStatusChip(wsConn, 'warn', 'WS: desconectado (reintentando…)');
+      clearTimeout(reconnectTimer);
+      reconnectTimer = setTimeout(connectWS, RECONNECT_MS);
+    };
+
+    ws.onerror = () => {
+      setStatusChip(wsConn, 'err', 'WS: error');
+      // el onclose hará el reconnect
+    };
+  }
+
+  // Limpiar terminal manualmente (no limpia el buffer del servidor)
+  clearLogsBtn?.addEventListener('click', () => {
+    logsTerm.textContent = '';
+    domLines = 0;
+  });
+
+  // Re-conectar WS si cambia la baseUrl
+  baseUrlInput?.addEventListener('input', () => {
+    try { ws?.close(); } catch {}
+  });
+
+  // Arrancar WS al cargar
+  window.addEventListener('load', () => {
+    connectWS();
+  });
+</script>
+
 </body>
+
 </html>
