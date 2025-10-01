@@ -1,75 +1,29 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Formulario — Enviar payload JSON</title>
   <style>
-    .ansi-black-fg {
-      color: #000;
-    }
+    /* ===================== Colores ANSI ===================== */
+    .ansi-black-fg { color: #000; }
+    .ansi-red-fg { color: #f87171; }
+    .ansi-green-fg { color: #4ade80; }
+    .ansi-yellow-fg { color: #facc15; }
+    .ansi-blue-fg { color: #60a5fa; }
+    .ansi-magenta-fg { color: #d946ef; }
+    .ansi-cyan-fg { color: #22d3ee; }
+    .ansi-white-fg { color: #f3f4f6; }
+    .ansi-bright-black-fg { color: #6b7280; }
+    .ansi-bright-red-fg { color: #ef4444; }
+    .ansi-bright-green-fg { color: #22c55e; }
+    .ansi-bright-yellow-fg { color: #eab308; }
+    .ansi-bright-blue-fg { color: #3b82f6; }
+    .ansi-bright-magenta-fg { color: #c026d3; }
+    .ansi-bright-cyan-fg { color: #06b6d4; }
+    .ansi-bright-white-fg { color: #ffffff; }
 
-    .ansi-red-fg {
-      color: #f87171;
-    }
-
-    .ansi-green-fg {
-      color: #4ade80;
-    }
-
-    .ansi-yellow-fg {
-      color: #facc15;
-    }
-
-    .ansi-blue-fg {
-      color: #60a5fa;
-    }
-
-    .ansi-magenta-fg {
-      color: #d946ef;
-    }
-
-    .ansi-cyan-fg {
-      color: #22d3ee;
-    }
-
-    .ansi-white-fg {
-      color: #f3f4f6;
-    }
-
-    .ansi-bright-black-fg {
-      color: #6b7280;
-    }
-
-    .ansi-bright-red-fg {
-      color: #ef4444;
-    }
-
-    .ansi-bright-green-fg {
-      color: #22c55e;
-    }
-
-    .ansi-bright-yellow-fg {
-      color: #eab308;
-    }
-
-    .ansi-bright-blue-fg {
-      color: #3b82f6;
-    }
-
-    .ansi-bright-magenta-fg {
-      color: #c026d3;
-    }
-
-    .ansi-bright-cyan-fg {
-      color: #06b6d4;
-    }
-
-    .ansi-bright-white-fg {
-      color: #ffffff;
-    }
-
+    /* ===================== Variables y base ===================== */
     :root {
       --bg: #0f1724;
       --card: #111827;
@@ -80,11 +34,7 @@
       --err: #ef4444;
       --border: #22314a;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 20px;
@@ -92,13 +42,13 @@
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, Arial;
     }
-
     h1 {
       margin: 0 0 16px;
       font-size: 1.25rem;
       color: var(--accent);
     }
 
+    /* ===================== Layout ===================== */
     .wrap {
       max-width: 1100px;
       margin: 0 auto;
@@ -106,11 +56,12 @@
       grid-template-columns: 1fr 420px;
       gap: 18px;
     }
-
     @media (max-width: 980px) {
-      .wrap {
-        grid-template-columns: 1fr;
-      }
+      .wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      h1 { font-size: 1.1rem; }
     }
 
     .card {
@@ -132,11 +83,11 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
+    @media (max-width: 600px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
 
-    input[type="text"],
-    input[type="number"],
-    textarea,
-    select {
+    input[type="text"], input[type="number"], textarea, select {
       width: 100%;
       padding: 10px;
       border-radius: 8px;
@@ -145,17 +96,16 @@
       color: var(--text);
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
+    textarea { min-height: 120px; resize: vertical; }
 
     .row {
       display: flex;
       gap: 8px;
       align-items: center;
       flex-wrap: wrap;
+    }
+    @media (max-width: 600px) {
+      .row { flex-direction: column; align-items: stretch; }
     }
 
     .btn {
@@ -166,21 +116,15 @@
       color: var(--text);
       cursor: pointer;
       font-weight: 600;
+      width: auto;
+    }
+    .btn.primary { background: linear-gradient(#1e3a8a, #0f1724); }
+    .btn.warn { background: linear-gradient(#b45309, #7c2d12); }
+    @media (max-width: 600px) {
+      .btn { width: 100%; }
     }
 
-    .btn.primary {
-      background: linear-gradient(#1e3a8a, #0f1724);
-    }
-
-    .btn.warn {
-      background: linear-gradient(#b45309, #7c2d12);
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
+    .muted { color: var(--muted); font-size: 0.85rem; }
     pre {
       background: #071324;
       padding: 10px;
@@ -188,18 +132,11 @@
       border: 1px solid var(--border);
       overflow: auto;
       white-space: pre-wrap;
+      font-size: 0.9rem;
     }
 
-    .field-help {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .small {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
+    .field-help { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+    .small { font-size: 0.85rem; color: var(--muted); }
 
     .status {
       display: inline-flex;
@@ -209,43 +146,34 @@
       border-radius: 999px;
       border: 1px solid var(--border);
       background: #071726;
+      font-size: 0.8rem;
     }
+    .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--muted); display: inline-block; }
+    .dot.ok { background: var(--ok); }
+    .dot.err { background: var(--err); }
+    .dot.warn { background: #f59e0b; }
 
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: var(--muted);
-      display: inline-block;
+    .footer-note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+    .error { color: var(--err); font-weight: 600; }
+
+    /* ===================== Logs terminal ===================== */
+    #logsTerm {
+      height: 260px;
+      background: #000;
+      color: #fff;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow: auto;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 0.95rem;
     }
-
-    .dot.ok {
-      background: var(--ok);
-    }
-
-    .dot.err {
-      background: var(--err);
-    }
-
-    .dot.warn {
-      background: #f59e0b;
-    }
-
-    .footer-note {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 12px;
-    }
-
-    .error {
-      color: var(--err);
-      font-weight: 600;
+    @media (max-width: 600px) {
+      #logsTerm { height: 200px; font-size: 0.8rem; }
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/ansi_up@5.2.1/ansi_up.min.js"></script>
-
 </head>
-
 <body>
   <h1>Formulario — Generar y enviar payload JSON</h1>
 
