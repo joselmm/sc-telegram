@@ -854,9 +854,18 @@
     }
 
     // Limpiar terminal manualmente (no limpia el buffer del servidor)
-    clearLogsBtn?.addEventListener('click', () => {
-      logsTerm.textContent = '';
-      domLines = 0;
+    clearLogsBtn?.addEventListener('click',async () => {
+      const url = constructUrl(baseUrlInput.value, '/clear-buffer');
+
+      var res= await fetch(url)
+      var json = await res.json();
+      if(json.noError && json.bufferValue.length===0){
+        logsTerm.textContent = '';
+        domLines = 0;
+      }
+      debugger
+      
+      
     });
 
     // Re-conectar WS si cambia la baseUrl

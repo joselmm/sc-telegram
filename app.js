@@ -31,6 +31,24 @@ app.get("/", (req, res) => {
   res.sendFile("interfaz.html", { root: "." });
 });
 
+app.get("/clear-buffer", (req, res) => {
+  try {
+    logsBuffer.length = 0;    // vacía el array
+    if (logsBuffer.length !== 0) {
+      throw new Error("No se vacio el buffer por alguna razon");
+    }
+    res.json({
+      noError: true,
+      bufferValue:logsBuffer
+    })
+  } catch (err) {
+    res.json({
+      noError: false,
+      message: err.message
+    })
+  }
+});
+
 app.get("/stop-checking", (req, res) => {
   try {
     const force = Object.keys(req?.query || {}).includes("force");
@@ -55,8 +73,8 @@ const server = app.listen(port, () => {
       process.platform == "darwin"
         ? "open"
         : process.platform == "win32"
-        ? "start"
-        : "xdg-open";
+          ? "start"
+          : "xdg-open";
     exec(`${start} ${url}`);
   }
 });
@@ -114,11 +132,11 @@ wss.on("connection", (ws) => {
 const heartbeat = setInterval(() => {
   for (const ws of wss.clients) {
     if (ws.isAlive === false) {
-      try { ws.terminate(); } catch {}
+      try { ws.terminate(); } catch { }
       continue;
     }
     ws.isAlive = false;
-    try { ws.ping(); } catch {}
+    try { ws.ping(); } catch { }
   }
 }, 30000);
 
