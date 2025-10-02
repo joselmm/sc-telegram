@@ -111,7 +111,7 @@ export function stopNextTime() {
 async function handleMessageEdited(event) {
     const message = event.message;
     var text = message.message;
-    debugger
+    
     if (text.match(cardRegex)) {
         await handleCardCheckResult(event);
     }
@@ -126,7 +126,7 @@ async function handleCardCheckResult(event) {
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch ? cardMatch[0] : null;
     cardNumber = processCardFormat(cardNumber);
-    debugger
+    
     if (sender.username.toLowerCase() === par.userName.toLowerCase().replace("@","") && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
         text += `\n\n*Bin:* \`${par.bin}\` *Gate:* \`${par.gate}\``;
         await sendMessageByUserName({ userName: par.me, message: text }, () => {
@@ -135,10 +135,13 @@ async function handleCardCheckResult(event) {
         foundLives++;
     }
 
-    var cardIndex = queue.indexOf(cardNumber);
+    var cardIndex = queue.map(card=>processCardFormat(card)).indexOf(cardNumber);
     var isResult = eval(par.eval_result);
 
     if (cardIndex >= 0 && isResult) {
+
+        
+
         queue.splice(cardIndex, 1);
         attempts++;
         maxAttempsTimeout = 0; // Reset max attempts counter after successful processing
@@ -174,7 +177,7 @@ async function handleCardCheckResult(event) {
 async function handleNewMessage(event) {
     const message = event.message;
     const text = message.message;
-    debugger
+    
     if (text.match(cardRegex)) {
         await handleCardCheckResult(event);
     }
