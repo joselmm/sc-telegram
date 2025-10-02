@@ -140,8 +140,6 @@ async function handleCardCheckResult(event) {
 
     if (cardIndex >= 0 && isResult) {
 
-        
-
         queue.splice(cardIndex, 1);
         attempts++;
         maxAttempsTimeout = 0; // Reset max attempts counter after successful processing
