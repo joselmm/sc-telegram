@@ -188,7 +188,7 @@ async function handleNewMessage(event) {
         if (captchaResolution) {
             await sendMessageByUserName({ userName: par.userName, message: "/captcha " + captchaResolution });
             console.log("Se solucionó captcha " + captchaResolution);
-            sendCard({ message: lastCardSentCommand });
+            sendCard({ message: lastCardSentCommand, anyway:true });
         }
     }
 
