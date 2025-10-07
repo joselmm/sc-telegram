@@ -14,7 +14,7 @@ app.use(express.json());
 
 import { startChecking, stopNextTime } from "./modules/checkerActions.js";
 
-// --------------------- ENDPOINTS HTTP ---------------------
+// --------------------- ENDPOINTS HTTP ---------------------s
 
 app.post("/start-checking", async (req, res) => {
   try {
