@@ -119,7 +119,7 @@ wss.on("connection", (ws) => {
     type: "history",
     logs: logsBuffer
   }));
-
+  //j
   // Nota: No aceptamos mensajes entrantes (es solo lectura)
   ws.on("message", () => { /* ignorado */ });
 
