@@ -27,7 +27,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  const entity = await client.getEntity("https://t.me/publicidadstreamingbratz");
+  const entity = await client.getEntity("https://t.me/doacoesnomade");
   console.log("Tipo de chat:", entity.className);
 
   const participantes = [];

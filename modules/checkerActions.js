@@ -84,7 +84,7 @@ export async function startChecking(args) {
         monitorTimeout();
 
         await connect();
-        
+
 
         onMessageEvent({ on: "edit", handler: handleMessageEdited, userName: par.userName });
         onMessageEvent({ on: "new", handler: handleNewMessage, userName: par.userName });
@@ -111,7 +111,7 @@ export function stopNextTime() {
 async function handleMessageEdited(event) {
     const message = event.message;
     var text = message.message;
-    
+
     if (text.match(cardRegex)) {
         await handleCardCheckResult(event);
     }
@@ -122,12 +122,12 @@ async function handleCardCheckResult(event) {
     var text = message.message;
 
     var sender = await message.getSender();
-    
+
     var cardMatch = text.match(cardRegex);
     var cardNumber = cardMatch ? cardMatch[0] : null;
     cardNumber = processCardFormat(cardNumber);
-    
-    if (sender.username.toLowerCase() === par.userName.toLowerCase().replace("@","") && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
+
+    if (sender.username.toLowerCase() === par.userName.toLowerCase().replace("@", "") && cardMatch?.length > 0 && text.includes(par.live_if_contains)) {
         text += `\n\n*Bin:* \`${par.bin}\` *Gate:* \`${par.gate}\``;
         await sendMessageByUserName({ userName: par.me, message: text }, () => {
             console.log(colors.green(`Se encontró y se envió live ${cardMatch} a ${par.me}`));
@@ -135,7 +135,7 @@ async function handleCardCheckResult(event) {
         foundLives++;
     }
 
-    var cardIndex = queue.map(card=>processCardFormat(card)).indexOf(cardNumber);
+    var cardIndex = queue.map(card => processCardFormat(card)).indexOf(cardNumber);
     var isResult = eval(par.eval_result);
 
     if (cardIndex >= 0 && isResult) {
@@ -155,9 +155,15 @@ async function handleCardCheckResult(event) {
         }
 
         if (foundLives === par.num_to_find) {
-            console.log("Se terminó de checkear por lives encontradas máximas");
-            return await stopChecking();
+            console.log(colors.yellow(`Se alcanzó el número máximo de lives (${foundLives}) para el BIN actual: ${par.bin}`));
+            const advanced = await advanceToNextBin();
+            if (!advanced) {
+                console.log(colors.bgMagenta("No hay más BINs ni GATES. Se termina el proceso."));
+                return await stopChecking();
+            }
+            return; // continúa con el siguiente BIN automáticamente
         }
+
 
         if (stop) {
             console.log("Se terminó de checkear por petición externa");
@@ -175,7 +181,7 @@ async function handleCardCheckResult(event) {
 async function handleNewMessage(event) {
     const message = event.message;
     const text = message.message;
-    
+
     if (text.match(cardRegex)) {
         await handleCardCheckResult(event);
     }
@@ -188,7 +194,7 @@ async function handleNewMessage(event) {
         if (captchaResolution) {
             await sendMessageByUserName({ userName: par.userName, message: "/captcha " + captchaResolution });
             console.log("Se solucionó captcha " + captchaResolution);
-            sendCard({ message: lastCardSentCommand, anyway:true });
+            sendCard({ message: lastCardSentCommand, anyway: true });
         }
     }
 
@@ -214,10 +220,12 @@ async function advanceToNextBin() {
         currentBinIndex++;
         par.bin = arrayBins[currentBinIndex];
         attempts = 0;
+        foundLives = 0; // 🔁 Reiniciar contador de lives al cambiar de BIN
         console.log(colors.bgCyan(`Cambiando al siguiente BIN (${currentBinIndex + 1}/${arrayBins.length}): ${par.bin}`));
         sendCard({ gate: par.gate, bin: par.bin });
-        return true; // Hay más bins
-    } else {
+        return true;
+    }
+    else {
         // Avanzar al siguiente gate
         const advancedGate = await advanceToNextGate();
         if (advancedGate) {
