@@ -104,7 +104,10 @@ export async function stopChecking() {
     await closeConnection();
 }
 
-export function stopNextTime() {
+export function stopNextTime(force = false) {
+    if (force) {
+        process.exit(1);
+    }
     stop = true;
 }
 
