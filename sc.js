@@ -27,8 +27,8 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  const entity = await client.getEntity("https://t.me/doacoesnomade");
-  console.log("Tipo de chat:", entity.className);
+  const entity = await client.getEntity("+57 318 9986259");
+  console.log("Tipo de chat:", JSON.stringify(entity));
 
   const participantes = [];
 
@@ -75,8 +75,8 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
         break;
       }
     }
-  } 
-  
+  }
+
   // Si es un grupo clásico (no supergrupo)
   else if (entity.className === "Chat") {
     console.log("👥 Es un grupo básico — usando messages.GetFullChat");
@@ -95,8 +95,8 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
         phone: userObj.phone ?? null
       });
     }
-  } 
-  
+  }
+
   else {
     console.log("⚠️ No es grupo ni supergrupo (probablemente un usuario o canal sin chat).");
   }
