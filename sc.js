@@ -27,13 +27,13 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  const entity = await client.getEntity("+57 318 9986259");
+  const entity = await client.getEntity("https://t.me/xoSGYMBITacyNWQxs");
   console.log("Tipo de chat:", JSON.stringify(entity));
 
   const participantes = [];
 
   // Si es supergrupo/canal
-  if (entity.className === "Channel" && entity.megagroup) {
+  if (entity.className === "Channel" /* && entity.megagroup */) {
     console.log("📢 Es un supergrupo — usando channels.GetParticipants");
 
     let offset = 0;

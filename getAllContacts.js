@@ -32,7 +32,7 @@ dotenv.config();
 
     console.log("Total reportado por Telegram:", result.users.length);
 
-    const file = "contactos-mios-16-nov-2025.json";
+    const file = "contactos-mios-17-nov-2025.json";
 
     // Si no existe el archivo, lo creamos vacío
     if (!fs.existsSync(file)) {

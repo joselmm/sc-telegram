@@ -1,14 +1,17 @@
 {
   "dependencies": {
+    "axios-cookiejar-support": "^6.0.5",
     "cli-timer": "^0.0.1",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "hpagent": "^1.2.0",
     "input": "^1.0.1",
     "node-fetch": "^2.7.0",
     "puppeteer-core": "^24.24.0",
     "telegram": "^2.26.22",
+    "tough-cookie": "^6.0.0",
     "ws": "^8.18.3"
   },
   "type": "module"

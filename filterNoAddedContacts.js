@@ -1,7 +1,7 @@
 import fs from "fs";
-import { contacts as fullContactsArray } from "./contacts-array.js";
+import { contacts as fullContactsArray } from "./phone-array21nov.js";
 
-var saveContactsFile = fs.readFileSync("./contactos-progresivos.json");
+var saveContactsFile = fs.readFileSync("./contactos-mios-18-nov-2025.json");
 var saveContactsArray = JSON.parse(saveContactsFile.toString());
 
 // 1. EXTRAER Y LIMPIAR NUMEROS ADDED (ya vienen sin + ni espacios)
@@ -12,7 +12,7 @@ var addedPPLContacts = saveContactsArray
 
 // 2. LIMPIAR FULL PARA QUE TENGAN LA MISMA FORMA
 var fullContactsArrayClean = fullContactsArray.map(e =>
-  e.replace(/\+/g, "").replace(/\s+/g, "")
+  e.replace(/\+/g, "").replace(/\s+/g, "").replace("-", "")
 );
 
 // 3. FILTRAR LOS QUE NO HAN SIDO AGREGADOS
