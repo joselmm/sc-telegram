@@ -101,7 +101,7 @@ async function processAllFiles() {
                 if (item && item.id !== undefined && item.id !== null) {
                     const idString = String(item.id);
                     // Agrega el elemento al Map. Si el ID ya existe, será sobrescrito.
-                    uniqueElementsMap.set(idString, item);
+                    uniqueElementsMap.set(idString, { id: idString });
                     totalElementsFound++;
                 }
             }

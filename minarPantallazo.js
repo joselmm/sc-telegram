@@ -9,7 +9,7 @@ const unsafeAgent = new https.Agent({
     rejectUnauthorized: false
 });
 
-const outFile = './theresults.json';
+const outFile = './pantallazo-theresults.json';
 const jsonName = "./unique-ids.json"
 //import { contacts } from "./contacts-array.js"
 
@@ -190,8 +190,8 @@ async function processAll(startIndex = 0) {
 
     console.log(`🔄 Iniciando desde índice ${startIndex}, batch ${Math.floor(startIndex / batchSize) + 1}`);
 
-  for (let i = miembros.length - 1; i >= startIndex; i -= batchSize) {
-/*   for (let i = startIndex; i < miembros.length; i += batchSize) { */
+  /* for (let i = miembros.length - 1; i >= startIndex; i -= batchSize) { */
+   for (let i = startIndex; i < miembros.length; i += batchSize) { 
         const batch = miembros.slice(i, i + batchSize);
 
         const promises = batch.map(miembro => {

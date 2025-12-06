@@ -4,7 +4,7 @@ import fs from "node:fs";
 import express from "express"
 const app = express();
 
-const outFile = './theresults.json';
+const outFile = './dereck-theresults.json';
 const jsonName = "./unique-ids.json"
 //import { contacts } from "./contacts-array.js"
 
