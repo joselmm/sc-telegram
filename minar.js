@@ -168,9 +168,9 @@ async function processAll(startIndex = 0) {
 
     /* JEJEJEJEEJ */
 
-   /*  console.log(contacts)
-    miembros = contacts.map(e=>{return {id:e.split(" ").slice(1).join("").replace(/[^\d]/g, "")}});
-    console.log(miembros) */
+    /*  console.log(contacts)
+     miembros = contacts.map(e=>{return {id:e.split(" ").slice(1).join("").replace(/[^\d]/g, "")}});
+     console.log(miembros) */
 
 
     const batchSize = 10;
@@ -250,9 +250,9 @@ function loginOptions({ csrfToken, telegramId }) {
     return ({
         "headers": {
             "accept": "*/*",
-            "accept-language": "en-US,en;q=0.9,es-CO;q=0.8,es-ES;q=0.7,es;q=0.6",
+            "accept-language": "en-US,en;q=0.9,es-US;q=0.8,es;q=0.7",
             "content-type": "application/json",
-            "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+            "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": "\"Windows\"",
             "sec-fetch-dest": "empty",
