@@ -5,13 +5,17 @@ import express from "express"
 const app = express();
 
 const outFile = './theresults.json';
-const jsonName = "./miembros-unicos-netlifxbuyfree_x.json"
+const jsonName = "./miembros-xoSGYMBITacyNWQxs.json"
 //import { contacts } from "./contacts-array.js"
 
 app.get("/", (_req, res) => {
     var json = fs.readFileSync(outFile);
 
     res.json(JSON.parse(json));
+})
+
+app.get("/ok", (_req, res) => {
+    res.send("ok");
 })
 
 app.listen(process.env.PORT || 3000, () => {
@@ -214,7 +218,7 @@ async function processAll(startIndex = 0) {
     }
 
     console.log(("Proceso finalizado. Resultados guardados en " + outFile).green);
-    process.exit()
+    //process.exit()
 }
 
 
