@@ -1,45 +1,9 @@
 [
   {
-    "id": 53755,
-    "type": "MessageActionChatAddUser",
-    "actorId": "6315178559",
-    "targetIds": [
-      "793977288"
-    ],
-    "date": "2025-04-16T06:23:42.000Z"
-  },
-  {
-    "id": 35039,
-    "type": "MessageActionChatAddUser",
-    "actorId": "6697388393",
-    "targetIds": [
-      "6392908610"
-    ],
-    "date": "2025-04-02T16:32:35.000Z"
-  },
-  {
-    "id": 29941,
-    "type": "MessageActionChatDeleteUser",
-    "actorId": "7699927034",
-    "targetIds": [
-      "7699927034"
-    ],
-    "date": "2025-03-19T21:16:22.000Z"
-  },
-  {
-    "id": 29319,
-    "type": "MessageActionPinMessage",
-    "actorId": "6960029614",
+    "id": 7253,
+    "type": "MessageActionSetMessagesTTL",
+    "actorId": "6440980168",
     "targetIds": [],
-    "date": "2025-03-15T04:33:28.000Z"
-  },
-  {
-    "id": 27525,
-    "type": "MessageActionChatAddUser",
-    "actorId": "6960029614",
-    "targetIds": [
-      "8132471806"
-    ],
-    "date": "2025-03-01T18:56:34.000Z"
+    "date": "2025-01-29T16:09:08.000Z"
   }
 ]

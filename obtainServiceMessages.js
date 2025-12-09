@@ -28,7 +28,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING);
     console.log("Session string:\n", client.session.save());
 
     // Cambia esto por el grupo/canal que quieras analizar
-    const chat = "-1001834896306";
+    const chat = "https://t.me/techcheckersgroup";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
