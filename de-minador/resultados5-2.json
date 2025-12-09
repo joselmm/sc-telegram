@@ -1,0 +1,186 @@
+[
+  {
+    "telegramId": "1835590672",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "gDJdqp9Du5arppIOZKzkHpMooFhRtaRuhmytb7kzbuY"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "6937366562",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "vXXSq1uV3WyzgFd8WYKuS4MLJKURyi8IkAdJqWWbXVQ"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "6832324502",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "IEozb3rEix7APtWHtWbKn3GWdpwCIdyuwEUhwFtJaXE"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "7546865066",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "7XRbEhQNVvEGF0gIU-9GE-XK4UNYqmm9tMlHWTTwydo"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "7337582292",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "y7AlwZepcJe-ujNwAhd3q_VXyS48bhuFb199OuMZWWY"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "6883176331",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "uiKMG5KmMsXYpwlb9nIS3hcfNNEQZLO6En42NymuVsU"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "7667030860",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "vIzM3xqIc8gESCdMcUCgMhDkvRrTKiTllfRc3XZ3VDU"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  },
+  {
+    "telegramId": "1328804865",
+    "loginValue": {
+      "data": {
+        "success": false,
+        "error": "Usuario no autorizado"
+      },
+      "status": 401,
+      "ok": false,
+      "statusText": "Unauthorized",
+      "url": "https://scavengerus.online/api/login"
+    },
+    "error": "HTTP 401: Unauthorized",
+    "tokenResponse": {
+      "data": {
+        "csrfToken": "HuAKA0RmnkL0hQFFBUeci-_32tCZcXFEch7qoa9_1pc"
+      },
+      "status": 200,
+      "ok": true,
+      "statusText": "OK",
+      "url": "https://scavengerus.online/api/csrf-token"
+    }
+  }
+]
