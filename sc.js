@@ -27,7 +27,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  const entity = await client.getEntity("https://t.me/techcheckersgroup");
+  const entity = await client.getEntity("https://t.me/VentasYPromocionesOnline");
   console.log("Tipo de chat:", JSON.stringify(entity));
 
   const participantes = [];
@@ -55,13 +55,10 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
 
         // Asocia info de cada participante con su usuario
         for (const p of res.participants) {
-          const userObj = res.users.find(u => u.id === p.userId);
+         // const userObj = res.users.find(u => u.id === p.userId);
           participantes.push({
             id: p.userId?.toString?.() ?? p.userId,
-            username: userObj?.username ?? null,
-            firstName: userObj?.firstName ?? null,
-            lastName: userObj?.lastName ?? null,
-            phone: userObj?.phone ?? null
+
           });
         }
 
