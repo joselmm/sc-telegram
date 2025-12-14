@@ -9,7 +9,7 @@ dotenv.config();
 (async () => {
     const apiId = +process.env.TELEGRAM_API_ID;
     const apiHash = process.env.TELEGRAM_API_HASH;
-    const session = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING);
+    const session = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1);
     const client = new TelegramClient(session, apiId, apiHash, { connectionRetries: 5 });
 
     await client.start({retries:5});

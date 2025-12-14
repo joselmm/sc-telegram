@@ -10,7 +10,7 @@ dotenv.config();
 const apiId = process.env.TELEGRAM_API_ID;
 const apiHash = process.env.TELEGRAM_API_HASH;
 
-const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING);
+const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1);
 
 
 (async () => {
