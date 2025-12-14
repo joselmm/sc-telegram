@@ -29,7 +29,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING);
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "https://t.me/StreamingColombia247/";
+    const chat = "-1002585911264";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
@@ -52,7 +52,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING);
             if (!msg.fromId) continue;
 
             if (msg.fromId.userId) {
-                senderIds.add(msg.fromId.userId);
+                senderIds.add(String(msg.fromId.userId));
             }
 
 
