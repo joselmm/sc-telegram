@@ -5,12 +5,11 @@ import express from "express"
 const app = express();
 
 const outFile = './theresults.json';
-const jsonName = "./unique-ids.json"
+const jsonName = "./senders-ids-StreamingColombia247.json"
 //import { contacts } from "./contacts-array.js"
 
 app.get("/", (_req, res) => {
     var json = fs.readFileSync(outFile);
-
     res.json(JSON.parse(json));
 })
 
