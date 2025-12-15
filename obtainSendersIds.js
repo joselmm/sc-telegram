@@ -29,7 +29,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "https://t.me/AssociatonBinners1";
+    const chat = "https://t.me/checkvipone";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
