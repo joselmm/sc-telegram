@@ -5,7 +5,7 @@ import express from "express"
 const app = express();
 
 const outFile = './theresults.json';
-const jsonName = "./senders-ids-private-group-1001746730183.json"
+const jsonName = "./unique-ids.json"
 //import { contacts } from "./contacts-array.js"
 
 app.get("/", (_req, res) => {
