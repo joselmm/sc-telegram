@@ -8,7 +8,7 @@ dotenv.config();
 
 const apiId = process.env.TELEGRAM_API_ID;
 const apiHash = process.env.TELEGRAM_API_HASH;
-const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1);
+const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2);
 
 (async () => {
     const client = new TelegramClient(
@@ -29,7 +29,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "-1002403606655";
+    const chat = "https://t.me/yaemikobotchat";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
