@@ -8,7 +8,7 @@ dotenv.config();
 
 const apiId = process.env.TELEGRAM_API_ID;
 const apiHash = process.env.TELEGRAM_API_HASH;
-const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1);
+const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2);
 
 (async () => {
     const client = new TelegramClient(
@@ -29,7 +29,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "https://t.me/pakhanchekerchat";
+    const chat = "-1002815739427";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
@@ -69,8 +69,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     let groupUsername = entity.username;
 
     if (!groupUsername) {
-        const random5 = Math.floor(10000 + Math.random() * 90000);
-        groupUsername = `private-group-${random5}`;
+        groupUsername = `private-group${chat}`;
     }
 
     const safeUsername = groupUsername.replace(/[^a-z0-9_-]/gi, "_");
