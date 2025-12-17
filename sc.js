@@ -14,7 +14,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
 (async () => {
   const apiId = +process.env.TELEGRAM_API_ID;
   const apiHash = process.env.TELEGRAM_API_HASH;
-  const session = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1);
+  const session = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2);
   const client = new TelegramClient(session, apiId, apiHash, { connectionRetries: 5 });
 
   await client.start({
@@ -27,7 +27,8 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  const entity = await client.getEntity("https://t.me/cuentaspremiumid");
+  var chat = "https://t.me/ravenccchecker";
+  const entity = await client.getEntity(chat);
   console.log("Tipo de chat:", JSON.stringify(entity));
 
   const participantes = [];
@@ -99,6 +100,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   }
 
   // Guarda los miembros en archivo
-  fs.writeFileSync("miembros.json", JSON.stringify(participantes, null, 2));
-  console.log(`✅ Guardados ${participantes.length} usuarios en miembros.json`);
+  var fileName= "miembros-"+(entity.username ? entity.username : chat)+".json";
+  fs.writeFileSync(fileName, JSON.stringify(participantes, null, 2));
+  console.log(`✅ Guardados ${participantes.length} usuarios en ${fileName}`);
 })();

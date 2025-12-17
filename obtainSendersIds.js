@@ -4,6 +4,8 @@ import { Api } from "telegram/tl/index.js";
 import input from "input";
 import fs from "fs";
 import dotenv from "dotenv";
+import { spawn } from "child_process";
+
 dotenv.config();
 
 const apiId = process.env.TELEGRAM_API_ID;
@@ -29,7 +31,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "-1001746730183";
+    const chat = "https://t.me/ravenccchecker";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
@@ -87,4 +89,17 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log(`✅ Guardados ${senderIds.size} sender IDs en "${fileName}"`);
 
     await client.disconnect();
+    await client._disconnect();
+
+
+    const child = spawn("node", ["minar", fileName], {
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", () => {
+        process.exit(0);
+    });
+    
+
 })();

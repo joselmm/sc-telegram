@@ -5,7 +5,7 @@ import express from "express"
 const app = express();
 
 const outFile = './theresults.json';
-const jsonName = "./unique-ids.json"
+const jsonName = process.argv[2] || "./senders-ids-ravenccchecker.json"
 //import { contacts } from "./contacts-array.js"
 
 app.get("/", (_req, res) => {
@@ -16,10 +16,9 @@ app.get("/", (_req, res) => {
 app.get("/ok", (_req, res) => {
     res.send("ok");
 })
-
-app.listen(process.env.PORT || 3000, () => {
+const server = app.listen(process.env.PORT || 3000, () => {
     console.log("se esta escuchando")
-})
+});
 
 // npm i colors
 import colors from "colors"
@@ -217,6 +216,12 @@ async function processAll(startIndex = 0) {
     }
 
     console.log(("Proceso finalizado. Resultados guardados en " + outFile).green);
+
+
+    server.close(() => {
+        process.exit(0);
+    });
+
     //process.exit()
 }
 

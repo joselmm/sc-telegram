@@ -1,14 +1,182 @@
 [
   {
     "email": "ESPNdis2893@thend.online",
-    "exist": false,
-    "noError": true,
-    "errorMessage": null
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
   },
   {
     "email": "SantiagoRoso22555@thend.online",
-    "exist": false,
-    "noError": true,
-    "errorMessage": null
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "TATIANATORRES22@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "Teo5ramos22@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "boyid71333@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "disneyanual0000101x@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "espndis41021@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "espndis6652@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "espndis80200@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "espndis82554@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "espndisky34927@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "espndisky68253@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "esteban319@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "franciscocopapo17153@ninjapro.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "funterika5@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "gagitol286@ninjapro.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "hetadi6837@thendx.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "hinote3674@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "hobob52253@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "kokomev755@ninjapro.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "luisdiaz00@favoritos.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "margaritacamila22@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "mocoga1923@favoritos.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "rexon43162@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "teressabenavides@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "vesixif785@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "vevedo8894@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "vojad92218@thend.online",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "waboris442@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
+  },
+  {
+    "email": "xavierodri@mainapph.com",
+    "exist": null,
+    "noError": false,
+    "errorMessage": "fetch failed"
   }
 ]
