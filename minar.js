@@ -218,10 +218,6 @@ async function processAll(startIndex = 0) {
     console.log(("Proceso finalizado. Resultados guardados en " + outFile).green);
 
 
-    server.close(() => {
-        process.exit(0);
-    });
-
     //process.exit()
 }
 
