@@ -28,7 +28,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log("Session string:\n", client.session.save());
 
     // Cambia esto por el grupo/canal que quieras analizar
-    const chat = "https://t.me/cuentaspremiumid";
+    const chat = "https://t.me/Mega_Streaming";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;

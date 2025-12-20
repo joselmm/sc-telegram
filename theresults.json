@@ -1,6 +1,6 @@
 [
   {
-    "telegramId": "6539105850",
+    "telegramId": "7200822626",
     "loginValue": {
       "data": {
         "success": false,
@@ -12,10 +12,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.8088957987928123"
+    "tokenResponse": "0.7027866578272493"
   },
   {
-    "telegramId": "7333463495",
+    "telegramId": "6656006173",
     "loginValue": {
       "data": {
         "success": false,
@@ -27,10 +27,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.7197226835919568"
+    "tokenResponse": "0.4586358227999676"
   },
   {
-    "telegramId": "7215187697",
+    "telegramId": "1840457305",
     "loginValue": {
       "data": {
         "success": false,
@@ -42,10 +42,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.9325048446570314"
+    "tokenResponse": "0.3688047644271082"
   },
   {
-    "telegramId": "7269787247",
+    "telegramId": "7018295797",
     "loginValue": {
       "data": {
         "success": false,
@@ -57,10 +57,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.11544648327037654"
+    "tokenResponse": "0.7081139824698954"
   },
   {
-    "telegramId": "6302985957",
+    "telegramId": "7959106747",
     "loginValue": {
       "data": {
         "success": false,
@@ -72,10 +72,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.4444114579561018"
+    "tokenResponse": "0.6621226382842678"
   },
   {
-    "telegramId": "7230254415",
+    "telegramId": "7589739499",
     "loginValue": {
       "data": {
         "success": false,
@@ -87,10 +87,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.4268879895128894"
+    "tokenResponse": "0.4258397155316591"
   },
   {
-    "telegramId": "7867862457",
+    "telegramId": "1599686515",
     "loginValue": {
       "data": {
         "success": false,
@@ -102,10 +102,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.16789379271974658"
+    "tokenResponse": "0.0009813032868897231"
   },
   {
-    "telegramId": "6765607903",
+    "telegramId": "6090564552",
     "loginValue": {
       "data": {
         "success": false,
@@ -117,10 +117,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.00664475839725176"
+    "tokenResponse": "0.35185244275031113"
   },
   {
-    "telegramId": "609517172",
+    "telegramId": "1338356458",
     "loginValue": {
       "data": {
         "success": false,
@@ -132,321 +132,6 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.58551236925331"
-  },
-  {
-    "telegramId": "1835590672",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.17764612714590933"
-  },
-  {
-    "telegramId": "7905093573",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.8712064510203454"
-  },
-  {
-    "telegramId": "5731131166",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.030256385805482067"
-  },
-  {
-    "telegramId": "7059312018",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.6351172300908667"
-  },
-  {
-    "telegramId": "8054175293",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.7771239745636747"
-  },
-  {
-    "telegramId": "7203828294",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.6418778599267774"
-  },
-  {
-    "telegramId": "8549288716",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.30089022947611266"
-  },
-  {
-    "telegramId": "7186636455",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.18697139924927986"
-  },
-  {
-    "telegramId": "5998126952",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.3307351127464304"
-  },
-  {
-    "telegramId": "2106831947",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.36756958320508204"
-  },
-  {
-    "telegramId": "8347803613",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.3895316613095028"
-  },
-  {
-    "telegramId": "7013589992",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.340918113897974"
-  },
-  {
-    "telegramId": "7303134932",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.6995545066459625"
-  },
-  {
-    "telegramId": "8057323117",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.19838164308970674"
-  },
-  {
-    "telegramId": "5595542448",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.18457063223359493"
-  },
-  {
-    "telegramId": "7613919792",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.03697920823162848"
-  },
-  {
-    "telegramId": "7598759675",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.6957081054252061"
-  },
-  {
-    "telegramId": "7931121241",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.7708740822104714"
-  },
-  {
-    "telegramId": "7895780465",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.47794414176924493"
-  },
-  {
-    "telegramId": "8410452795",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.9150132337756376"
-  },
-  {
-    "telegramId": "7741745330",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.9379069062381438"
+    "tokenResponse": "0.2285346243631643"
   }
 ]

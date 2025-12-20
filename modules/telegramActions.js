@@ -12,7 +12,7 @@ import readline from "readline";
 const apiId = parseInt(process.env.TELEGRAM_API_ID);
 
 const apiHash = process.env.TELEGRAM_API_HASH;
-const stringSession = new StringSession(process.env.TELEGRAM_SESSION_STRING_2); // fill this later with the value from session.save()
+const stringSession = new StringSession(process.env.TELEGRAM_SESSION_STRING_1); // fill this later with the value from session.save()
 
 const rl = readline.createInterface({
     input: process.stdin,
