@@ -22,7 +22,7 @@ if (emailsALeer.length === 0) {
 
 console.log(`Se encontraron ${emailsALeer.length} emails para procesar.\n`);
 
-var TOKEN = "Bearer eyJ6aXAiOiJERUYiLCJraWQiOiJ0Vy10M2ZQUTJEN2Q0YlBWTU1rSkd4dkJlZ0ZXQkdXek5KcFFtOGRJMWYwIiwiY3R5IjoiSldUIiwiZW5jIjoiQzIwUCIsImFsZyI6ImRpciJ9..kWJu_I-cNmNLwVb9.PPOY5aExTCTgyBVpZGJZK5MPtufqxD92Qm3ERtbnh9H_P37cXtHuJiv3jIEUtVGB0YdPfiYFpP9PEtn1boFE5MXiEIAe17OgFhX4iNC5gse2im710sIwhq-6mekIMC3CrxisCMYDEeWS24qUfzs3zRD_knjorNXQtOo2elkzImJhoCIBxT9vk_dAzrgVYmUVxiksHYDvwwOSkKCC5Vq1U6OsK0JtNvzjOtrp80mCfLQFYZUlFy1IJz-4B_XOpBaHxVJb2iWZbiF6CY3pGoYJJobHEAHKMMGztLMKawlSZMTlf514ph-8BcwZR07RqOYI-RLdUjnTX4sEVI89MXLv0bj8eJwrnMzibe4d_4Ja6PZ82FYaxql4nRm0MUk8SJRc4vkXMvSrMcmD-loMDozd2MJjBE7bojnldiD12nbP9gk78znEtKwh3uBPtrjDSJrRu7sKQJcN1D-It0s6GJy5T7_7zVjQUVKdqCyD4FrYtM1PW2QnxTJzWFgnMwUR-EE6EEXzVNljHCOg7pbU6_p_WvxAejMsHt9zQymI7xq0ObJ3tZQVEMiR7GB5RJCv-A5EKcAuvYKIhaf-WxLyONqzVrCdF3yGYxYiKWdG6JbfWbb9n5fHbxLPdT95607k3D_t7sy7Ot3M5YTP2176BTllrkf-jqDgX7ixJrCfIqbfCn622lWy0kwwv_1JHH9MfWlk36VrCF4ghQAtMjBJTvbf2wsANK0WVKfqBF5gRgCVpZLQrPn4qbaQubIZjc8Kv5SGnYktF5hQT3osQCIDrK3bMq2nmMbKBnnxgWfKu92n77t9RghjdICdFCo86qRc3AzPMNs1V1yM8PF_2sc7NZmqW99OMPHOvQYsKU8GVsv-iFkJ7KKK73AdXJ1CxcdsuYcbMWYAYtZAY-b4KQdg0Cdbnb_Njx6ccVBUJ1VrcnWN9_Tg4yp_vzLnqI-3iy348AT2RBx7CX_x9mTwAn-pqBHWEtxpoqODAuiF_hR6dY2YzMCv1SJ1h_HM7DW1ivM6dFyDJcIW5PefyxcR8QD8ostxKvVGkmUqirXj-GZcKK5ulyr_iASfAr-aKSHIdTnEru0oqtofREwQuLW9x2bE3FhcoajiGKhfXF-Hf8Gykt0-NGXw9wfblYJFqJtx8xzDbR0TXmqj151wq3wHiTzeS1d68_jgGqVtmeGhEyrA21Kj6Gk6nsE-62V7FsOCzGYoY0jO0i-xBA6fX4u3N2swiyWb68629UdluKoVSPDQGbqg8qA-K5ZV8N2XhpPu5J-IKCoUE8mQLBGffnOqw4W9C1bzOwLGPoJ8t6SxDubnGuvve62L8xN4p9oaJwbKKdJdkJYNB8PspYTT96zFZjZR9HKRW5bz8rqqdhVjmOH9vDJSB88xlCPsIPZTMkj5zzR57BjHuikEr8g6nZZl-53yAN1VaNBwvp3aU2VG7552J3nGufZuE1JZ0KP5k0kVXCqO6HvwyMEIjzmcGw6t9HFu8gCcw9R48OBijfQ7H3G9BaOsDe0XgDirBptncEFsAgfoRbwk4NE920QE65Pt0iG4KU-q0Gzg3vwxZDLbcMhsf4hln9UIdSlx4dbpFyCPlYOgAM8OO95B36uFy0aHuh0FUNJjNzySONa4HnFuTCDqjVRR7kvu7ohFw8Yhf9urxQ9htnC01g6_yEyx7rF5ekVh7z6dAlczXrq4ZgdnLKucr2oWrhnnUlyaWpO2iw-d5ow8-Xm-ysz7FAzjNjdoF83r9pZZpVgHo_ZEQMokbxNJF27FbEDqb2mij8--jm4A5i2J-NphHfM72GoApxb3SHtyChCql7kou0zgMfmjigrBZQJXz7Qc7sdxt3FOrBj-aSy0ottsGPkMRZl5wtqtny7D1dlD3vAX7tzsinNrovxG5M1bBRY5RLxoN55X-DKDKTrr12mR6NR7XmzEl2iilv-CCuNbPdi-fM5xmbm_8jXx0NWXYDWvCuPrY1jBrXIEMcx7Pq_uVAwg8EjUiPAyzDUCYVQACYcWhF6S1-A1jS4zZaRSt13QGSL1KFQN1AowdNRVCq7l0qHeQO4_jxLEW-cfu22FOgevOVgKTDkAUNjKaoWRWGwg5SFkp1Ad21FSvk0Kqx1QRTx_LLo3H0OBrFxxbA17yXKfOUwjJtwePNGCi99qKvXfEzEB7EClYVwGvvO8I0y-gkON3eUIU2nQ5Hwi5AB6IUfe0xlI_r-7mRkzdXnZQit7bgzahupo6J6xczqkpHvMj7LEhnS7aU4Q0BUBYISp5qHfhCKguyq_tCDcjVFvZ5aYhAVVmcUeWAQkgUM1BnlwWBtx4YKqLF5s2EXJm9MSV3LN-e0XKPCpZ8BfzURYdiuxc_hjpzP43czg98VZTX90xgXFVgKS_meMs5XqhTEcjhhLcjJoXsKyIQCyA6BwIBB07Px9HGzAaY6bpY97qPr26ovqEbbvCsHg676Ry_9yDlw3_3vynjVm3nIHSFpD090yD4JXPcmeeEH5dGF1DPxUbi9wWZR6WKDlEAUiDnT-Q7imP11JW97gqBGyIm0PTW4OC-5R7gSva-J2ObooLh9FdmZqs6AeZMS8Z9SVI-kAW6jEI2XQlCTYz8oJDDLl6G88nFSwwxC09bjysWr5-fFMAxc.T9Lt_hDhJWpF0tBeohDPUQ"
+var TOKEN = "Bearer eyJ6aXAiOiJERUYiLCJraWQiOiJ0Vy10M2ZQUTJEN2Q0YlBWTU1rSkd4dkJlZ0ZXQkdXek5KcFFtOGRJMWYwIiwiY3R5IjoiSldUIiwiZW5jIjoiQzIwUCIsImFsZyI6ImRpciJ9..WbcwRwLF6rIw6fsg.8Iew217dBnvoQLHSLNY4jEZgzSYlnhcDTD3ITw4CLcXRl2AZJv_h7dUyrihofRfm4R7FMyT_kUfG_Odlxx7KV3OHLJXTAO7wrquwIftZqYrAGcjfIrD_KDrKo30ki0-rpEjiDpjXauExAlYdjayVtjtzBAFK9Vel10FLxk5eBjvguE-yvaUv29k7jl3AaucuBgp4I77FytEm5k55jiKbBy7nCPEL1KMrF--38QkiseAnQt3DhfnSOP1hu2ljtP37U9aJij7-3GkVpkt-54xHDLI7V0IoCh9XaAwJTzLkggCjw0vy-d-UhzV0ny899uD2fuzGz4ufD6T4KRPeibDgJgGqy2h89AaVXudIsv6T3eLkmwW2XmTF5nRg_8CqwvV3-SF0fF-wpA_s3VGnb_qIY_aRZp-sE6oXdctKL0qgNRp5YGjlsQL3xYpT0-LbcG3DACPM0jmOxPSh2N0dGAhHoDzkH3vx2g_7FxL6wrPyvB256zb8jyoLksIOMLkdy_lOZ6wMeZbD7pkkjRW9gIimQwRqAbgakbiRiDMZ7yu51m9k1M84LyKT9CaXHg24GEyyXCKNIPBzE6oZjc8BA6Gj7Czjnd7yzLTBdwQWyGzdpSaaSwCYvtuPCBhND4zlHY0oA4ItD3PGzhEvxSiwtOPy3hBAYnuTTgleriLIyqDlx5zI3RkclVLSOaj_BLmjtYtOaoXYrOwcFS5axvOvcnjCvAk-E2MiJd50bQ5N7n8AXVlZYLdxM_63u6zIAx5GFYoY4s1KjTAYOIo858TMR6i6K54QKQ8q0LDJN_j2Ltej10_CWdZMRWsiGYHTCu-RgGMW-NOK3EpvXVyiFlDzp6d9k3ruwLHId83RBSrcGfhIEfHjAN5PxpZiDwGIwCl8K9r1f2x-epLm_gH1-Qko2ncCVpIq6lJ1PYp4YMyC4ZHw5U6-Xo_tuPyZuUl-YbpnJVTfgv9IfqSr59LCk3vccxxSsYp4PpA823YiyZDhxnzt26zKLDGsEOvQhcn9I7eHEXdqFRZMtN0erDH-oeR6AXu-EWh5MNFoMDL2-VL9SbbkuMvOyE69YW4TF3kIcorE_EHxJNstwXaORujG2c0pipr23YO8on1di_1oYePxHMt7fHAnYOa8YtyjR5d_9cam7e36_s0vo0Yw6d5TthKgZyh--nT5L9ZyZqssWoMVVt__wa1LU-5apUfVxt6Mq5vr8__apv0oA0ZLLrxhBM2THr418MEbvPhmH7QPAT8_yMwgH-_Sv8j4RerDkwhDckLvvH5D3XeTiHt4kaZ9kG1j1qYl-f3iiZv3rMq0bPmBK7cqnhiVAq3o-inoQZ3iOFY6lBOIIX_R73SfqedZITFhW79oiwdu38sVwRavfrrz7co_JOJa2luJPXXGgYfot-5A1KcvtCB5v4YM_9yv5MHHh9XsL8m8SlPZyO9T3bkfiOtk6D1CM9Q5dTQjVsW2-0WV2aykJ5p4cBAo--z9f3PXe2WphmEwpliybaf8u6CKgbVrf7VD9TmsD38i_1vgTV3tHcpUbxgGv9Z40oNwih2EQaXrxQuw2ISmku8778LJuzToWZQJcXPLEN3lw_A2lnRSh3VRNEDe9XPZ9YoP05_Wk_Fz2301dr96PsFtM8WGbEL8NWGb1gen4Ul8BmP8e8KOiNrwLEJ4yH4ypk9cccJZWcFHXIAj9jXnA9Zfdlb3IHHbr0L2tf1NIqDHBvXRRIH_HEAT8bke2JH54pDUE_IZOCmth_ekYdeJJYpKV3klNIGyIdOyQxXeAslsjwlYcIXsrNZymOjUE29XMHEK1dKIJ5ouJQUYMohHr27iZxcL9g0EA_hSSNtYXU1VkqmaIag6XZOGxAYTrt7_dDvUtT1FUgrKilGwWceeBEFHA3w4TaUeQ59uFidVy32eu2An3pr2C2QZ5T_LzNaZVXuMDKAmm-kXioCQHnSKanCxSP-a3yS5a_v4iwHf-M4w8wI9wLSEXp7UsROd8Lt6uPqBx90qyj00h37mr_NSURNj8JOdjEBWOQZDff69rcdUsUzLmELVLrWY51yWLSk3V4-91adXMrtnSGAxVrrMnPOjOoYl3YF_7G6holsetQGIARudM9TAMp1Rf2cBIAukpJPNztFkh998e86xARGUIDzV6Gx5StFNYB8Wyqu7lcpdEsrIfq0k8Gu3jZGtx9mqsZnWR8unm2nAAptWT5G0VVQohrEmrIdOr9poONb59VIiVTATFtVcLDxDpyMPwZvruc4zCqr-iXd5jXaUUqM8mRX6XaAqqW-ZVhQJjR0qFlEvkz1M2C0NXG9tcLL1SyH3INsGwubrsXy_jElBHsrAEv8S9pv_mqzVoo_LLA-Osd3iP779t2m3roEkkMkY-5crcVSRwlZ5LheC5PpTDzS6KfykfXdgV4fTHrjupcPzQ3fryhtrNJvGPBsYm6m45Iqie92U0dX5j5AoaXSW5Qjs93rl5UuQkTWMRKDm0OO2-r7K5n7mVJr8QGFQK3woBLc3zAjLQBdSp4ET7azYIqODc6D0mAkdZVsHVPXCYoaXGh1aX3Z34toiGAC9L6pE8L1f2SEkmDoRnqCQ0goeXbFvEFQIFrWu7k88K3YD4ZnLtgS2iIqlEw.4j68OsguPuX4jH7yUtBv0A"
 
 const rutaArchivo = "./resultados.json";
 fs.writeFileSync(rutaArchivo, "[]", "utf8");
@@ -50,7 +50,7 @@ function guardarResultado(email, result) {
 // Procesar cada email del archivo
 for (let i = 0; i < emailsALeer.length; i++) {
     const correoFormado = emailsALeer[i];
-    
+
     if (!correoFormado.includes('@')) {
         console.log(`⚠️ Línea ${i + 1} no es un email válido: ${correoFormado}`);
         continue;
@@ -59,20 +59,20 @@ for (let i = 0; i < emailsALeer.length; i++) {
     var result = await checkDisneyExists(correoFormado);
     guardarResultado(correoFormado, result);
 
-    if(result.noError){
-        if(result.exist===true){
+    if (result.noError) {
+        if (result.exist === true) {
             console.log(correoFormado + " PERRO existeeeeeeeeeeeeeeeeeeee")
         }
-        if(result.exist===false){
-            console.log((i+1) + " no existe")
+        if (result.exist === false) {
+            console.log((i + 1) + " no existe")
         }
     }
 
-    if(result.noError===false){
-        if(result.serverError){
-            console.error("🖥🖥🖥🖥 Error servidor: "+result.errorMessage)
+    if (result.noError === false) {
+        if (result.serverError) {
+            console.error("🖥🖥🖥🖥 Error servidor: " + result.errorMessage)
         } else {
-            console.log("🌐🌐🌐🌐 Error solicitud: "+result.errorMessage);
+            console.log("🌐🌐🌐🌐 Error solicitud: " + result.errorMessage);
         }
     }
 }
@@ -124,6 +124,12 @@ async function checkDisneyExists(email) {
                     if (jsonResponse.data.check.operations.includes("Login") || jsonResponse.data.check.operations.includes("OTP")) {
                         result.exist = true;
                         result.noError = true;
+                        if (jsonResponse.data.check.operations.includes("Login")){
+                            result.login=true
+                            console.log("LOGIN")
+                        }else{
+                            result.login=false
+                        }
                     }
                     if (jsonResponse.data.check.operations.includes("Register")) {
                         result.exist = false;
@@ -132,7 +138,7 @@ async function checkDisneyExists(email) {
                 }
             }
         }
-        if(result.exist===null) {
+        if (result.exist === null) {
             throw new Error("No se pudo determinar si existe")
         }
 
