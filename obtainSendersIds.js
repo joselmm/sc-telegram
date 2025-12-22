@@ -31,7 +31,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "-1003539346951";
+    const chat = "https://t.me/FrostyAccounts";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
