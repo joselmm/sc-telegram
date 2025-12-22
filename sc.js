@@ -14,7 +14,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
 (async () => {
   const apiId = +process.env.TELEGRAM_API_ID;
   const apiHash = process.env.TELEGRAM_API_HASH;
-  const session = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2);
+  const session = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_1);
   const client = new TelegramClient(session, apiId, apiHash, { connectionRetries: 5 });
 
   await client.start({
@@ -27,7 +27,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  var chat = "https://t.me/binerosmx";
+  var chat = "https://t.me/BINNEROSCC";
   const entity = await client.getEntity(chat);
   console.log("Tipo de chat:", JSON.stringify(entity));
 
