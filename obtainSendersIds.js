@@ -31,7 +31,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = "-1002059854983";
+    const chat = "@binerosmx";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
