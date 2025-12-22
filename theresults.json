@@ -1,6 +1,6 @@
 [
   {
-    "telegramId": "2015172632",
+    "telegramId": "47651",
     "loginValue": {
       "data": {
         "success": false,
@@ -12,10 +12,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.5037961966928981"
+    "tokenResponse": "0.7367586508917026"
   },
   {
-    "telegramId": "8461610558",
+    "telegramId": "47047",
     "loginValue": {
       "data": {
         "success": false,
@@ -27,10 +27,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.7181865422386002"
+    "tokenResponse": "0.5615430980002976"
   },
   {
-    "telegramId": "5073251387",
+    "telegramId": "47035",
     "loginValue": {
       "data": {
         "success": false,
@@ -42,10 +42,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.1852356308524652"
+    "tokenResponse": "0.5913765003080307"
   },
   {
-    "telegramId": "8427762125",
+    "telegramId": "47010",
     "loginValue": {
       "data": {
         "success": false,
@@ -57,10 +57,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.6676492925541078"
+    "tokenResponse": "0.29129807009249653"
   },
   {
-    "telegramId": "5824972063",
+    "telegramId": "46642",
     "loginValue": {
       "data": {
         "success": false,
@@ -72,10 +72,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.0326201384177951"
+    "tokenResponse": "0.9062451394442053"
   },
   {
-    "telegramId": "8314107791",
+    "telegramId": "46633",
     "loginValue": {
       "data": {
         "success": false,
@@ -87,10 +87,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.020430404475344277"
+    "tokenResponse": "0.10762962274184806"
   },
   {
-    "telegramId": "8455610399",
+    "telegramId": "46511",
     "loginValue": {
       "data": {
         "success": false,
@@ -102,10 +102,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.2623730070367889"
+    "tokenResponse": "0.3550320447269286"
   },
   {
-    "telegramId": "5613568505",
+    "telegramId": "46499",
     "loginValue": {
       "data": {
         "success": false,
@@ -117,10 +117,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.7829727597432581"
+    "tokenResponse": "0.6225983938425601"
   },
   {
-    "telegramId": "6699145284",
+    "telegramId": "46160",
     "loginValue": {
       "data": {
         "success": false,
@@ -132,10 +132,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.8105020840436237"
+    "tokenResponse": "0.10773692935843582"
   },
   {
-    "telegramId": "300860929",
+    "telegramId": "46108",
     "loginValue": {
       "data": {
         "success": false,
@@ -147,10 +147,10 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.5402682485345254"
+    "tokenResponse": "0.09143907745409297"
   },
   {
-    "telegramId": "5737125466",
+    "telegramId": "46082",
     "loginValue": {
       "data": {
         "success": false,
@@ -162,21 +162,6 @@
       "url": "https://scavengerus.online/api/login"
     },
     "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.493633178725825"
-  },
-  {
-    "telegramId": "8191397359",
-    "loginValue": {
-      "data": {
-        "success": false,
-        "error": "Usuario no autorizado"
-      },
-      "status": 401,
-      "ok": false,
-      "statusText": "Unauthorized",
-      "url": "https://scavengerus.online/api/login"
-    },
-    "error": "HTTP 401: Unauthorized",
-    "tokenResponse": "0.9758176868180142"
+    "tokenResponse": "0.8040129845901829"
   }
 ]
