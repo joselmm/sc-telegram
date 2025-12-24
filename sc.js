@@ -27,7 +27,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   console.log("✅ Conectado correctamente");
 
   // Obtiene la entidad del grupo o canal
-  var chat = "https://t.me/BINNEROSCC";
+  var chat = process.argv[2] || "https://t.me/BINNEROSCC";
   const entity = await client.getEntity(chat);
   console.log("Tipo de chat:", JSON.stringify(entity));
 
