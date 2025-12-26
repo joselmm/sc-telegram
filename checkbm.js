@@ -1,3 +1,16 @@
+import express from "express";
+const port = process.env.PORT || 3000;
+const app = express();
+ 
+app.listen(port, () => {
+  console.log(`Escuchando en el puerto ${port}`);
+});
+
+app.get("/ok",(req, res)=>{
+    res.send("ok")
+})
+
+
 
 // Genera URLs para cada día de 2025 (1 de enero → 31 de diciembre)
 function generateDailyUrls() {
