@@ -6,11 +6,11 @@ function generateDailyUrls() {
 
   // Función auxiliar: formatea fecha como YYYY/MM/DD
   const formatDate = (date) => {
-       return (date + 900);
+       return (date + 60);
   };
 
   // Fecha inicial: 1 de enero de 2025
-  let current = 1761951600 // Enero = mes 0
+  let current = 1762191600
   const end = 1766753049    // 1 de enero de 2026 (exclusivo)
 
   while (current < end) {
