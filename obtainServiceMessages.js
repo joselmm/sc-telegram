@@ -5,6 +5,8 @@ import input from "input";
 import fs from "fs";
 import dotenv from "dotenv";
 dotenv.config();
+import { spawn } from "child_process";
+
 
 const apiId = process.env.TELEGRAM_API_ID;
 const apiHash = process.env.TELEGRAM_API_HASH;
@@ -82,4 +84,13 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2
     console.log(`📄 Archivo generado: "${OUTPUT_FILE}"`);
 
     await client.disconnect();
+
+    const child = spawn("node", ["minar", OUTPUT_FILE], {
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", () => {
+        process.exit(0);
+    });
 })();

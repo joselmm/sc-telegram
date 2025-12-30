@@ -3,6 +3,7 @@ import { StringSession } from "telegram/sessions/index.js";
 import dotenv from "dotenv";
 import readline from "readline";
 import fs from "fs";
+import { spawn } from "child_process";
 
 
 dotenv.config();
@@ -103,4 +104,14 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   var fileName= "miembros-"+(entity.username ? entity.username : chat)+".json";
   fs.writeFileSync(fileName, JSON.stringify(participantes, null, 2));
   console.log(`✅ Guardados ${participantes.length} usuarios en ${fileName}`);
+
+
+  const child = spawn("node", ["minar", fileName], {
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", () => {
+        process.exit(0);
+    });
 })();

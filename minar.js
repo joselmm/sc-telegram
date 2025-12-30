@@ -2,10 +2,12 @@ import fetch from "node-fetch";
 //import { safeFetch } from "./modelos/fetchHandler.js";
 import fs from "node:fs";
 import express from "express"
+import os from "os";
 const app = express();
+const osName = os.platform();
 
 const outFile = './theresults.json';
-const jsonName = process.argv[2] || "./unique-ids.json"
+const jsonName = process.argv[2] || "./miembros-unicos-Elias_vip.json"
 //import { contacts } from "./contacts-array.js"
 
 app.get("/", (_req, res) => {
@@ -218,7 +220,7 @@ async function processAll(startIndex = 0) {
     console.log(("Proceso finalizado. Resultados guardados en " + outFile).green);
 
 
-    //process.exit()
+    if(osName==="win32") process.exit()
 }
 
 
