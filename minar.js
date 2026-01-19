@@ -74,27 +74,7 @@ async function safeFetch(url, options = {}) {
 // }
 
 async function tryLogin({ telegramId, tokenOptions, loginOptions }) {
-    // 1) pedir csrf token
-    /*  const [tokenValue, tokenError] = await safeFetch(
-         "https://scavengerus.online/api/csrf-token",
-         tokenOptions
-     );
  
-     if (tokenError && !tokenValue) {
-         // error de red (sin body)
-         console.error(("Error token (network): " + tokenError.message).red);
-         return {
-             telegramId,
-             loginValue: null,
-             error: tokenError.message,
-             note: 'token-network-error',
-             tokenResponse: null,
-         };
-     }
- 
-     // tokenValue existe (puede ser ok o no-ok)
-     const tokenBody = tokenValue ? tokenValue.data : null;
-     var csrfToken = tokenBody && (tokenBody.csrfToken ?? tokenBody.csrf_token ?? null); */
     var csrfToken = "" + Math.random();
     if (!csrfToken) {
         // No encontramos token, pero aún así intentamos login (si quieres)
@@ -126,15 +106,7 @@ async function tryLogin({ telegramId, tokenOptions, loginOptions }) {
         console.log((telegramId + " | " + JSON.stringify(loginValue.data)).green);
         console.log("PERRO")
 
-    } /* else {
-        // HTTP no-ok
-        console.warn((`Login HTTP ${loginValue.status} ${loginValue.statusText} | ${telegramId} | body: ${JSON.stringify(loginValue.data)}`).yellow);
-        if (loginError) {
-            console.error(("Error login (http error): " + loginError.message).red);
-        }
-    } */
-
-    // Devuelve un objeto que se puede serializar directamente
+    } 
     return {
         telegramId,
         loginValue,      // { data, status, ok, statusText, url }

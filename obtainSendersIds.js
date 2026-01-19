@@ -31,7 +31,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2
     console.log("Session string:\n", client.session.save());
 
     // 🔹 Grupo o canal a analizar
-    const chat = process.argv[2]  ||  "https://t.me/MetodosNetflixx";
+    const chat = process.argv[2] || "https://t.me/MetodosNetflixx";
     const entity = await client.getEntity(chat);
 
     let offsetId = 0;
@@ -90,6 +90,7 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2
 
     await client.disconnect();
     await client._disconnect();
+    if (process.argv[3]) return
 
 
     const child = spawn("node", ["minar", fileName], {
@@ -100,6 +101,6 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2
     child.on("close", () => {
         process.exit(0);
     });
-    
+
 
 })();

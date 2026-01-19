@@ -1,4 +1,6 @@
 import fs from "fs";
+import { HttpsProxyAgent } from "https-proxy-agent";
+
 
 // Leer emails desde archivo txt
 function leerEmailsDesdeArchivo(ruta) {
@@ -22,7 +24,8 @@ if (emailsALeer.length === 0) {
 
 console.log(`Se encontraron ${emailsALeer.length} emails para procesar.\n`);
 
-var TOKEN = "Bearer eyJ6aXAiOiJERUYiLCJraWQiOiJ0Vy10M2ZQUTJEN2Q0YlBWTU1rSkd4dkJlZ0ZXQkdXek5KcFFtOGRJMWYwIiwiY3R5IjoiSldUIiwiZW5jIjoiQzIwUCIsImFsZyI6ImRpciJ9..P85Ph2cSLSyEbW3v.J9n0CN48Se2PNrTatioei5cQU23TVcAtrNnZ62WK6T9BGQ1Y_3K792bu4NufJJav6ge9hX93wS--1M4BeoTCh6U57aKIcDr-k54h4t2iOdImdF0ews8IjFGSnF0s9H1s7rxq88c0dlBAn3ExaFHQGjzLhXEI5iAbnURS91yIizF8IiONK8TMkhacJkmJNtmm4HOL1LdY871L_17SrkKbtKGNYuJJ_OG6I_DjO6wf34oAoaOwX174bakNP3D_efO8Bk9QLJhJWcysNKG06dQFzNPyG-z-TQh2okfygoHiBKgxMvpmWgBbV8QhNYwBzvo8dlW5xzNlG5dzDNfZDYon2O60TPtbWQlAcEPemuHKVNI8fjbGuSjj12yKRpQGg8hAzODJGpy3xw6vu09TH5Ieec1A5D_Yd3BY9aVt9_FDcPwC1AlaaS4HlDDJLCtnaaY7aGaXGnEEOMSgbP2xWbN8BJ5qUzdDaVGSTwVwN_L8_58hCfc2zdrK4hkzaZq07Vmog1o6VGo7eG6cJHnBbcYWcvLC2efl50JR1Q0rY31z0H_XUWBveZ4ewNQPLUQxWZNl4xmxAt7xQkQgTsIkXEh8qUBYNfavkW_Z4kdURqrgGUXRemeXmHU876UtvhM3JEzlUzB-KoZ2N9n2mVD5MuVKseMOXUtL23_GABSL_kyUSNYUGahx3vJ1FT7RC1eVdR05iRYhUmiNNiHvDt3mkC3KCFKqp3r67S0-n2InHs4aQ4ckEXyxgr44vEtEo1BQUBSuxAjJ0zYzAuhNAnYDV2Zabbs3_dQeT7hyjusmkLqieyYm5SlimN9ktHCvBWY3zFqkIJJMv6tT9aG7qeEMPkkG0rWV-8AJ_sB7AvdJZjKYw_Zx7mpBeklS8sWKH_N7DajHmuh3a13_C9-JssI_wb2eWPHCLEfrKJE1unQ6sg0GFhx3ls5Jaw0gAQeAp0DWP4I-J3HyNYGwJkwa425mmKtoqABA2rkf7nLQUF2gg29KABX3_NwwpR21PZNH0sIObhOZLqAkt7MevZ4zLM12OWF7sw3Kk6-EL3CmPrtdd6xKHxxemYAjnjQBlZ7KUIigWzwe4HgY4mz0UuV7QlS5wqkxG3Pov5T2me3vDlfkUKZkXIHRRKaYIVkRjHXq5XrIVteVxfJTKXPSuoxnrcdGK0MVEC-VWUPWqgm4jnGDPLhUmabhwj0w3xo4q4me3L1fCvj3f4u4NID5iawdFb54Y73gQmrtmcK5Jjkjza7ZYzoFti_RST3CzQ_4hnlXZBMFE_D5e717d_Oj1NK7rsYbVXViDOB8DEp-znJxyh1gFP-nr1U-jkxcNyyCQCkgV4W-72CflROxZ_C39kXgGF3fqypZTuF8dg50tVagvzdzT4Fyixd40WGzsJLJy-JXolhezrQypq2hO4l1XvxzHXPc1dAfb8mwoC8ibvimuveBo5P-ml8GLH21YqkPIQaCjyYMUCSYjnNbo4Y1eRheRcHr_gCzKwKbnZkpnDNHzh6uIsu6Sqx3m0ZFiiYfWgWmGhqLL_eRsxxGnwk5f-gyThsYOEyb15wMbTPjy9EUav6wqL92xjQhvvrxZXhqL1HlqL-7xSo5wzv5iDtgFXqmkVpJAio0j_8OCjtbDRWBhg79zCskQLMGuZUQ9tZ-ePbjKWSSGK5599ARyadTIsX47m-xGCPV4yKD0gBcSbe0JFnk8RayS0LE3ziMq-3Mt_n5Bi8wQYN7IqaCeVPGYwS_cAMKxJTlxvMSBdMJcsq4XyzkvEwpV3mVg48PeFuuQTCooMG9HyCsJi5OkFcqu6Ruzh2stoPcMUFg8ZXl6m6PL1y_lfU_sXCFT8PU-B5KQX1InuZ_8wK8aE29f14EYunP_lwGCsTiW6bdO7szI_ykh9Oj8C_4NVz776KmGWIrEJiDN_rBeHCTOdXGq6g3xM3O2cdKV7UMyg8uKfyxQx3rgrV0BG-huGP5gq2Kwl9weK6JbI60X7PjU8dlI9JFEFAhr_O0LAopViTQsNG2m9AtNFCjMFmGvBWC2UH4WYK2ocYi8kodZlLLATlrJn6QW8PfAVvwjEJ6g2glOWznLLlmjMVQNRS4fLC311n0aMM8ObWOOJecDkGMSORX8x3obtd3WMTVQmRkZqQ54MORFNDj5HtKOaScmo8P5HUIeIUl9DnKUk0y_LkI1Z2ji7UjntWczUaG4l-YxXsG2_j25sIuoa7NaHb0YosLikn70gjSJ0a9vpAS5IPDRiQjjY-DS_jG-tyv4q9v_FBRjBTqsYqIjKDqmNUPMgxGtUU1Fh7_8P_3w-tTTLVd3HFkXB63QosbVXGN3g96do2w8T5w1jHWBhcBnvBaiCSxSC-hK2ZEOgp4ugrqyM8Y8dgrT5UQdq7OS196ElFgbAjZCEvtTFkUAMuQwzi9lU7fEJIe9Fp12nWBLvL4Udl0YouHeaaWvZpLKfypjMGyfFM1WjXkEjDBrGRAt4o2uFHjS9T6kdFmIEeBSHzv7ELdYt0z0yAxJzk0WkQ8Jo8ZcomDXzX7f992JZ6etxXAaDMGyO1bcBT_h_1xmXfCMnz7jxY_waNrL04jOoCyu-p4d6bKfcC4MErL6yjgdXUJbmelDmvg2KB33g.WkhVy_5biz2sJ_bIlF2U1A"
+var TOKEN = "Bearer eyJ6aXAiOiJERUYiLCJraWQiOiJ0Vy10M2ZQUTJEN2Q0YlBWTU1rSkd4dkJlZ0ZXQkdXek5KcFFtOGRJMWYwIiwiY3R5IjoiSldUIiwiZW5jIjoiQzIwUCIsImFsZyI6ImRpciJ9..UjNEFGdlrvXEvL4m.8GEe-3dvGlNsbUxfsR9kIEWRHvubNinRFHw738q-7yDMdPMF3a3NY1gdTBufsz__xoMpNehDT2NU8KQhw_feN_MBfLcTPlvc1SaVPWj-csIu0IsmDZVsk4H_i0rNlgBo37d_iQ-HIXNSLvOw5k8aw9-w-lNFMnD-i9Kt-_2Sq5DiMjN-WW9okPUjVZwAPfe2MGWJXXdLIkFcN0ewXNfjaBxV8S9GawU6f3-fyqnesxVXdassOZB6uX4HtC9zGa0EU0sGwok8oXYaDDE2sghGLL2ZeVcunnHTvsViWqoajXa3CWSyC8a6XFyvJ1sZ7aktAQMum6rAA2w9eH-k7OHBu1iafl0uRBRQkbBOxAHMwbXtUSOuMLgzfjka_NyC-3XY0BNlyQgYGSPa7RRcgAgw9o1-vGS7fRkp2EFZB06G9IXANRcx5lsJ5YEZXaQOvAfq6FF1MVHNYWZTtYiwbay3Kx2Gm4HZxy4JBCK8XrY2ZJ8J2rNZj0JJ5jVmwgairb3J7HjXQ7UdYg6_AqEnylS6BR6T0EBNzcMoh6Oxnk0WbQ0wn7WLFiZU4Yo2q0w3HQJkmgDd_maCUxueVDcE8HonO38Xg1w3E5C3JSJAwa_kXrv6Morgt8L7wdNNgDWx0HQvHRX4GUsNjBf7S4FRA6Tilk1yOqMAe_7w-WFmJiHCmdlWwMRKnx-tO2LxS6IN2lk9D9RwEqnU6MZYJGYDsHjRyX84vWAtGueGZphgENOTuTtfWa8GKWxGc8YcCLACr5rjccj4E8XVr-aE-qLArooKdnGdSS65Wa5rrWQt2aBnduW4Atg3AX9KxTacmBviM-p6Ay3PjO5oYUc_R35fAB6ma2w5ZpSeTzERlAuRdp_d1EmNCVBhCTPmo6BJ8e8bbLB5aWCpgrBCzqQxbB5NgPsEBvVrj8TcJFS782AbnkD2kAnMKOzX3Be3zasgKE64sY2yG8XedmzmshGJRQizY30d5uFRERcXmmLiI0TBmxAJCKAK4uDtLt3m7__8dcPu0_h7sVGsw_Kjul_1VDgz-CMmfmEL6WcEvV-gC2yOuAyjE6tMzwBVbIIgcXmTlYp85wEvy3ndm33gz8nHT1r0x2lxe_b2k__hNr2Ej4tv_2CDCTxoIW_P3RqPKpUXa3Px4H7FIN4dOByYYDo0t2g8PFzKwmYDRWD2lNjSv4ILDDGqZcA3fRVTg_a1OOxUu4BH-BlO2Ge95lDFHrrqJ2s8cLWnSn4RtO4IR87DCM80LAT5WCiOft4g6IxIDwI_1id8CvjlmhzjvKrt1N9x-Z6YVcW94iF3d1P8OR_oD-joeE_fIodX5VkFiv8yR903n5YeJ9O2DUdzcgabaa6ZmiYsx1v1DQTl6Qum7YPGRdbjxgYU7GrP_Wl1DXcHPNnWPa8tn9qvtNKIxBaoGnukUVyYJBUf8zlenV3wPLm5_PG-aZ-zczL5Y8KZT7zXK_noQXdZ_gtScU3PNg-VbRzs6WhI9-90aqjZulFZ9E2uRChDgaFGk-rBA0B8brSVoGW-Qo-__4mYQ5CIFUcF_sHvyZxvpjKL_9gxA2QjWGU1s562-k0Wi-5WNCVc73yzhUWwC0BqTyUzyCowTx1UMRfY_ocbTcoiUikHs5RiaCiVyu7pXOn8MQIXvD3A3xlA16LRikVY6r-b-7k4eMc3RAngRNv_ZBUckZWoXFHAXUxjxTsVpnygtqFe-uju6Pme9yrZs6Mhodu91T1w8Zs5Z6Qy9yjQPf1-_GU_3GLiErBirlWhqFRNJu22SiIVsSevjXCg9-OI6TN0oaYXZyedN3cBqvCGbwn0HKiv57T4UzZ9TXlYYtqh8HZ56TByK0OQvzBt5TcsOqzlkZgU7HvEcbwGUv3jSLaKANurOq057grpxd0OkCRqKizwdPDKdQqKwrFViB9gwKUXGe-BSmFq6W6I3F7_EKhnw8DTdhorY031YoEEZaOcbjYrXnwVRqqTw8Ar8nig97WJaJ-W1UkxcM1x1vwRDp88UNbNV-CeJ7K0o2xIGgoQ_6mmPtPtKeLYlrmmgjHEWkrY7YAheYiubylzD2HogekqhXfIK78g444mohTh6yTeunVnE6gzCeu5SKYR_kVXygC4oVko3JL5Q_Kh8q7CiGZUtd1l9bz2IfSDNz5OncgM7CVKKipAcr53moEz5MwnxR4WZpTl_IEvaz0wonRR5TbjfDaB7aPaQWitgYOmou0tGkP_u5rz1n2Eq5LBejhfHXmY4mNXx6gDGHec9qWc4et_pmG1KFk5ADJsojHTql3OQAU9dXkyXJvKmQa-AcaIZtZbu_JJYap-sDRBUTfgmWvHxOqhrlftnBvAw7PHyk06ggqjwLg_HXST209BMBqYdrpjwCasnSczLZoNCMnQ3vh2pDE3BIk59A2gCRlepwR9ve-Gc6Djd18enafsn025oI7sOdDreSs801i4DBdRQHySl2yZTrM_awUoHZl8MxU3MBpEfEJqjmyfefTC36-36hDvII0Z8g2hB3AaezhGIQ08eTXZsoklLJip5jbIeCD05xEkzIVApWGiKEjIDW5hSW9csoLsgsCxehJVUe2i6N1ZeZ_G4iJ3c75G8xPOA4GRITnnvP3qgja14A2UpQ_bWSbbk9m35U4TCJdfCoi-2ybXSwRJBqs4uZLE49o4XL60GGDsM6fcP6xeVrWqGIfE3vXXvjw5.mz65HyzTm8bqvfU-SgVIyA"
+
 
 const rutaArchivo = "./resultados.json";
 fs.writeFileSync(rutaArchivo, "[]", "utf8");
@@ -48,13 +51,28 @@ function guardarResultado(email, result) {
 }
 
 // Procesar cada email del archivo
-for (let i = 0; i < emailsALeer.length; i++) {
+/* for (let i = 532; i >= 0; i--) { */
+for (let i = 0; i < emailsALeer.length ; i++) {
     const correoFormado = emailsALeer[i];
-
+    //console.log(correoFormado)
     if (!correoFormado.includes('@')) {
         console.log(`⚠️ Línea ${i + 1} no es un email válido: ${correoFormado}`);
         continue;
     }
+
+    /* const proxy = "http://8.35.211.163:80";
+    const agent = new HttpsProxyAgent(proxy);
+
+    const res = await fetch("https://ipinfo.io/json", {
+        agent,
+        headers: {
+            "User-Agent": "Mozilla/5.0"
+        }
+    });
+
+    console.log(await res.json());
+
+    break */
 
     var result = await checkDisneyExists(correoFormado);
     guardarResultado(correoFormado, result);
@@ -84,7 +102,12 @@ async function checkDisneyExists(email) {
         serverError: false,
         errorMessage: ""
     }
+
     try {
+
+        const proxy = "http://192.168.148.68:46704";
+        const agent = new HttpsProxyAgent(proxy);
+
         var serverResponse = await fetch("https://disney.api.edge.bamgrid.com/v1/public/graphql ", {
             "headers": {
                 "accept": "application/json",
@@ -108,6 +131,7 @@ async function checkDisneyExists(email) {
                 "Referer": "https://www.disneyplus.com/ ",
                 "authorization": TOKEN,
             },
+            agent,
             "body": "{\"query\":\"\\n    query check($email: String!) {\\n        check(email: $email) {\\n            operations\\n            nextOperation\\n        }\\n    }\\n\",\"variables\":{\"email\":\"" + email + "\"},\"operationName\":\"check\"}",
             "method": "POST"
         })
@@ -124,11 +148,11 @@ async function checkDisneyExists(email) {
                     if (jsonResponse.data.check.operations.includes("Login") || jsonResponse.data.check.operations.includes("OTP")) {
                         result.exist = true;
                         result.noError = true;
-                        if (jsonResponse.data.check.operations.includes("Login")){
-                            result.login=true
+                        if (jsonResponse.data.check.operations.includes("Login")) {
+                            result.login = true
                             console.log("LOGIN")
-                        }else{
-                            result.login=false
+                        } else {
+                            result.login = false
                         }
                     }
                     if (jsonResponse.data.check.operations.includes("Register")) {

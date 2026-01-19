@@ -105,7 +105,7 @@ console.log("API_HASH:", process.env.TELEGRAM_API_HASH);
   fs.writeFileSync(fileName, JSON.stringify(participantes, null, 2));
   console.log(`✅ Guardados ${participantes.length} usuarios en ${fileName}`);
 
-
+  if(process.argv[3]) return
   const child = spawn("node", ["minar", fileName], {
         stdio: "inherit",
         shell: true

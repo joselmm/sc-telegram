@@ -1,0 +1,566 @@
+[
+  {
+    "num": 1502,
+    "noError": false,
+    "type": "none",
+    "errorMessage": "TypeError: Cannot read properties of null (reading 'textContent')\n    at processEmails (file:///C:/Users/Usuario/Documents/sc-telegram/extractorNetflix.js:38:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  {
+    "num": 1501,
+    "noError": false,
+    "type": "none",
+    "errorMessage": "TypeError: Cannot read properties of null (reading 'textContent')\n    at processEmails (file:///C:/Users/Usuario/Documents/sc-telegram/extractorNetflix.js:38:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  {
+    "num": 1500,
+    "noError": false,
+    "type": "none",
+    "errorMessage": "TypeError: Cannot read properties of null (reading 'textContent')\n    at processEmails (file:///C:/Users/Usuario/Documents/sc-telegram/extractorNetflix.js:38:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  {
+    "num": 1499,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1498,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1497,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1496,
+    "noError": true,
+    "type": "netflix",
+    "match": "californiatx@brustra.lat"
+  },
+  {
+    "num": 1495,
+    "noError": true,
+    "type": "netflix",
+    "match": "californiatx@brustra.lat"
+  },
+  {
+    "num": 1494,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1493,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1492,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1491,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1490,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1489,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1488,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1487,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1486,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1485,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1484,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1483,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1482,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1481,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1480,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1479,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1478,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1477,
+    "noError": true,
+    "type": "netflix",
+    "match": "missipi901@brustra.lat"
+  },
+  {
+    "num": 1476,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1475,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1474,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1473,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor3@brustra.lat"
+  },
+  {
+    "num": 1472,
+    "noError": true,
+    "type": "netflix",
+    "match": "premso901@brustra.lat"
+  },
+  {
+    "num": 1471,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1470,
+    "noError": true,
+    "type": "netflix",
+    "match": "moiseskma@brustra.lat"
+  },
+  {
+    "num": 1469,
+    "noError": true,
+    "type": "netflix",
+    "match": "premiumforum@brustra.lat"
+  },
+  {
+    "num": 1468,
+    "noError": true,
+    "type": "netflix",
+    "match": "premiumforum@brustra.lat"
+  },
+  {
+    "num": 1467,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1466,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1465,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1464,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1463,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1462,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1461,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1460,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1459,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1458,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1457,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1456,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1455,
+    "noError": false,
+    "type": "none",
+    "errorMessage": "TypeError: Cannot read properties of null (reading 'textContent')\n    at processEmails (file:///C:/Users/Usuario/Documents/sc-telegram/extractorNetflix.js:38:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  {
+    "num": 1454,
+    "noError": true,
+    "type": "netflix",
+    "match": "premiumforum@brustra.lat"
+  },
+  {
+    "num": 1453,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1452,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1451,
+    "noError": true,
+    "type": "netflix",
+    "match": "premiumforum@brustra.lat"
+  },
+  {
+    "num": 1450,
+    "noError": true,
+    "type": "netflix",
+    "match": "alicatter90@brustra.lat"
+  },
+  {
+    "num": 1449,
+    "noError": true,
+    "type": "netflix",
+    "match": "alicatter90@brustra.lat"
+  },
+  {
+    "num": 1448,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1447,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1446,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1445,
+    "noError": true,
+    "type": "netflix",
+    "match": "californiatx@brustra.lat"
+  },
+  {
+    "num": 1444,
+    "noError": true,
+    "type": "netflix",
+    "match": "californiatx@brustra.lat"
+  },
+  {
+    "num": 1443,
+    "noError": true,
+    "type": "netflix",
+    "match": "californiatx@brustra.lat"
+  },
+  {
+    "num": 1442,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1441,
+    "noError": true,
+    "type": "netflix",
+    "match": "chekratu901@brustra.lat"
+  },
+  {
+    "num": 1440,
+    "noError": true,
+    "type": "netflix",
+    "match": "chekratu901@brustra.lat"
+  },
+  {
+    "num": 1439,
+    "noError": false,
+    "type": "none",
+    "errorMessage": "TypeError: Cannot read properties of null (reading 'textContent')\n    at processEmails (file:///C:/Users/Usuario/Documents/sc-telegram/extractorNetflix.js:38:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  {
+    "num": 1438,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1437,
+    "noError": true,
+    "type": "netflix",
+    "match": "premiumforum@brustra.lat"
+  },
+  {
+    "num": 1436,
+    "noError": true,
+    "type": "netflix",
+    "match": "premiumforum@brustra.lat"
+  },
+  {
+    "num": 1435,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1434,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1433,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1432,
+    "noError": true,
+    "type": "netflix",
+    "match": "supprete190@brustra.lat"
+  },
+  {
+    "num": 1431,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1430,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1429,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1428,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1427,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1426,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1425,
+    "noError": true,
+    "type": "netflix",
+    "match": "sophia291@brustra.lat"
+  },
+  {
+    "num": 1424,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1423,
+    "noError": true,
+    "type": "netflix",
+    "match": "fedexprom1900@brustra.lat"
+  },
+  {
+    "num": 1422,
+    "noError": true,
+    "type": "netflix",
+    "match": "fedexprom1900@brustra.lat"
+  },
+  {
+    "num": 1421,
+    "noError": true,
+    "type": "netflix",
+    "match": "alicatter90@brustra.lat"
+  },
+  {
+    "num": 1420,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1419,
+    "noError": true,
+    "type": "netflix",
+    "match": "clevert90@brustra.lat"
+  },
+  {
+    "num": 1418,
+    "noError": true,
+    "type": "netflix",
+    "match": "alicatter90@brustra.lat"
+  },
+  {
+    "num": 1417,
+    "noError": true,
+    "type": "netflix",
+    "match": "proefectus-@brustra.lat"
+  },
+  {
+    "num": 1416,
+    "noError": true,
+    "type": "netflix",
+    "match": "proefectus-@brustra.lat"
+  },
+  {
+    "num": 1415,
+    "noError": true,
+    "type": "netflix",
+    "match": "proefectus-@brustra.lat"
+  },
+  {
+    "num": 1414,
+    "noError": true,
+    "type": "netflix",
+    "match": "proefectus-@brustra.lat"
+  },
+  {
+    "num": 1413,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1412,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1411,
+    "noError": false,
+    "type": "none",
+    "errorMessage": "TypeError: Cannot read properties of null (reading 'textContent')\n    at processEmails (file:///C:/Users/Usuario/Documents/sc-telegram/extractorNetflix.js:38:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  {
+    "num": 1410,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  },
+  {
+    "num": 1409,
+    "noError": true,
+    "type": "netflix",
+    "match": "redentor1@brustra.lat"
+  }
+]

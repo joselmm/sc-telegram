@@ -85,6 +85,10 @@ const stringSession = new StringSession(process.env.SC_TELEGRAM_SESSION_STRING_2
 
     await client.disconnect();
 
+    
+    if (process.argv[3]) return
+
+
     const child = spawn("node", ["minar", OUTPUT_FILE], {
         stdio: "inherit",
         shell: true
