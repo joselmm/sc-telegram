@@ -9,10 +9,7 @@ const DISNEY_TEXT = "legalmente válido en formatos PDF y XML.";
 
 let results = [];
 
-// si ya existe el archivo, lo cargamos
-if (fs.existsSync(PATH)) {
-  results = JSON.parse(fs.readFileSync(PATH, "utf8"));
-}
+
 
 /* ================== SERVIDOR ================== */
 const server = http.createServer((req, res) => {
