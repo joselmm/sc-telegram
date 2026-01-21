@@ -39,6 +39,7 @@ const results = [];
 
 async function processEmails() {
   for (let i = START_NUM; i >= 0; i--) {
+    console.log(i)
     if (i === 0) {
       console.log("ya termino");
       break
