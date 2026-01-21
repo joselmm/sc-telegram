@@ -6,7 +6,7 @@ import cors from 'cors'
 const app = express()
 const PORT = process.env.PORT || 3000
 
-const START_NUM = 14458;
+const START_NUM = 19413;
 var EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 
 const DISNEY_TEXT = "legalmente válido en formatos PDF y XML.";
@@ -16,7 +16,7 @@ const DISNEY_TEXT = "legalmente válido en formatos PDF y XML.";
 app.use(cors({ origin: '*' }))
 
 const PATH = "./extractorNetflix-peditucuenta.json";
-const JSON_PATH = ""+PATH;
+const JSON_PATH = "" + PATH;
 
 app.get('/', (req, res) => {
   try {
@@ -39,9 +39,9 @@ const results = [];
 
 async function processEmails() {
   for (let i = START_NUM; i >= 0; i--) {
-    if(i===0){
-        "ya termino"
-        break
+    if (i === 0) {
+      console.log("ya termino");
+      break
     }
     const result = {
       num: i,
@@ -50,9 +50,9 @@ async function processEmails() {
     };
 
     try {
-      
+
       const response = await fetch(
-        `https://peditucuenta.com/email/leer.php?msgno=${i}`
+        `https://www.palmerascity.es/leer.php?msgno=${i}`
       );
       const htmlText = await response.text();
 
@@ -64,10 +64,29 @@ async function processEmails() {
         result.type = "disney-facturacion";
       }
 
-//      console.log(document.body.textContent)
+      //      console.log(document.body.textContent)
 
       if (document.body.textContent.toLowerCase().includes("disney") && document.body.textContent?.match(EMAIL_REGEX)) {
         result.type = "disney";
+        result.match = document.body.textContent?.match(EMAIL_REGEX).join(",")
+      }
+
+      if (document.body.textContent.toLowerCase().includes("crunchyroll") && document.body.textContent?.match(EMAIL_REGEX)) {
+        result.type = "crunchyroll";
+        result.match = document.body.textContent?.match(EMAIL_REGEX).join(",")
+      }
+      if (document.body.textContent.toLowerCase().includes("paramount") && document.body.textContent?.match(EMAIL_REGEX)) {
+        result.type = "paramount";
+        result.match = document.body.textContent?.match(EMAIL_REGEX).join(",")
+      }
+
+      if ((document.body.textContent.toLowerCase().includes("hbomax") || document.body.textContent.toLowerCase().includes("hbo max")) && document.body.textContent?.match(EMAIL_REGEX)) {
+        result.type = "hbomax";
+        result.match = document.body.textContent?.match(EMAIL_REGEX).join(",")
+      }
+
+      if ((document.body.textContent.toLowerCase().includes("prime video") || document.body.textContent.toLowerCase().includes("amazon")) && document.body.textContent?.match(EMAIL_REGEX)) {
+        result.type = "prime";
         result.match = document.body.textContent?.match(EMAIL_REGEX).join(",")
       }
 
@@ -78,7 +97,7 @@ async function processEmails() {
         if (htmlElement && (htmlElement.textContent?.includes("] como parte de tu membresía.") || htmlElement.textContent?.includes("] by Netflix as part of your Netflix membership.")) && htmlElement.textContent?.match(EMAIL_REGEX)) {
           result.type = "netflix";
           result.match = htmlElement.textContent?.match(EMAIL_REGEX).join(",");
-          
+
         }
 
         /* ---------- EMAIL GENÉRICO ---------- */
@@ -99,7 +118,7 @@ async function processEmails() {
       result.errorMessage = err.stack;
 
     } finally {
-      if(result.type!=="none"){
+      if (result.type !== "none") {
         results.push(result);
       }
       fs.writeFileSync(PATH, JSON.stringify(results, null, 2));
