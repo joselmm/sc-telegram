@@ -15,7 +15,7 @@ const DISNEY_TEXT = "legalmente válido en formatos PDF y XML.";
 
 app.use(cors({ origin: '*' }))
 
-const PATH = "./extractorNetflix-peditucuenta.json";
+const PATH = "./extractorNetflix-palmeras.json";
 const JSON_PATH = "" + PATH;
 
 app.get('/', (req, res) => {
