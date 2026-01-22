@@ -6,7 +6,7 @@ import cors from 'cors'
 const app = express()
 const PORT = process.env.PORT || 3000
 
-const START_NUM = 19413;
+const START_NUM = 64880;
 var EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 
 const DISNEY_TEXT = "legalmente válido en formatos PDF y XML.";
@@ -15,7 +15,7 @@ const DISNEY_TEXT = "legalmente válido en formatos PDF y XML.";
 
 app.use(cors({ origin: '*' }))
 
-const PATH = "./extractorNetflix-palmeras.json";
+const PATH = "./extractorNetflix-kardexnet.json";
 const JSON_PATH = "" + PATH;
 
 app.get('/', (req, res) => {
@@ -53,7 +53,7 @@ async function processEmails() {
     try {
 
       const response = await fetch(
-        `https://www.palmerascity.es/leer.php?msgno=${i}`
+        `https://www.kardexnet.com/leer.php?msgno=${i}`
       );
       const htmlText = await response.text();
 
