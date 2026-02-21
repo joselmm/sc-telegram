@@ -1,0 +1,138 @@
+/* 
+
+brooky1@gejarvis.net  sirve
+brooky2@gejarvis.net sirve
+brooky3@gejarvis.net sirve
+brooky4@gejarvis.net no
+brooky5@gejarvis.net sirve
+miner1@gejarvis.net sirve
+miner2@gejarvis.net sirve
+miner3@gejarvis.net sirve
+miner4@gejarvis.net sirve
+miner5@gejarvis.net sirvve
+yuyis1@gejarvis.net no 
+yuyis2@gejarvis.net no
+yuyis3@gejarvis.net no
+yuyis4@gejarvis.net no
+yuyis5@gejarvis.net no
+yuyis6@gejarvis.net no
+yuyis7@gejarvis.net sirve
+yuyis8@gejarvis.net no
+yuyis9@gejarvis.net no
+yuyis10@gejarvis.net no
+ent01@gejarvis.net no
+ent02@gejarvis.net  NO
+ent03@gejarvis.net no
+ent04@gejarvis.net no
+ent05@gejarvis.net no
+ent06@gejarvis.net no
+ent07@gejarvis.net no
+corel1@gejarvis.net si
+corel2@gejarvis.net si
+corel3@gejarvis.net  sirve
+corel4@gejarvis.net no llegan codigos
+corel5@gejarvis.net no llegan codigos
+qrc01@gejarvis.net si
+qrc02@gejarvis.net si
+qrc03@gejarvis.net si
+qrc04@gejarvis.net si
+qrc05@gejarvis.net si
+susteg1@gejarvis.net si
+susteg2@gejarvis. si
+susteg3@gejarvis.net si
+susteg4@gejarvis.net si
+susteg5@gejarvis.net si
+pipo1@gejarvis.net no
+pipo2@gejarvis.net si
+pipo3@gejarvis.net no
+pipo4@gejarvis.net no llega code
+pipo5@gejarvis.net no
+pipa1@gejarvis.net si
+pipa2@gejarvis.net no
+pipa3@gejarvis.net no
+pipa4@gejarvis.net no
+pipa5@gejarvis.net no
+pipa6@gejarvis.net no
+pipa7@gejarvis.net no
+pipa8@gejarvis.net si
+pipa9@gejarvis.net si
+pipa10@gejarvis.net no
+cuenta1@gejarvis.net no
+cuenta10@gejarvis.net no
+cuenta11@gejarvis.net no
+germa1@gejarvis.net no
+germa2@gejarvis.net no
+germa3@gejarvis.net no
+germa4@gejarvis.net no
+germa5@gejarvis.net no
+popxe2@gejarvis.net no
+marte2@gejarvis.net no 
+buba1@gejarvis.net disney2500visitanos@cuenticas.com
+buba2@gejarvis.net disney2522visitanos@cuenticas.com
+buba3@gejarvis.net disney3600visitanos@cuenticas.com
+buba4@gejarvis.net disney7200visitanos@cuenticas.com
+buba5@gejarvis.net disney2508visitanos@cuenticas.com
+tonik@gejarvis.net disney3968visitanos@cuenticas.com
+pipo10@gejarvis.net disney4400visitanos@cuenticas.com
+amx6@gejarvis.net disney7300visitanos@cuenticas.com
+amx1@gejarvis.net no
+amx2@gejarvis.net no
+amx3@gejarvis.net no
+amx4@gejarvis.net no
+amx5@gejarvis.net  no
+95.173.223.225
+recp1@gejarvis.net si
+recp2@gejarvis.net si
+recp3@gejarvis.net si
+recp4@gejarvis.net si
+recp5@gejarvis.net si
+95.173.223.230
+recp6@gejarvis.net si
+recp7@gejarvis.net si
+recp8@gejarvis.net si
+recp9@gejarvis.net si
+
+idm01@gejarvis.net si
+idm02@gejarvis.net si
+idm03@gejarvis.net si
+idm04@gejarvis.net si
+idm05@gejarvis.net no
+idm06@gejarvis.net si
+
+mxq01@gejarvis.net si
+mxq02@gejarvis.net no
+mxq03@gejarvis.net si Pass:Balmiro7289
+mxq04@gejarvis.net si pass:Elisa3597
+mxq05@gejarvis.net si pass: Carlos7295 DOB 05 / 07 / 1997 (MM/DD/YYYY)
+mxq06@gejarvis.net si pass: Eduard0528 DOB 11 / 18 / 1994 (MM/DD/YYYY)
+mxq07@gejarvis.net si pass: Maria8293 DOB 09 / 24 / 1993
+mxq08@gejarvis.net no
+mxq09@gejarvis.net si Pass: Naren2986
+
+dgo3@gejarvis.net no
+dgo4@gejarvis.net no
+dgo5@gejarvis.net no
+dgo6@gejarvis.net no
+dgo7@gejarvis.net no
+
+mpx1@gejarvis.net no
+mpx2@gejarvis.net no
+mpx3@gejarvis.net no
+
+mina01@gejarvis.net si
+mina02@gejarvis.net si
+mina03@gejarvis.net no
+
+contry1@gejarvis.net no
+contry2@gejarvis.net no
+contry3@gejarvis.net no
+contry4@gejarvis.net no
+contry5@gejarvis.net no
+contry6@gejarvis.net
+contry7@gejarvis.net
+contry8@gejarvis.net
+contry9@gejarvis.net
+contry10@gejarvis.net
+
+
+ */

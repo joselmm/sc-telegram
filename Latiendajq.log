@@ -1,0 +1,872 @@
+[LOG] [12/02/2026, 19:45:42] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [12/02/2026, 19:45:42] [Slot 1] Procesando: dis9829@latiendajq.com
+[ERROR] [12/02/2026, 19:45:43] [Slot 1] Error en dis9829@latiendajq.com: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [12/02/2026, 19:46:06] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [12/02/2026, 19:46:06] [Slot 1] Procesando: dis9829@latiendajq.com
+[LOG] [12/02/2026, 19:46:06] [Slot 2] Procesando: dis9821@latiendajq.com
+[LOG] [12/02/2026, 19:46:06] [Slot 3] Procesando: dis9818@latiendajq.com
+[LOG] [12/02/2026, 19:46:06] [Slot 4] Procesando: dis9401@latiendajq.com
+[LOG] [12/02/2026, 19:46:06] [Slot 5] Procesando: dis9108@latiendajq.com
+[LOG] [12/02/2026, 19:46:32] [Slot 3] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:46:41] [Slot 4] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:46:45] [Slot 2] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:46:47] [Slot 5] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:46:47] [Slot 1] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:48:18] {"noError":false,"errorMessage":"No se obtuvo resultado tras 4 intentos"}
+[ERROR] [12/02/2026, 19:48:18] [Slot 3] Error en dis9818@latiendajq.com: No se obtuvo resultado tras 4 intentos
+[LOG] [12/02/2026, 19:48:18] [Slot 3] Procesando: dis9093@latiendajq.com
+[LOG] [12/02/2026, 19:48:25] {"noError":false,"errorMessage":"No se obtuvo resultado tras 4 intentos"}
+[ERROR] [12/02/2026, 19:48:25] [Slot 4] Error en dis9401@latiendajq.com: No se obtuvo resultado tras 4 intentos
+[LOG] [12/02/2026, 19:48:25] [Slot 4] Procesando: dis9059@latiendajq.com
+[LOG] [12/02/2026, 19:48:27] [Slot 3] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:48:27] {"noError":false,"errorMessage":"No se obtuvo resultado tras 4 intentos"}
+[ERROR] [12/02/2026, 19:48:27] [Slot 2] Error en dis9821@latiendajq.com: No se obtuvo resultado tras 4 intentos
+[LOG] [12/02/2026, 19:48:27] [Slot 2] Procesando: dis9039@latiendajq.com
+[LOG] [12/02/2026, 19:48:28] {"noError":false,"errorMessage":"No se obtuvo resultado tras 4 intentos"}
+[ERROR] [12/02/2026, 19:48:28] [Slot 5] Error en dis9108@latiendajq.com: No se obtuvo resultado tras 4 intentos
+[LOG] [12/02/2026, 19:48:28] [Slot 5] Procesando: dis9031@latiendajq.com
+[LOG] [12/02/2026, 19:48:29] {"noError":false,"errorMessage":"No se obtuvo resultado tras 4 intentos"}
+[ERROR] [12/02/2026, 19:48:29] [Slot 1] Error en dis9829@latiendajq.com: No se obtuvo resultado tras 4 intentos
+[LOG] [12/02/2026, 19:48:29] [Slot 1] Procesando: dis8920@latiendajq.com
+[LOG] [12/02/2026, 19:48:38] [Slot 4] OTP enviado directo o campo ya presente, saltando al código...
+[LOG] [12/02/2026, 19:48:43] [Slot 2] OTP enviado directo o campo ya presente, saltando al código...
+[ERROR] [12/02/2026, 19:48:43] [Slot 1] Error en dis8920@latiendajq.com: locator.isVisible: Target page, context or browser has been closed
+[ERROR] [12/02/2026, 19:48:43] [Slot 5] Error en dis9031@latiendajq.com: locator.isVisible: Target page, context or browser has been closed
+[LOG] [12/02/2026, 20:17:06] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [12/02/2026, 20:17:07] [Slot 1] Procesando: dis1510@latiendajq.com
+[LOG] [12/02/2026, 20:17:07] [Slot 2] Procesando: dis3001@latiendajq.com
+[ERROR] [12/02/2026, 20:17:11] [Slot 2] Error en dis3001@latiendajq.com: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#email') to be visible[22m
+
+[ERROR] [12/02/2026, 20:17:11] [Slot 1] Error en dis1510@latiendajq.com: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#email') to be visible[22m
+
+[LOG] [12/02/2026, 20:17:11] [Slot 2] Procesando: dis3010@latiendajq.com
+[LOG] [12/02/2026, 20:17:11] [Slot 1] Procesando: dis3039@latiendajq.com
+[LOG] [12/02/2026, 20:17:22] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [12/02/2026, 20:17:22] [Slot 1] Procesando: dis1510@latiendajq.com
+[LOG] [12/02/2026, 20:17:22] [Slot 2] Procesando: dis3001@latiendajq.com
+[LOG] [12/02/2026, 20:17:33] [Slot 1] OTP enviado directo...
+[LOG] [12/02/2026, 20:17:33] [Slot 2] OTP enviado directo...
+[LOG] [12/02/2026, 20:17:45] {"noError":false,"errorMessage":"No se obtuvo el código tras reintentos"}
+[ERROR] [12/02/2026, 20:17:45] [Slot 2] Error en dis3001@latiendajq.com: No se obtuvo el código tras reintentos
+[LOG] [12/02/2026, 20:17:46] [Slot 2] Procesando: dis3010@latiendajq.com
+[LOG] [12/02/2026, 20:17:46] {"noError":false,"errorMessage":"No se obtuvo el código tras reintentos"}
+[ERROR] [12/02/2026, 20:17:46] [Slot 1] Error en dis1510@latiendajq.com: No se obtuvo el código tras reintentos
+[LOG] [12/02/2026, 20:17:46] [Slot 1] Procesando: dis3039@latiendajq.com
+[ERROR] [12/02/2026, 20:17:52] [Slot 1] Error en dis3039@latiendajq.com: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#email') to be visible[22m
+
+[ERROR] [12/02/2026, 20:17:52] [Slot 2] Error en dis3010@latiendajq.com: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#email') to be visible[22m
+
+[LOG] [12/02/2026, 20:17:52] [Slot 1] Procesando: dis3512@latiendajq.com
+[LOG] [12/02/2026, 20:17:52] [Slot 2] Procesando: dis3709@latiendajq.com
+[LOG] [12/02/2026, 20:18:52] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [12/02/2026, 20:18:53] [Slot 1] Procesando: dis9829@latiendajq.com
+[LOG] [12/02/2026, 20:18:53] [Slot 2] Procesando: dis9821@latiendajq.com
+[LOG] [12/02/2026, 20:19:04] [Slot 2] OTP enviado directo...
+[LOG] [12/02/2026, 20:19:05] [Slot 1] OTP enviado directo...
+[LOG] [12/02/2026, 20:19:22] {"noError":false,"errorMessage":"page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://www.codigos.latiendajq.com/index.php?p=disney&email=dis9829%40latiendajq.com\", waiting until \"load\"\u001b[22m\n"}
+[ERROR] [12/02/2026, 20:19:22] [Slot 1] Error en dis9829@latiendajq.com: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://www.codigos.latiendajq.com/index.php?p=disney&email=dis9829%40latiendajq.com", waiting until "load"[22m
+
+[LOG] [12/02/2026, 20:19:22] [Slot 1] Procesando: dis9818@latiendajq.com
+[LOG] [12/02/2026, 20:19:22] {"noError":false,"errorMessage":"page.waitForTimeout: Target page, context or browser has been closed"}
+[ERROR] [12/02/2026, 20:19:22] [Slot 2] Error en dis9821@latiendajq.com: page.waitForTimeout: Target page, context or browser has been closed
+[LOG] [12/02/2026, 20:19:22] [Slot 2] Procesando: dis9401@latiendajq.com
+[ERROR] [12/02/2026, 20:19:25] [Slot 2] Error en dis9401@latiendajq.com: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[ERROR] [12/02/2026, 20:19:25] [Slot 1] Error en dis9818@latiendajq.com: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [12/02/2026, 20:19:25] [Slot 2] Procesando: dis9108@latiendajq.com
+[LOG] [12/02/2026, 20:19:25] [Slot 1] Procesando: dis9093@latiendajq.com
+[LOG] [15/02/2026, 11:16:24] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 11:16:25] [Slot 1] Procesando: disney110@lermosplay.com
+[LOG] [15/02/2026, 11:16:25] [Slot 2] Procesando: dis606@lermosplay.com
+[ERROR] [15/02/2026, 11:16:35] [Slot 2] Error en dis606@lermosplay.com: page.waitForTimeout: Target page, context or browser has been closed
+[ERROR] [15/02/2026, 11:16:35] [Slot 1] Error en disney110@lermosplay.com: page.waitForTimeout: Target page, context or browser has been closed
+[LOG] [15/02/2026, 11:16:47] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 11:16:48] [Slot 1] Procesando: disney110@lermosplay.com
+[LOG] [15/02/2026, 11:16:48] [Slot 2] Procesando: dis606@lermosplay.com
+[LOG] [15/02/2026, 11:16:57] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:16:57] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:16:58] 1
+[LOG] [15/02/2026, 11:16:58] 1
+[ERROR] [15/02/2026, 11:17:33] [Slot 2] Error en dis606@lermosplay.com: The operation was aborted due to timeout
+[LOG] [15/02/2026, 11:17:33] [Slot 2] Procesando: dis118@lermosplay.com
+[ERROR] [15/02/2026, 11:17:34] [Slot 1] Error en disney110@lermosplay.com: The operation was aborted due to timeout
+[LOG] [15/02/2026, 11:17:34] [Slot 1] Procesando: dis117@lermosplay.com
+[LOG] [15/02/2026, 11:17:53] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:17:53] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:17:55] 1
+[LOG] [15/02/2026, 11:17:55] 1
+[LOG] [15/02/2026, 11:19:52] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 11:19:53] [Slot 1] Procesando: dis28@lermosplay.com
+[LOG] [15/02/2026, 11:19:53] [Slot 2] Procesando: dis91@lermosplay.com
+[LOG] [15/02/2026, 11:20:11] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:20:14] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:20:16] 1
+[LOG] [15/02/2026, 11:20:17] 1
+[LOG] [15/02/2026, 11:20:52] Guaradad
+[LOG] [15/02/2026, 11:20:52] 2
+[LOG] [15/02/2026, 11:20:53] Guaradad
+[LOG] [15/02/2026, 11:20:53] 2
+[LOG] [15/02/2026, 11:21:32] dis28@lermosplay.com ❌ NO tiene suscripción
+[LOG] [15/02/2026, 11:21:32] [Slot 1] Procesando: dis100@lermosplay.com
+[LOG] [15/02/2026, 11:21:33] dis91@lermosplay.com ❌ NO tiene suscripción
+[LOG] [15/02/2026, 11:21:33] [Slot 2] Procesando: dis101@lermosplay.com
+[LOG] [15/02/2026, 11:21:41] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:21:42] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:21:43] 1
+[LOG] [15/02/2026, 11:21:43] 1
+[LOG] [15/02/2026, 11:22:18] Guaradad
+[LOG] [15/02/2026, 11:22:18] 2
+[LOG] [15/02/2026, 11:22:19] Guaradad
+[LOG] [15/02/2026, 11:22:19] 2
+[LOG] [15/02/2026, 11:24:09] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 11:24:10] [Slot 1] Procesando: dis102@lermosplay.com
+[LOG] [15/02/2026, 11:24:10] [Slot 2] Procesando: dis103@lermosplay.com
+[LOG] [15/02/2026, 11:24:24] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:24:24] [Slot 1] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 11:26:42] [Slot 2] Error en dis103@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 11:26:42] [Slot 2] Procesando: dis104@lermosplay.com
+[ERROR] [15/02/2026, 11:26:43] [Slot 1] Error en dis102@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 11:26:43] [Slot 1] Procesando: dis105@lermosplay.com
+[LOG] [15/02/2026, 11:26:52] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:26:53] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:28:15] dis105@lermosplay.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [15/02/2026, 11:28:15] [Slot 1] Procesando: dis106@lermosplay.com
+[LOG] [15/02/2026, 11:28:17] Timeout ⏱️: dis104@lermosplay.com
+[LOG] [15/02/2026, 11:28:17] [Slot 2] Procesando: dis107@lermosplay.com
+[LOG] [15/02/2026, 11:28:59] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:29:01] [Slot 2] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 11:29:09] [Slot 1] Error en dis106@lermosplay.com: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid="code-input"]').first() to be visible[22m
+
+[LOG] [15/02/2026, 11:29:09] [Slot 1] Procesando: dis108@lermosplay.com
+[ERROR] [15/02/2026, 11:29:12] [Slot 2] Error en dis107@lermosplay.com: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid="code-input"]').first() to be visible[22m
+
+[LOG] [15/02/2026, 11:29:12] [Slot 2] Procesando: dis109@lermosplay.com
+[ERROR] [15/02/2026, 11:29:40] [Slot 1] Error en dis108@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 11:29:40] [Slot 1] Procesando: dis110@lermosplay.com
+[ERROR] [15/02/2026, 11:29:42] [Slot 2] Error en dis109@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 11:29:42] [Slot 2] Procesando: dis111@lermosplay.com
+[ERROR] [15/02/2026, 11:29:51] [Slot 2] Error en dis111@lermosplay.com: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[ERROR] [15/02/2026, 11:29:51] [Slot 1] Error en dis110@lermosplay.com: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#email') to be visible[22m
+
+[LOG] [15/02/2026, 11:29:51] [Slot 2] Procesando: dis112@lermosplay.com
+[LOG] [15/02/2026, 11:29:51] [Slot 1] Procesando: dis113@lermosplay.com
+[LOG] [15/02/2026, 11:36:07] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 11:36:07] [Slot 1] Procesando: dis111@lermosplay.com
+[LOG] [15/02/2026, 11:36:07] [Slot 2] Procesando: dis112@lermosplay.com
+[LOG] [15/02/2026, 11:36:28] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:36:31] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:37:39] dis111@lermosplay.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [15/02/2026, 11:37:39] [Slot 1] Procesando: dis113@lermosplay.com
+[LOG] [15/02/2026, 11:37:46] dis112@lermosplay.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [15/02/2026, 11:37:46] [Slot 2] Procesando: dis114@lermosplay.com
+[LOG] [15/02/2026, 11:37:55] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:38:00] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:38:53] dis113@lermosplay.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [15/02/2026, 11:38:53] [Slot 1] Procesando: dis115@lermosplay.com
+[LOG] [15/02/2026, 11:39:02] [Slot 1] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 11:39:48] [Slot 2] Error en dis114@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 11:39:49] [Slot 2] Procesando: dis116@lermosplay.com
+[LOG] [15/02/2026, 11:39:57] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:39:59] dis115@lermosplay.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [15/02/2026, 11:39:59] [Slot 1] Procesando: dis117@lermosplay.com
+[LOG] [15/02/2026, 11:40:07] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:40:54] Timeout ⏱️: dis117@lermosplay.com
+[LOG] [15/02/2026, 11:40:54] [Slot 1] Procesando: dis118@lermosplay.com
+[LOG] [15/02/2026, 11:40:55] dis116@lermosplay.com ✅ Tiene suscripción: https://www.disneyplus.com/home
+[LOG] [15/02/2026, 11:40:55] [Slot 2] Procesando: dis606@lermosplay.com
+[LOG] [15/02/2026, 11:41:09] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:41:10] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:42:02] Timeout ⏱️: dis606@lermosplay.com
+[LOG] [15/02/2026, 11:42:02] [Slot 2] Procesando: disney110@lermosplay.com
+[LOG] [15/02/2026, 11:42:04] Timeout ⏱️: dis118@lermosplay.com
+[LOG] [15/02/2026, 11:42:04] [Slot 1] Procesando: dis100@lermosplay.com
+[LOG] [15/02/2026, 11:42:23] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:42:30] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:43:20] Timeout ⏱️: dis100@lermosplay.com
+[LOG] [15/02/2026, 11:43:20] [Slot 1] Procesando: dis101@lermosplay.com
+[LOG] [15/02/2026, 11:43:24] Timeout ⏱️: disney110@lermosplay.com
+[LOG] [15/02/2026, 11:43:25] [Slot 2] Procesando: dis102@lermosplay.com
+[LOG] [15/02/2026, 11:43:30] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:43:35] [Slot 2] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 11:45:18] [Slot 1] Error en dis101@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 11:45:18] [Slot 1] Procesando: dis103@lermosplay.com
+[ERROR] [15/02/2026, 11:45:24] [Slot 2] Error en dis102@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 11:45:24] [Slot 2] Procesando: dis104@lermosplay.com
+[LOG] [15/02/2026, 11:46:10] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:46:12] [Slot 2] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 11:46:56] [Slot 1] Error en dis103@lermosplay.com: The operation was aborted due to timeout
+[LOG] [15/02/2026, 11:46:57] [Slot 1] Procesando: dis106@lermosplay.com
+[LOG] [15/02/2026, 11:47:50] Timeout ⏱️: dis104@lermosplay.com
+[LOG] [15/02/2026, 11:47:50] [Slot 2] Procesando: dis107@lermosplay.com
+[ERROR] [15/02/2026, 11:48:08] [Slot 1] Error en dis106@lermosplay.com: locator.waitFor: Timeout 50000ms exceeded.
+Call log:
+[2m  - waiting for locator('#email') to be visible[22m
+
+[LOG] [15/02/2026, 11:48:08] [Slot 1] Procesando: dis108@lermosplay.com
+[ERROR] [15/02/2026, 11:48:21] [Slot 2] Error en dis107@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 11:48:21] [Slot 2] Procesando: dis109@lermosplay.com
+[LOG] [15/02/2026, 11:48:49] [Slot 1] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 11:48:59] [Slot 1] Error en dis108@lermosplay.com: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid="code-input"]').first() to be visible[22m
+
+[LOG] [15/02/2026, 11:48:59] [Slot 1] Procesando: dis110@lermosplay.com
+[LOG] [15/02/2026, 11:49:05] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:49:18] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 11:50:06] dis109@lermosplay.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [15/02/2026, 11:50:19] dis110@lermosplay.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [15/02/2026, 12:00:35] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 12:00:36] [Slot 1] Procesando: dis100@lermosplay.com
+[LOG] [15/02/2026, 12:00:36] [Slot 2] Procesando: dis101@lermosplay.com
+[ERROR] [15/02/2026, 12:00:41] [Slot 2] Error en dis101@lermosplay.com: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[ERROR] [15/02/2026, 12:00:41] [Slot 1] Error en dis100@lermosplay.com: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 12:00:42] [Slot 2] Procesando: dis102@lermosplay.com
+[LOG] [15/02/2026, 12:00:42] [Slot 1] Procesando: dis103@lermosplay.com
+[LOG] [15/02/2026, 12:02:59] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [15/02/2026, 12:03:00] [Slot 1] Procesando: dis100@lermosplay.com
+[LOG] [15/02/2026, 12:03:00] [Slot 2] Procesando: dis101@lermosplay.com
+[ERROR] [15/02/2026, 12:03:31] [Slot 1] Error en dis100@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 12:03:31] [Slot 1] Procesando: dis102@lermosplay.com
+[ERROR] [15/02/2026, 12:03:31] [Slot 2] Error en dis101@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 12:03:31] [Slot 2] Procesando: dis103@lermosplay.com
+[ERROR] [15/02/2026, 12:04:01] [Slot 1] Error en dis102@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 12:04:02] [Slot 1] Procesando: dis104@lermosplay.com
+[LOG] [15/02/2026, 12:04:16] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:04:25] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:05:27] dis104@lermosplay.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [15/02/2026, 12:05:27] [Slot 1] Procesando: dis106@lermosplay.com
+[LOG] [15/02/2026, 12:05:39] [Slot 1] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 12:06:15] [Slot 2] Error en dis103@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 12:06:15] [Slot 2] Procesando: dis107@lermosplay.com
+[ERROR] [15/02/2026, 12:06:46] [Slot 2] Error en dis107@lermosplay.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [15/02/2026, 12:06:46] [Slot 2] Procesando: dis108@lermosplay.com
+[ERROR] [15/02/2026, 12:06:53] [Slot 1] Error en dis106@lermosplay.com: The operation was aborted due to timeout
+[LOG] [15/02/2026, 12:06:53] [Slot 1] Procesando: dis114@lermosplay.com
+[LOG] [15/02/2026, 12:07:32] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:07:35] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:08:45] dis108@lermosplay.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [15/02/2026, 12:08:45] [Slot 2] Procesando: dis117@lermosplay.com
+[LOG] [15/02/2026, 12:08:57] [Slot 2] Haciendo click en botón OTP...
+[ERROR] [15/02/2026, 12:09:40] [Slot 1] Error en dis114@lermosplay.com: No se obtuvo el código tras reintentos
+[LOG] [15/02/2026, 12:09:40] [Slot 1] Procesando: dis118@lermosplay.com
+[LOG] [15/02/2026, 12:09:45] Timeout ⏱️: dis117@lermosplay.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [15/02/2026, 12:09:45] [Slot 2] Procesando: dis606@lermosplay.com
+[LOG] [15/02/2026, 12:09:52] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:09:57] [Slot 2] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:10:40] Timeout ⏱️: dis118@lermosplay.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [15/02/2026, 12:10:40] [Slot 1] Procesando: disney110@lermosplay.com
+[LOG] [15/02/2026, 12:10:49] Timeout ⏱️: dis606@lermosplay.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [15/02/2026, 12:11:03] [Slot 1] Haciendo click en botón OTP...
+[LOG] [15/02/2026, 12:11:58] Timeout ⏱️: disney110@lermosplay.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [16/02/2026, 12:30:29] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 12:30:30] [Slot 1] Procesando: eraseunavez@itrenet.com
+[ERROR] [16/02/2026, 12:30:54] [Slot 1] Error en eraseunavez@itrenet.com: No se reconoció la siguiente pantalla
+[LOG] [16/02/2026, 12:31:38] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 12:31:38] [Slot 1] Procesando: eraseunavez@itrenet.com
+[LOG] [16/02/2026, 12:31:47] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:32:10] Guaradad
+[ERROR] [16/02/2026, 12:33:15] [Slot 1] Error en eraseunavez@itrenet.com: No se obtuvo el código tras reintentos
+[LOG] [16/02/2026, 12:35:47] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 12:35:47] [Slot 1] Procesando: 1-fenix@itrenet.com
+[LOG] [16/02/2026, 12:35:56] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:36:20] Guaradad
+[LOG] [16/02/2026, 12:36:25] 1-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:43:33] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 12:43:34] [Slot 1] Procesando: 6-fenix@itrenet.com
+[LOG] [16/02/2026, 12:43:43] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:44:05] Guaradad
+[LOG] [16/02/2026, 12:44:15] 6-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:44:15] [Slot 1] Procesando: 10-fenix@itrenet.com
+[LOG] [16/02/2026, 12:44:23] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:44:46] Guaradad
+[LOG] [16/02/2026, 12:44:53] 10-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:44:53] [Slot 1] Procesando: 23-fenix@itrenet.com
+[LOG] [16/02/2026, 12:45:05] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:45:28] Guaradad
+[LOG] [16/02/2026, 12:45:36] 23-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:45:36] [Slot 1] Procesando: 25-fenix@itrenet.com
+[LOG] [16/02/2026, 12:45:46] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:46:09] Guaradad
+[LOG] [16/02/2026, 12:46:16] 25-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:46:16] [Slot 1] Procesando: 33-fenix@itrenet.com
+[LOG] [16/02/2026, 12:46:25] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:46:47] Guaradad
+[LOG] [16/02/2026, 12:46:54] 33-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:46:54] [Slot 1] Procesando: 37-fenix@itrenet.com
+[LOG] [16/02/2026, 12:47:03] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:47:26] Guaradad
+[LOG] [16/02/2026, 12:47:28] 37-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [16/02/2026, 12:47:29] [Slot 1] Procesando: 48-fenix@itrenet.com
+[LOG] [16/02/2026, 12:47:37] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:48:00] Guaradad
+[LOG] [16/02/2026, 12:48:05] 48-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:48:05] [Slot 1] Procesando: 60-fenix@itrenet.com
+[LOG] [16/02/2026, 12:48:12] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:48:34] Guaradad
+[LOG] [16/02/2026, 12:49:01] 60-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:49:01] [Slot 1] Procesando: 80-fenix@itrenet.com
+[LOG] [16/02/2026, 12:49:10] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:49:32] Guaradad
+[LOG] [16/02/2026, 12:49:37] 80-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:49:37] [Slot 1] Procesando: 85-fenix@itrenet.com
+[LOG] [16/02/2026, 12:49:49] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:50:11] Guaradad
+[LOG] [16/02/2026, 12:50:18] 85-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:50:18] [Slot 1] Procesando: 92-fenix@itrenet.com
+[LOG] [16/02/2026, 12:50:26] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:50:50] Guaradad
+[LOG] [16/02/2026, 12:50:56] 92-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:50:56] [Slot 1] Procesando: 113-fenix@itrenet.com
+[LOG] [16/02/2026, 12:51:07] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:51:30] Guaradad
+[LOG] [16/02/2026, 12:51:37] 113-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:51:37] [Slot 1] Procesando: 114-fenix@itrenet.com
+[LOG] [16/02/2026, 12:51:46] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:52:09] Guaradad
+[LOG] [16/02/2026, 12:52:16] 114-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:52:16] [Slot 1] Procesando: 115-fenix@itrenet.com
+[LOG] [16/02/2026, 12:52:24] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:52:47] Guaradad
+[LOG] [16/02/2026, 12:52:53] 115-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:52:53] [Slot 1] Procesando: 125-fenix@itrenet.com
+[LOG] [16/02/2026, 12:53:03] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:53:25] Guaradad
+[LOG] [16/02/2026, 12:53:32] 125-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 12:53:32] [Slot 1] Procesando: 129-fenix@itrenet.com
+[LOG] [16/02/2026, 12:53:40] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 12:54:02] Guaradad
+[LOG] [16/02/2026, 12:54:07] 129-fenix@itrenet.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:30:38] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 23:30:40] [Slot 1] Procesando: eraseunavez@dmstreaming.com
+[LOG] [16/02/2026, 23:30:50] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:31:14] Guaradad
+[LOG] [16/02/2026, 23:32:08] eraseunavez@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:33:04] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 23:33:04] [Slot 1] Procesando: disney0909@dmstreaming.com
+[LOG] [16/02/2026, 23:33:12] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:33:37] Guaradad
+[LOG] [16/02/2026, 23:34:29] disney0909@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:34:29] [Slot 1] Procesando: disney07@dmstreaming.com
+[LOG] [16/02/2026, 23:34:38] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:35:04] Guaradad
+[LOG] [16/02/2026, 23:35:56] disney07@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:35:56] [Slot 1] Procesando: disney06@dmstreaming.com
+[LOG] [16/02/2026, 23:36:06] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:36:29] Guaradad
+[LOG] [16/02/2026, 23:37:21] disney06@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:37:21] [Slot 1] Procesando: disney05@dmstreaming.com
+[LOG] [16/02/2026, 23:37:31] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:37:54] Guaradad
+[LOG] [16/02/2026, 23:38:46] disney05@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:38:46] [Slot 1] Procesando: disney01@dmstreaming.com
+[LOG] [16/02/2026, 23:38:54] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:39:17] Guaradad
+[LOG] [16/02/2026, 23:40:09] disney01@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [16/02/2026, 23:40:48] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [16/02/2026, 23:40:49] [Slot 1] Procesando: disney08008@dmstreaming.com
+[LOG] [16/02/2026, 23:40:57] [Slot 1] Haciendo click en botón OTP...
+[LOG] [16/02/2026, 23:41:22] Guaradad
+[LOG] [16/02/2026, 23:42:15] disney08008@dmstreaming.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:32:54] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [17/02/2026, 00:32:55] [Slot 1] Procesando: dpremium1@de1click.com
+[LOG] [17/02/2026, 00:33:02] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:33:18] Guaradad
+[LOG] [17/02/2026, 00:33:22] dpremium1@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:33:41] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [17/02/2026, 00:33:41] [Slot 1] Procesando: dpremium10@de1click.com
+[LOG] [17/02/2026, 00:33:48] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:34:00] Guaradad
+[LOG] [17/02/2026, 00:34:16] dpremium10@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:34:16] [Slot 1] Procesando: dpremium11@de1click.com
+[LOG] [17/02/2026, 00:34:23] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:34:35] Guaradad
+[LOG] [17/02/2026, 00:34:37] dpremium11@de1click.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [17/02/2026, 00:34:37] [Slot 1] Procesando: dpremium12@de1click.com
+[LOG] [17/02/2026, 00:34:46] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:34:59] Guaradad
+[LOG] [17/02/2026, 00:35:04] dpremium12@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:35:04] [Slot 1] Procesando: dpremium14@de1click.com
+[LOG] [17/02/2026, 00:35:14] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:35:26] Guaradad
+[LOG] [17/02/2026, 00:35:31] dpremium14@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:35:31] [Slot 1] Procesando: dpremium15@de1click.com
+[LOG] [17/02/2026, 00:35:39] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:35:51] Guaradad
+[LOG] [17/02/2026, 00:36:18] dpremium15@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:36:18] [Slot 1] Procesando: dpremium16@de1click.com
+[LOG] [17/02/2026, 00:36:26] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:36:39] Guaradad
+[LOG] [17/02/2026, 00:37:03] dpremium16@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [17/02/2026, 00:37:03] [Slot 1] Procesando: dpremium18@de1click.com
+[LOG] [17/02/2026, 00:37:12] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:37:25] Guaradad
+[LOG] [17/02/2026, 00:37:29] dpremium18@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:37:29] [Slot 1] Procesando: dpremium20@de1click.com
+[LOG] [17/02/2026, 00:37:38] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:37:50] Guaradad
+[LOG] [17/02/2026, 00:37:55] dpremium20@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 00:37:55] [Slot 1] Procesando: dpremium21@de1click.com
+[LOG] [17/02/2026, 00:38:04] [Slot 1] OTP enviado directo...
+[LOG] [17/02/2026, 00:38:15] Guaradad
+[LOG] [17/02/2026, 00:38:16] dpremium21@de1click.com 🔑 PASSWORD pide contraseña: https://www.disneyplus.com/identity/login/change-password
+[LOG] [17/02/2026, 00:38:17] [Slot 1] Procesando: dpremium22@de1click.com
+[LOG] [17/02/2026, 00:38:24] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:38:36] Guaradad
+[LOG] [17/02/2026, 00:38:38] dpremium22@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [17/02/2026, 00:38:38] [Slot 1] Procesando: dpremium23@de1click.com
+[LOG] [17/02/2026, 00:38:47] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:38:59] Guaradad
+[LOG] [17/02/2026, 00:39:01] dpremium23@de1click.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [17/02/2026, 00:39:01] [Slot 1] Procesando: dpremium24@de1click.com
+[LOG] [17/02/2026, 00:39:09] [Slot 1] OTP enviado directo...
+[LOG] [17/02/2026, 00:39:21] Guaradad
+[LOG] [17/02/2026, 00:39:22] dpremium24@de1click.com 🔑 PASSWORD pide contraseña: https://www.disneyplus.com/identity/login/change-password
+[LOG] [17/02/2026, 00:39:22] [Slot 1] Procesando: dpremium25@de1click.com
+[LOG] [17/02/2026, 00:39:29] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:39:41] Guaradad
+[LOG] [17/02/2026, 00:39:43] dpremium25@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [17/02/2026, 00:39:43] [Slot 1] Procesando: dpremium26@de1click.com
+[LOG] [17/02/2026, 00:39:50] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:40:02] Guaradad
+[LOG] [17/02/2026, 00:40:06] dpremium26@de1click.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [17/02/2026, 00:40:06] [Slot 1] Procesando: dpremium30@de1click.com
+[LOG] [17/02/2026, 00:40:13] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:40:25] Guaradad
+[LOG] [17/02/2026, 00:40:27] dpremium30@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [17/02/2026, 00:40:27] [Slot 1] Procesando: dpremium31@de1click.com
+[LOG] [17/02/2026, 00:40:35] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:40:47] Guaradad
+[ERROR] [17/02/2026, 00:41:43] [Slot 1] Error en dpremium31@de1click.com: No se obtuvo el código tras reintentos
+[LOG] [17/02/2026, 00:41:43] [Slot 1] Procesando: dpremium32@de1click.com
+[LOG] [17/02/2026, 00:41:49] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:42:02] Guaradad
+[LOG] [17/02/2026, 00:42:04] dpremium32@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [17/02/2026, 00:42:04] [Slot 1] Procesando: dpremium33@de1click.com
+[LOG] [17/02/2026, 00:42:13] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:42:25] Guaradad
+[LOG] [17/02/2026, 00:42:28] dpremium33@de1click.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [17/02/2026, 00:42:28] [Slot 1] Procesando: dpremium012@de1click.com
+[LOG] [17/02/2026, 00:42:35] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:42:48] Guaradad
+[LOG] [17/02/2026, 00:42:51] dpremium012@de1click.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [17/02/2026, 00:42:51] [Slot 1] Procesando: dpremium016@de1click.com
+[LOG] [17/02/2026, 00:42:58] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:43:10] Guaradad
+[LOG] [17/02/2026, 00:43:13] dpremium016@de1click.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [17/02/2026, 00:43:13] [Slot 1] Procesando: dpremium018@de1click.com
+[LOG] [17/02/2026, 00:43:21] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 00:43:34] Guaradad
+[LOG] [17/02/2026, 00:43:37] dpremium018@de1click.com ✅ Tiene suscripción: https://www.disneyplus.com/home
+[LOG] [17/02/2026, 11:05:57] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [17/02/2026, 11:05:58] [Slot 1] Procesando: dis2025@neewmovie.com
+[LOG] [17/02/2026, 11:06:09] [Slot 1] Haciendo click en botón OTP...
+[ERROR] [17/02/2026, 11:06:51] [Slot 1] Error en dis2025@neewmovie.com: The operation was aborted due to timeout
+[LOG] [17/02/2026, 11:06:51] [Slot 1] Procesando: dis16@neewmovie.com
+[LOG] [17/02/2026, 11:07:01] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 11:07:46] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [17/02/2026, 11:07:46] [Slot 1] Procesando: disney1@neewmovie.com
+[LOG] [17/02/2026, 11:07:58] [Slot 1] OTP enviado directo...
+[ERROR] [17/02/2026, 11:08:58] [Slot 1] Error en disney1@neewmovie.com: The operation was aborted due to timeout
+[LOG] [17/02/2026, 11:08:58] [Slot 1] Procesando: disney20@neewmovie.com
+[LOG] [17/02/2026, 11:09:09] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 11:10:34] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [17/02/2026, 11:10:35] [Slot 1] Procesando: disney20@neewmovie.com
+[LOG] [17/02/2026, 11:10:49] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 11:11:51] Guaradad
+[LOG] [17/02/2026, 11:12:12] Timeout ⏱️: disney20@neewmovie.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [17/02/2026, 11:12:12] [Slot 1] Procesando: disney25@neewmovie.com
+[LOG] [17/02/2026, 11:12:25] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 11:13:27] Guaradad
+[LOG] [17/02/2026, 11:14:36] disney25@neewmovie.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [17/02/2026, 11:14:36] [Slot 1] Procesando: dis1@neewmovie.com
+[LOG] [17/02/2026, 11:14:45] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 11:15:43] Guaradad
+[ERROR] [17/02/2026, 11:20:48] [Slot 1] Error en dis1@neewmovie.com: No se obtuvo el código tras reintentos
+[LOG] [17/02/2026, 11:20:48] [Slot 1] Procesando: dis2@neewmovie.com
+[LOG] [17/02/2026, 11:21:02] [Slot 1] Haciendo click en botón OTP...
+[LOG] [17/02/2026, 11:22:05] Guaradad
+[ERROR] [17/02/2026, 11:27:49] [Slot 1] Error en dis2@neewmovie.com: No se obtuvo el código tras reintentos
+[LOG] [17/02/2026, 11:27:49] [Slot 1] Procesando: dis16@neewmovie.com
+[LOG] [17/02/2026, 11:27:55] [Slot 1] Haciendo click en botón OTP...
+[LOG] [19/02/2026, 12:33:05] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [19/02/2026, 12:33:06] [Slot 1] Procesando: disney251@linpotop.com
+[LOG] [19/02/2026, 12:33:27] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:33:27] 1
+[LOG] [19/02/2026, 12:33:51] Guaradad
+[LOG] [19/02/2026, 12:33:51] 2
+[LOG] [19/02/2026, 12:34:18] disney251@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [19/02/2026, 12:34:18] [Slot 1] Procesando: disney226@linpotop.com
+[LOG] [19/02/2026, 12:34:29] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:34:29] 1
+[LOG] [19/02/2026, 12:34:53] Guaradad
+[LOG] [19/02/2026, 12:34:53] 2
+[LOG] [19/02/2026, 12:35:19] disney226@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 12:35:19] [Slot 1] Procesando: disney202@linpotop.com
+[LOG] [19/02/2026, 12:35:33] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:35:33] 1
+[LOG] [19/02/2026, 12:35:56] Guaradad
+[LOG] [19/02/2026, 12:35:56] 2
+[LOG] [19/02/2026, 12:36:20] 3
+[LOG] [19/02/2026, 12:36:47] disney202@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 12:36:47] [Slot 1] Procesando: disney152@linpotop.com
+[LOG] [19/02/2026, 12:37:07] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:37:07] 1
+[LOG] [19/02/2026, 12:37:31] Guaradad
+[LOG] [19/02/2026, 12:37:31] 2
+[LOG] [19/02/2026, 12:37:54] 3
+[LOG] [19/02/2026, 12:38:22] disney152@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [19/02/2026, 12:38:22] [Slot 1] Procesando: disney56@linpotop.com
+[LOG] [19/02/2026, 12:38:31] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:38:31] 1
+[LOG] [19/02/2026, 12:38:55] Guaradad
+[LOG] [19/02/2026, 12:38:55] 2
+[LOG] [19/02/2026, 12:39:38] disney56@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 12:39:38] [Slot 1] Procesando: disney50@linpotop.com
+[ERROR] [19/02/2026, 12:40:08] [Slot 1] Error en disney50@linpotop.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [19/02/2026, 12:40:08] [Slot 1] Procesando: disney31@linpotop.com
+[ERROR] [19/02/2026, 12:40:38] [Slot 1] Error en disney31@linpotop.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [19/02/2026, 12:40:38] [Slot 1] Procesando: disney26@linpotop.com
+[ERROR] [19/02/2026, 12:41:09] [Slot 1] Error en disney26@linpotop.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [19/02/2026, 12:41:09] [Slot 1] Procesando: disney25@linpotop.com
+[ERROR] [19/02/2026, 12:41:39] [Slot 1] Error en disney25@linpotop.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [19/02/2026, 12:41:39] [Slot 1] Procesando: disney21@linpotop.com
+[LOG] [19/02/2026, 12:42:16] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:42:16] 1
+[LOG] [19/02/2026, 12:42:42] Guaradad
+[LOG] [19/02/2026, 12:42:42] 2
+[LOG] [19/02/2026, 12:43:09] disney21@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [19/02/2026, 12:43:09] [Slot 1] Procesando: disney20@linpotop.com
+[LOG] [19/02/2026, 12:43:22] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:43:22] 1
+[LOG] [19/02/2026, 12:43:45] Guaradad
+[LOG] [19/02/2026, 12:43:45] 2
+[LOG] [19/02/2026, 12:44:08] 3
+[LOG] [19/02/2026, 12:44:34] disney20@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/home
+[LOG] [19/02/2026, 12:44:34] [Slot 1] Procesando: disney16@linpotop.com
+[LOG] [19/02/2026, 12:44:59] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:44:59] 1
+[LOG] [19/02/2026, 12:45:23] Guaradad
+[LOG] [19/02/2026, 12:45:23] 2
+[LOG] [19/02/2026, 12:45:48] disney16@linpotop.com 🔑 PASSWORD pide contraseña: https://www.disneyplus.com/identity/login/change-password
+[LOG] [19/02/2026, 12:45:48] [Slot 1] Procesando: disney15@linpotop.com
+[LOG] [19/02/2026, 12:45:58] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:45:58] 1
+[LOG] [19/02/2026, 12:46:21] Guaradad
+[LOG] [19/02/2026, 12:46:21] 2
+[LOG] [19/02/2026, 12:47:04] disney15@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 12:47:04] [Slot 1] Procesando: disney14@linpotop.com
+[ERROR] [19/02/2026, 12:47:34] [Slot 1] Error en disney14@linpotop.com: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.disneyplus.com/login", waiting until "load"[22m
+
+[LOG] [19/02/2026, 12:47:34] [Slot 1] Procesando: disney13@linpotop.com
+[LOG] [19/02/2026, 12:48:01] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:48:01] 1
+[LOG] [19/02/2026, 12:48:25] Guaradad
+[LOG] [19/02/2026, 12:48:25] 2
+[LOG] [19/02/2026, 12:48:48] 3
+[LOG] [19/02/2026, 12:49:15] disney13@linpotop.com 🔑 PASSWORD pide contraseña: https://www.disneyplus.com/identity/login/change-password
+[LOG] [19/02/2026, 12:49:15] [Slot 1] Procesando: disney12@linpotop.com
+[LOG] [19/02/2026, 12:49:26] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:49:26] 1
+[LOG] [19/02/2026, 12:49:49] Guaradad
+[LOG] [19/02/2026, 12:49:49] 2
+[LOG] [19/02/2026, 12:50:12] 3
+[LOG] [19/02/2026, 12:50:40] disney12@linpotop.com 🔑 PASSWORD pide contraseña: https://www.disneyplus.com/identity/login/change-password
+[LOG] [19/02/2026, 12:50:40] [Slot 1] Procesando: disney11@linpotop.com
+[LOG] [19/02/2026, 12:51:11] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 12:51:11] 1
+[LOG] [19/02/2026, 13:12:26] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [19/02/2026, 13:12:27] [Slot 1] Procesando: disney1125@linpotop.com
+[LOG] [19/02/2026, 13:13:03] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:13:03] 1
+[LOG] [19/02/2026, 13:13:27] Guaradad
+[LOG] [19/02/2026, 13:13:27] 2
+[LOG] [19/02/2026, 13:14:00] disney1125@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [19/02/2026, 13:14:00] [Slot 1] Procesando: disney2009@linpotop.com
+[LOG] [19/02/2026, 13:14:22] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:14:22] 1
+[LOG] [19/02/2026, 13:14:46] Guaradad
+[LOG] [19/02/2026, 13:15:06] Timeout ⏱️: disney2009@linpotop.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [19/02/2026, 13:15:06] [Slot 1] Procesando: disney2026@linpotop.com
+[LOG] [19/02/2026, 13:15:21] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:15:21] 1
+[LOG] [19/02/2026, 13:15:45] Guaradad
+[LOG] [19/02/2026, 13:15:45] 2
+[LOG] [19/02/2026, 13:16:08] 3
+[LOG] [19/02/2026, 13:16:33] disney2026@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 13:16:34] [Slot 1] Procesando: disney50@linpotop.com
+[LOG] [19/02/2026, 13:16:42] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:16:42] 1
+[LOG] [19/02/2026, 13:17:06] Guaradad
+[LOG] [19/02/2026, 13:17:06] 2
+[LOG] [19/02/2026, 13:17:29] 3
+[LOG] [19/02/2026, 13:17:54] disney50@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 13:17:54] [Slot 1] Procesando: disney31@linpotop.com
+[LOG] [19/02/2026, 13:18:03] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:18:03] 1
+[LOG] [19/02/2026, 13:18:26] Guaradad
+[LOG] [19/02/2026, 13:18:26] 2
+[LOG] [19/02/2026, 13:18:49] 3
+[LOG] [19/02/2026, 13:19:12] 4
+[LOG] [19/02/2026, 13:19:36] 5
+[LOG] [19/02/2026, 13:19:59] 6
+[ERROR] [19/02/2026, 13:20:22] [Slot 1] Error en disney31@linpotop.com: No se obtuvo el código tras reintentos
+[LOG] [19/02/2026, 13:20:22] [Slot 1] Procesando: disney26@linpotop.com
+[LOG] [19/02/2026, 13:20:34] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:20:34] 1
+[LOG] [19/02/2026, 13:20:57] Guaradad
+[LOG] [19/02/2026, 13:20:57] 2
+[LOG] [19/02/2026, 13:21:20] 3
+[LOG] [19/02/2026, 13:21:46] disney26@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/profiles/loading
+[LOG] [19/02/2026, 13:21:46] [Slot 1] Procesando: disney25@linpotop.com
+[LOG] [19/02/2026, 13:21:55] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:21:55] 1
+[LOG] [19/02/2026, 13:22:18] Guaradad
+[LOG] [19/02/2026, 13:22:18] 2
+[LOG] [19/02/2026, 13:22:41] 3
+[LOG] [19/02/2026, 13:23:08] disney25@linpotop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [19/02/2026, 13:23:08] [Slot 1] Procesando: disney14@linpotop.com
+[LOG] [19/02/2026, 13:23:21] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:23:21] 1
+[LOG] [19/02/2026, 13:23:44] Guaradad
+[LOG] [19/02/2026, 13:23:44] 2
+[LOG] [19/02/2026, 13:24:08] 3
+[LOG] [19/02/2026, 13:24:33] disney14@linpotop.com 🔑 PASSWORD pide contraseña: https://www.disneyplus.com/identity/login/change-password
+[LOG] [19/02/2026, 13:24:33] [Slot 1] Procesando: disney11@linpotop.com
+[LOG] [19/02/2026, 13:24:48] [Slot 1] OTP enviado directo...
+[LOG] [19/02/2026, 13:24:48] 1
+[LOG] [19/02/2026, 13:25:12] Guaradad
+[LOG] [19/02/2026, 13:25:33] Timeout ⏱️: disney11@linpotop.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [21/02/2026, 11:40:51] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [21/02/2026, 11:40:52] [Slot 1] Procesando: disney+11@alucardshop.com
+[LOG] [21/02/2026, 11:41:02] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:41:03] 1
+[LOG] [21/02/2026, 11:41:23] Guaradad
+[LOG] [21/02/2026, 11:41:23] 2
+[LOG] [21/02/2026, 11:41:44] 3
+[LOG] [21/02/2026, 11:42:10] disney+11@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [21/02/2026, 11:42:10] [Slot 1] Procesando: disney+2@alucardshop.com
+[LOG] [21/02/2026, 11:42:18] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:42:19] 1
+[LOG] [21/02/2026, 11:42:39] Guaradad
+[LOG] [21/02/2026, 11:42:39] 2
+[LOG] [21/02/2026, 11:43:00] 3
+[LOG] [21/02/2026, 11:43:25] disney+2@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/tr-tr/commerce/welcome-back
+[LOG] [21/02/2026, 11:43:25] [Slot 1] Procesando: disney+1@alucardshop.com
+[LOG] [21/02/2026, 11:43:32] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:43:33] 1
+[LOG] [21/02/2026, 11:43:54] Guaradad
+[LOG] [21/02/2026, 11:43:54] 2
+[LOG] [21/02/2026, 11:44:14] 3
+[LOG] [21/02/2026, 11:44:37] disney+1@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:44:37] [Slot 1] Procesando: disney16@alucardshop.com
+[LOG] [21/02/2026, 11:44:45] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:44:47] 1
+[LOG] [21/02/2026, 11:45:07] Guaradad
+[LOG] [21/02/2026, 11:45:07] 2
+[LOG] [21/02/2026, 11:45:28] 3
+[LOG] [21/02/2026, 11:45:50] disney16@alucardshop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [21/02/2026, 11:45:50] [Slot 1] Procesando: disney15@alucardshop.com
+[LOG] [21/02/2026, 11:45:59] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:46:00] 1
+[LOG] [21/02/2026, 11:46:20] Guaradad
+[LOG] [21/02/2026, 11:46:20] 2
+[LOG] [21/02/2026, 11:46:41] 3
+[LOG] [21/02/2026, 11:47:03] disney15@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:47:03] [Slot 1] Procesando: disney14@alucardshop.com
+[LOG] [21/02/2026, 11:47:10] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:47:12] 1
+[LOG] [21/02/2026, 11:47:33] Guaradad
+[LOG] [21/02/2026, 11:47:33] 2
+[LOG] [21/02/2026, 11:47:53] 3
+[LOG] [21/02/2026, 11:48:16] disney14@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:48:16] [Slot 1] Procesando: disney13@alucardshop.com
+[LOG] [21/02/2026, 11:48:22] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:48:23] 1
+[LOG] [21/02/2026, 11:48:44] Guaradad
+[LOG] [21/02/2026, 11:48:44] 2
+[LOG] [21/02/2026, 11:49:04] 3
+[LOG] [21/02/2026, 11:49:28] disney13@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:49:28] [Slot 1] Procesando: disney12@alucardshop.com
+[LOG] [21/02/2026, 11:49:38] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:49:38] 1
+[LOG] [21/02/2026, 11:49:59] Guaradad
+[LOG] [21/02/2026, 11:49:59] 2
+[LOG] [21/02/2026, 11:50:19] 3
+[LOG] [21/02/2026, 11:50:42] disney12@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:50:42] [Slot 1] Procesando: disney11@alucardshop.com
+[LOG] [21/02/2026, 11:50:48] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:50:49] 1
+[LOG] [21/02/2026, 11:51:10] Guaradad
+[LOG] [21/02/2026, 11:51:30] Timeout ⏱️: disney11@alucardshop.com - URL actual: https://www.disneyplus.com/identity/login/enter-passcode
+[LOG] [21/02/2026, 11:51:30] [Slot 1] Procesando: disney10@alucardshop.com
+[LOG] [21/02/2026, 11:51:36] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:51:37] 1
+[LOG] [21/02/2026, 11:51:58] Guaradad
+[LOG] [21/02/2026, 11:51:58] 2
+[LOG] [21/02/2026, 11:52:18] 3
+[LOG] [21/02/2026, 11:52:41] disney10@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:52:41] [Slot 1] Procesando: disney9@alucardshop.com
+[LOG] [21/02/2026, 11:52:48] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:52:49] 1
+[LOG] [21/02/2026, 11:53:09] Guaradad
+[LOG] [21/02/2026, 11:53:09] 2
+[LOG] [21/02/2026, 11:53:30] 3
+[LOG] [21/02/2026, 11:53:52] disney9@alucardshop.com ✅ Tiene suscripción: https://www.disneyplus.com/select-profile
+[LOG] [21/02/2026, 11:53:52] [Slot 1] Procesando: disney8@alucardshop.com
+[LOG] [21/02/2026, 11:53:59] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:53:59] 1
+[LOG] [21/02/2026, 11:54:20] Guaradad
+[LOG] [21/02/2026, 11:54:20] 2
+[LOG] [21/02/2026, 11:54:40] 3
+[LOG] [21/02/2026, 11:55:04] disney8@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:55:04] [Slot 1] Procesando: disney7@alucardshop.com
+[LOG] [21/02/2026, 11:55:11] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:55:12] 1
+[LOG] [21/02/2026, 11:55:33] Guaradad
+[LOG] [21/02/2026, 11:55:33] 2
+[LOG] [21/02/2026, 11:55:53] 3
+[LOG] [21/02/2026, 11:56:17] disney7@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:56:17] [Slot 1] Procesando: disney6@alucardshop.com
+[LOG] [21/02/2026, 11:56:25] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:56:27] 1
+[LOG] [21/02/2026, 11:56:47] Guaradad
+[LOG] [21/02/2026, 11:56:47] 2
+[LOG] [21/02/2026, 11:57:08] 3
+[LOG] [21/02/2026, 11:57:35] disney6@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:57:35] [Slot 1] Procesando: disney5@alucardshop.com
+[LOG] [21/02/2026, 11:57:44] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:57:45] 1
+[LOG] [21/02/2026, 11:58:06] Guaradad
+[LOG] [21/02/2026, 11:58:06] 2
+[LOG] [21/02/2026, 11:58:26] 3
+[LOG] [21/02/2026, 11:58:50] disney5@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 11:58:50] [Slot 1] Procesando: disney4@alucardshop.com
+[LOG] [21/02/2026, 11:58:57] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 11:58:58] 1
+[LOG] [21/02/2026, 11:59:18] Guaradad
+[LOG] [21/02/2026, 11:59:18] 2
+[LOG] [21/02/2026, 11:59:39] 3
+[LOG] [21/02/2026, 12:00:02] disney4@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 12:00:02] [Slot 1] Procesando: disney3@alucardshop.com
+[LOG] [21/02/2026, 12:00:09] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 12:00:10] 1
+[LOG] [21/02/2026, 12:00:31] Guaradad
+[LOG] [21/02/2026, 12:00:31] 2
+[LOG] [21/02/2026, 12:00:51] 3
+[LOG] [21/02/2026, 12:01:14] disney3@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 12:01:14] [Slot 1] Procesando: disney2@alucardshop.com
+[LOG] [21/02/2026, 12:01:21] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 12:01:22] 1
+[LOG] [21/02/2026, 12:01:42] Guaradad
+[LOG] [21/02/2026, 12:01:42] 2
+[LOG] [21/02/2026, 12:02:02] 3
+[LOG] [21/02/2026, 12:02:25] disney2@alucardshop.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 16:09:15] --- Logger activado: guardando en C:\Users\Usuario\Documents\sc-telegram\Latiendajq.log ---
+[LOG] [21/02/2026, 16:09:16] [Slot 1] Procesando: disney10@szencuenta.com
+[LOG] [21/02/2026, 16:09:23] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:09:24] 1
+[LOG] [21/02/2026, 16:09:55] Guaradad
+[LOG] [21/02/2026, 16:10:00] disney10@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [21/02/2026, 16:10:00] [Slot 1] Procesando: disney20@szencuenta.com
+[LOG] [21/02/2026, 16:10:09] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:10:10] 1
+[LOG] [21/02/2026, 16:10:41] Guaradad
+[LOG] [21/02/2026, 16:10:48] disney20@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [21/02/2026, 16:10:48] [Slot 1] Procesando: disney90@szencuenta.com
+[LOG] [21/02/2026, 16:10:56] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:10:58] 1
+[LOG] [21/02/2026, 16:11:30] Guaradad
+[LOG] [21/02/2026, 16:11:36] disney90@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [21/02/2026, 16:11:36] [Slot 1] Procesando: disney100@szencuenta.com
+[LOG] [21/02/2026, 16:11:45] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:11:47] 1
+[LOG] [21/02/2026, 16:12:20] Guaradad
+[LOG] [21/02/2026, 16:12:23] disney100@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 16:12:24] [Slot 1] Procesando: disney580@szencuenta.com
+[LOG] [21/02/2026, 16:12:32] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:12:33] 1
+[LOG] [21/02/2026, 16:13:06] Guaradad
+[LOG] [21/02/2026, 16:13:12] disney580@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [21/02/2026, 16:13:13] [Slot 1] Procesando: disney678@szencuenta.com
+[LOG] [21/02/2026, 16:13:23] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:13:24] 1
+[LOG] [21/02/2026, 16:13:54] Guaradad
+[LOG] [21/02/2026, 16:14:02] disney678@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
+[LOG] [21/02/2026, 16:14:02] [Slot 1] Procesando: disney1400@szencuenta.com
+[LOG] [21/02/2026, 16:14:17] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:14:19] 1
+[LOG] [21/02/2026, 16:14:51] Guaradad
+[LOG] [21/02/2026, 16:15:02] disney1400@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/commerce/welcome-back
+[LOG] [21/02/2026, 16:15:03] [Slot 1] Procesando: disney3123@szencuenta.com
+[LOG] [21/02/2026, 16:15:21] [Slot 1] Haciendo click en botón OTP...
+[LOG] [21/02/2026, 16:15:22] 1
+[LOG] [21/02/2026, 16:15:54] Guaradad
+[LOG] [21/02/2026, 16:16:00] disney3123@szencuenta.com ❌ NO tiene suscripción: https://www.disneyplus.com/es-419/commerce/welcome-back
